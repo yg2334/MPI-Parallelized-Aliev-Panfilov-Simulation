@@ -11,7 +11,7 @@ Code organization
 
 Results
 =================
-<img src="perf.png" width="700">
+<img src="perf.PNG" width="700">
 
 
 
