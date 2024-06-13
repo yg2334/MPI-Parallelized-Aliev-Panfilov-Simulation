@@ -1,0 +1,1669 @@
+
+[Simulation begins] Wed Jun  5 06:25:44 2024
+
+dt= 0.00144443, # iters = 100000
+m x n = 1800 x 1800
+processor geometry: 2 x 8
+
+Compiled with MPI ENABLED
+
+[Simulation completes] Wed Jun  5 06:27:02 2024
+
+End at iteration 99999
+Max norm: 9.83612e-01, L2norm: 7.55139e-01
+Running Time: 77.8607 sec. [117 GFlop/sec]
+
+   M x N   px x py Comm?   #iter  T_p, Gflops        Linf, L2
+@ 1800 1800    2 8      Y     100000  77.86 116.5    9.83612e-01 7.55139e-01
+  -----
+Reading Profile files in profile.*
+
+NODE 0;CONTEXT 0;THREAD 0:
+---------------------------------------------------------------------------------------
+%Time    Exclusive    Inclusive       #Call      #Subrs  Inclusive Name
+              msec   total msec                          usec/call 
+---------------------------------------------------------------------------------------
+100.0       51,983     1:18.195           1      300054   78195972 .TAU application
+ 68.0            0       53,190        1769           0      30068 .TAU application => [CONTEXT] .TAU application
+ 68.0            0       53,190        1769           0      30068 [CONTEXT] .TAU application
+ 67.3       52,650       52,650        1751           0      30069 .TAU application => [CONTEXT] .TAU application => [SAMPLE] solve(double**, double**, double*, double, double, Plotter*, double&, double&) 
+ 67.3       52,650       52,650        1751           0      30069 [SAMPLE] solve(double**, double**, double*, double, double, Plotter*, double&, double&) 
+ 32.9       25,749       25,749      100000           0        257 MPI_Waitall() 
+ 30.5            0       23,819         791           0      30113 MPI_Waitall() => [CONTEXT] MPI_Waitall() 
+ 30.5            0       23,819         791           0      30113 [CONTEXT] MPI_Waitall() 
+ 22.4       17,488       17,488         580           0      30152 [SAMPLE] MPIDI_CH3I_SMP_pull_header 
+ 22.3       17,428       17,428         578           0      30153 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] MPIDI_CH3I_SMP_pull_header 
+  7.3        5,701        5,701         190           0      30008 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] MPIDI_CH3I_SMP_read_progress 
+  7.3        5,701        5,701         190           0      30008 [SAMPLE] MPIDI_CH3I_SMP_read_progress 
+  0.7          510          510          17           0      30000 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] MPIDI_CH3I_Progress 
+  0.7          510          510          17           0      30000 [SAMPLE] MPIDI_CH3I_Progress 
+  0.4          300          300          10           0      30001 .TAU application => [CONTEXT] .TAU application => [SAMPLE] _int_malloc 
+  0.4          300          300          10           0      30001 [SAMPLE] _int_malloc 
+  0.3          269          269           9           0      29962 [SAMPLE] __memmove_avx_unaligned_erms 
+  0.3          231          231           1           0     231100 MPI_Init() 
+  0.2          150          150           5           0      30000 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] __memmove_avx_unaligned_erms 
+  0.2          150          150           5           0      30000 [SAMPLE] UNRESOLVED /cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen2/gcc-9.2.0/tau-2.29-x6cvjho7izlv6p5hxo2ponkjjvb3m6zy/x86_64/lib/libTAUsh-papi-mpi-pthread-pdt.so
+  0.1          111          111      100001           0          1 MPI_Isend() [THROTTLED]
+  0.1            0           90           3           0      30000 MPI_Isend() [THROTTLED] => [CONTEXT] MPI_Isend() [THROTTLED]
+  0.1           90           90           3           0      30000 MPI_Isend() [THROTTLED] => [CONTEXT] MPI_Isend() [THROTTLED] => [SAMPLE] __memmove_avx_unaligned_erms 
+  0.1            0           90           3           0      30000 [CONTEXT] MPI_Isend() [THROTTLED]
+  0.1           90           90           3           0      30000 .TAU application => [CONTEXT] .TAU application => [SAMPLE] UNRESOLVED /cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen2/gcc-9.2.0/tau-2.29-x6cvjho7izlv6p5hxo2ponkjjvb3m6zy/x86_64/lib/libTAUsh-papi-mpi-pthread-pdt.so
+  0.1            0           60           2           0      30000 MPI_Irecv() [THROTTLED] => [CONTEXT] MPI_Irecv() [THROTTLED]
+  0.1           60           60           2           0      30000 MPI_Irecv() [THROTTLED] => [CONTEXT] MPI_Irecv() [THROTTLED] => [SAMPLE] UNRESOLVED /cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen2/gcc-9.2.0/tau-2.29-x6cvjho7izlv6p5hxo2ponkjjvb3m6zy/x86_64/lib/libTAUsh-papi-mpi-pthread-pdt.so
+  0.1            0           60           2           0      30000 [CONTEXT] MPI_Irecv() [THROTTLED]
+  0.1           52           52           1           0      52291 MPI_Finalize() 
+  0.1           44           44      100001           0          0 MPI_Irecv() [THROTTLED]
+  0.0           30           30           1           0      30023 .TAU application => [CONTEXT] .TAU application => [SAMPLE] init(double*, double*, double*, int, int) 
+  0.0           30           30           1           0      30023 [SAMPLE] init(double*, double*, double*, int, int) 
+  0.0           30           30           1           0      30000 .TAU application => [CONTEXT] .TAU application => [SAMPLE] MPID_Irecv 
+  0.0           30           30           1           0      30000 .TAU application => [CONTEXT] .TAU application => [SAMPLE] __tls_get_addr 
+  0.0           30           30           1           0      30000 .TAU application => [CONTEXT] .TAU application => [SAMPLE] malloc 
+  0.0            0           30           1           0      30000 MPI_Reduce() => [CONTEXT] MPI_Reduce() 
+  0.0           30           30           1           0      30000 MPI_Reduce() => [CONTEXT] MPI_Reduce() => [SAMPLE] MPIDI_CH3I_SMP_pull_header 
+  0.0           30           30           1           0      30000 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] UNRESOLVED /cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen2/gcc-9.2.0/mvapich2-2.3.6-3c3rtf3ca32c3t3m5gl4kka2bt7fzdmk/lib/libmpi.so.12.1.1
+  0.0            0           30           1           0      30000 [CONTEXT] MPI_Reduce() 
+  0.0           30           30           1           0      30000 [SAMPLE] MPID_Irecv 
+  0.0           30           30           1           0      30000 [SAMPLE] UNRESOLVED /cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen2/gcc-9.2.0/mvapich2-2.3.6-3c3rtf3ca32c3t3m5gl4kka2bt7fzdmk/lib/libmpi.so.12.1.1 
+  0.0           30           30           1           0      30000 [SAMPLE] __tls_get_addr 
+  0.0           30           30           1           0      30000 [SAMPLE] malloc 
+  0.0            0           29           1           0      29986 MPI_Send() => [CONTEXT] MPI_Send() 
+  0.0           29           29           1           0      29986 MPI_Send() => [CONTEXT] MPI_Send() => [SAMPLE] MPIDI_CH3I_SMP_pull_header 
+  0.0            0           29           1           0      29986 [CONTEXT] MPI_Send() 
+  0.0           29           29           1           0      29653 .TAU application => [CONTEXT] .TAU application => [SAMPLE] __memmove_avx_unaligned_erms 
+  0.0           20           20          30           0        686 MPI_Send() 
+  0.0            2            2           2           0       1148 MPI_Reduce() 
+  0.0        0.084        0.084           4           0         21 MPI_Barrier() 
+  0.0        0.015        0.015           2           0          8 MPI_Type_commit() 
+  0.0        0.013        0.013           1           0         13 MPI_Type_vector() 
+  0.0        0.005        0.005           7           0          1 MPI_Comm_rank() 
+  0.0        0.004        0.004           3           0          1 MPI_Comm_size() 
+  0.0        0.004        0.004           1           0          4 MPI_Type_contiguous() 
+---------------------------------------------------------------------------------------
+
+USER EVENTS Profile :NODE 0, CONTEXT 0, THREAD 0
+---------------------------------------------------------------------------------------
+NumSamples   MaxValue   MinValue  MeanValue  Std. Dev.  Event Name
+---------------------------------------------------------------------------------------
+         2          8          8          8          0  Message size for reduce
+---------------------------------------------------------------------------------------
+
+NODE 1;CONTEXT 0;THREAD 0:
+---------------------------------------------------------------------------------------
+%Time    Exclusive    Inclusive       #Call      #Subrs  Inclusive Name
+              msec   total msec                          usec/call 
+---------------------------------------------------------------------------------------
+100.0       52,102     1:18.197           1      300026   78197433 .TAU application
+ 66.1            0       51,655        1718           0      30067 .TAU application => [CONTEXT] .TAU application
+ 66.1            0       51,655        1718           0      30067 [CONTEXT] .TAU application
+ 65.3       51,085       51,085        1699           0      30068 .TAU application => [CONTEXT] .TAU application => [SAMPLE] solve(double**, double**, double*, double, double, Plotter*, double&, double&) 
+ 65.3       51,085       51,085        1699           0      30068 [SAMPLE] solve(double**, double**, double*, double, double, Plotter*, double&, double&) 
+ 32.8       25,644       25,644      100000           0        256 MPI_Waitall() 
+ 32.2            0       25,144         838           0      30005 MPI_Waitall() => [CONTEXT] MPI_Waitall() 
+ 32.2            0       25,144         838           0      30005 [CONTEXT] MPI_Waitall() 
+ 23.6       18,454       18,454         615           0      30007 [SAMPLE] MPIDI_CH3I_SMP_pull_header 
+ 23.6       18,424       18,424         614           0      30007 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] MPIDI_CH3I_SMP_pull_header 
+  7.5        5,850        5,850         195           0      30000 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] MPIDI_CH3I_SMP_read_progress 
+  7.5        5,850        5,850         195           0      30000 [SAMPLE] MPIDI_CH3I_SMP_read_progress 
+  1.0          779          779          26           0      30000 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] MPIDI_CH3I_Progress 
+  1.0          779          779          26           0      30000 [SAMPLE] MPIDI_CH3I_Progress 
+  0.3          270          270           9           0      30002 .TAU application => [CONTEXT] .TAU application => [SAMPLE] _int_malloc 
+  0.3          270          270           9           0      30002 [SAMPLE] _int_malloc 
+  0.3          231          231           1           0     231171 MPI_Init() 
+  0.2          120          120           4           0      30000 [SAMPLE] __memmove_avx_unaligned_erms 
+  0.1          111          111      100001           0          1 MPI_Isend() [THROTTLED]
+  0.1           60           60           2           0      30000 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] __memmove_avx_unaligned_erms 
+  0.1           59           59           2           0      29999 .TAU application => [CONTEXT] .TAU application => [SAMPLE] UNRESOLVED /cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen2/gcc-9.2.0/tau-2.29-x6cvjho7izlv6p5hxo2ponkjjvb3m6zy/x86_64/lib/libTAUsh-papi-mpi-pthread-pdt.so
+  0.1            0           59           2           0      29999 MPI_Isend() [THROTTLED] => [CONTEXT] MPI_Isend() [THROTTLED]
+  0.1            0           59           2           0      29999 [CONTEXT] MPI_Isend() [THROTTLED]
+  0.1           59           59           2           0      29999 [SAMPLE] UNRESOLVED /cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen2/gcc-9.2.0/tau-2.29-x6cvjho7izlv6p5hxo2ponkjjvb3m6zy/x86_64/lib/libTAUsh-papi-mpi-pthread-pdt.so
+  0.1           53           53           1           0      53659 MPI_Finalize() 
+  0.1           48           48      100001           0          0 MPI_Irecv() [THROTTLED]
+  0.0           30           30           1           0      30025 .TAU application => [CONTEXT] .TAU application => [SAMPLE] init(double*, double*, double*, int, int) 
+  0.0           30           30           1           0      30025 [SAMPLE] init(double*, double*, double*, int, int) 
+  0.0           30           30           1           0      30002 .TAU application => [CONTEXT] .TAU application => [SAMPLE] __brk 
+  0.0           30           30           1           0      30002 [SAMPLE] __brk 
+  0.0           30           30           1           0      30001 .TAU application => [CONTEXT] .TAU application => [SAMPLE] mv2_smp_fast_write_contig 
+  0.0            0           30           1           0      30001 MPI_Irecv() [THROTTLED] => [CONTEXT] MPI_Irecv() [THROTTLED]
+  0.0           30           30           1           0      30001 MPI_Irecv() [THROTTLED] => [CONTEXT] MPI_Irecv() [THROTTLED] => [SAMPLE] PMPI_Irecv 
+  0.0            0           30           1           0      30001 MPI_Reduce() => [CONTEXT] MPI_Reduce() 
+  0.0           30           30           1           0      30001 MPI_Reduce() => [CONTEXT] MPI_Reduce() => [SAMPLE] MPIDI_CH3I_SMP_pull_header 
+  0.0            0           30           1           0      30001 [CONTEXT] MPI_Irecv() [THROTTLED]
+  0.0            0           30           1           0      30001 [CONTEXT] MPI_Reduce() 
+  0.0           30           30           1           0      30001 [SAMPLE] PMPI_Irecv [THROTTLED]
+  0.0           30           30           1           0      30001 [SAMPLE] mv2_smp_fast_write_contig 
+  0.0           30           30           1           0      30000 .TAU application => [CONTEXT] .TAU application => [SAMPLE] MPIDI_CH3_EagerContigShortSend 
+  0.0           30           30           1           0      30000 .TAU application => [CONTEXT] .TAU application => [SAMPLE] MPI_Isend 
+  0.0           30           30           1           0      30000 .TAU application => [CONTEXT] .TAU application => [SAMPLE] __memmove_avx_unaligned_erms 
+  0.0           30           30           1           0      30000 .TAU application => [CONTEXT] .TAU application => [SAMPLE] _dl_update_slotinfo 
+  0.0           30           30           1           0      30000 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] UNRESOLVED /cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen2/gcc-9.2.0/mvapich2-2.3.6-3c3rtf3ca32c3t3m5gl4kka2bt7fzdmk/lib/libmpi.so.12.1.1
+  0.0           30           30           1           0      30000 [SAMPLE] MPIDI_CH3_EagerContigShortSend 
+  0.0           30           30           1           0      30000 [SAMPLE] MPI_Isend 
+  0.0           30           30           1           0      30000 [SAMPLE] UNRESOLVED /cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen2/gcc-9.2.0/mvapich2-2.3.6-3c3rtf3ca32c3t3m5gl4kka2bt7fzdmk/lib/libmpi.so.12.1.1 
+  0.0           30           30           1           0      30000 [SAMPLE] _dl_update_slotinfo 
+  0.0           29           29           1           0      29999 .TAU application => [CONTEXT] .TAU application => [SAMPLE] MPIU_Handle_obj_alloc_unsafe 
+  0.0           29           29           1           0      29999 MPI_Isend() [THROTTLED] => [CONTEXT] MPI_Isend() [THROTTLED] => [SAMPLE] MPID_Isend 
+  0.0           29           29           1           0      29999 MPI_Isend() [THROTTLED] => [CONTEXT] MPI_Isend() [THROTTLED] => [SAMPLE] __memmove_avx_unaligned_erms 
+  0.0           29           29           1           0      29999 [SAMPLE] MPID_Isend [THROTTLED]
+  0.0           29           29           1           0      29999 [SAMPLE] MPIU_Handle_obj_alloc_unsafe 
+  0.0            2            2           2           0       1240 MPI_Recv() 
+  0.0            2            2           2           0       1062 MPI_Reduce() 
+  0.0        0.651        0.651           4           0        163 MPI_Barrier() 
+  0.0        0.015        0.015           2           0          8 MPI_Type_commit() 
+  0.0        0.013        0.013           1           0         13 MPI_Type_vector() 
+  0.0        0.004        0.004           7           0          1 MPI_Comm_rank() 
+  0.0        0.004        0.004           1           0          4 MPI_Type_contiguous() 
+  0.0        0.002        0.002           3           0          1 MPI_Comm_size() 
+---------------------------------------------------------------------------------------
+
+USER EVENTS Profile :NODE 1, CONTEXT 0, THREAD 0
+---------------------------------------------------------------------------------------
+NumSamples   MaxValue   MinValue  MeanValue  Std. Dev.  Event Name
+---------------------------------------------------------------------------------------
+         2          8          8          8          0  Message size for reduce
+---------------------------------------------------------------------------------------
+
+NODE 2;CONTEXT 0;THREAD 0:
+---------------------------------------------------------------------------------------
+%Time    Exclusive    Inclusive       #Call      #Subrs  Inclusive Name
+              msec   total msec                          usec/call 
+---------------------------------------------------------------------------------------
+100.0       52,091     1:18.196           1      300026   78196087 .TAU application
+ 68.6            0       53,644        1785           0      30053 .TAU application => [CONTEXT] .TAU application
+ 68.6            0       53,644        1785           0      30053 [CONTEXT] .TAU application
+ 67.5       52,804       52,804        1757           0      30054 .TAU application => [CONTEXT] .TAU application => [SAMPLE] solve(double**, double**, double*, double, double, Plotter*, double&, double&) 
+ 67.5       52,804       52,804        1757           0      30054 [SAMPLE] solve(double**, double**, double*, double, double, Plotter*, double&, double&) 
+ 32.8       25,644       25,644      100000           0        256 MPI_Waitall() 
+ 30.4            0       23,785         792           0      30033 MPI_Waitall() => [CONTEXT] MPI_Waitall() 
+ 30.4            0       23,785         792           0      30033 [CONTEXT] MPI_Waitall() 
+ 23.9       18,685       18,685         622           0      30041 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] MPIDI_CH3I_SMP_pull_header 
+ 23.9       18,685       18,685         622           0      30041 [SAMPLE] MPIDI_CH3I_SMP_pull_header 
+  5.8        4,560        4,560         152           0      30000 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] MPIDI_CH3I_SMP_read_progress 
+  5.8        4,560        4,560         152           0      30000 [SAMPLE] MPIDI_CH3I_SMP_read_progress 
+  0.6          450          450          15           0      30000 .TAU application => [CONTEXT] .TAU application => [SAMPLE] _int_malloc 
+  0.6          450          450          15           0      30000 [SAMPLE] _int_malloc 
+  0.5          360          360          12           0      30000 [SAMPLE] __memmove_avx_unaligned_erms 
+  0.4          330          330          11           0      30000 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] MPIDI_CH3I_Progress 
+  0.4          330          330          11           0      30000 [SAMPLE] MPIDI_CH3I_Progress 
+  0.3          240          240           8           0      30000 .TAU application => [CONTEXT] .TAU application => [SAMPLE] __memmove_avx_unaligned_erms 
+  0.3          229          229           1           0     229792 MPI_Init() 
+  0.2          117          117      100001           0          1 MPI_Isend() [THROTTLED]
+  0.1           90           90           3           0      30000 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] __memmove_avx_unaligned_erms 
+  0.1            0           60           2           0      30000 MPI_Isend() [THROTTLED] => [CONTEXT] MPI_Isend() [THROTTLED]
+  0.1            0           60           2           0      30000 [CONTEXT] MPI_Isend() [THROTTLED]
+  0.1           59           59           2           0      29998 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] UNRESOLVED /cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen2/gcc-9.2.0/mvapich2-2.3.6-3c3rtf3ca32c3t3m5gl4kka2bt7fzdmk/lib/libmpi.so.12.1.1
+  0.1           59           59           2           0      29998 [SAMPLE] UNRESOLVED /cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen2/gcc-9.2.0/mvapich2-2.3.6-3c3rtf3ca32c3t3m5gl4kka2bt7fzdmk/lib/libmpi.so.12.1.1 
+  0.1           53           53           1           0      53751 MPI_Finalize() 
+  0.1           52           52      100001           0          1 MPI_Irecv() [THROTTLED]
+  0.0           30           30           1           0      30026 .TAU application => [CONTEXT] .TAU application => [SAMPLE] init(double*, double*, double*, int, int) 
+  0.0           30           30           1           0      30026 [SAMPLE] init(double*, double*, double*, int, int) 
+  0.0           30           30           1           0      30005 .TAU application => [CONTEXT] .TAU application => [SAMPLE] Tau_malloc 
+  0.0           30           30           1           0      30005 [SAMPLE] Tau_malloc 
+  0.0           30           30           1           0      30002 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] MPID_Request_create 
+  0.0           30           30           1           0      30002 [SAMPLE] MPID_Request_create 
+  0.0           30           30           1           0      30000 .TAU application => [CONTEXT] .TAU application => [SAMPLE] __tls_get_addr 
+  0.0           30           30           1           0      30000 .TAU application => [CONTEXT] .TAU application => [SAMPLE] mv2_smp_fast_write_contig 
+  0.0           30           30           1           0      30000 MPI_Isend() [THROTTLED] => [CONTEXT] MPI_Isend() [THROTTLED] => [SAMPLE] UNRESOLVED /cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen2/gcc-9.2.0/tau-2.29-x6cvjho7izlv6p5hxo2ponkjjvb3m6zy/x86_64/lib/libTAUsh-papi-mpi-pthread-pdt.so
+  0.0           30           30           1           0      30000 MPI_Isend() [THROTTLED] => [CONTEXT] MPI_Isend() [THROTTLED] => [SAMPLE] __memmove_avx_unaligned_erms 
+  0.0           30           30           1           0      30000 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] MPIR_Waitall_impl 
+  0.0           30           30           1           0      30000 [SAMPLE] MPIR_Waitall_impl 
+  0.0           30           30           1           0      30000 [SAMPLE] UNRESOLVED /cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen2/gcc-9.2.0/tau-2.29-x6cvjho7izlv6p5hxo2ponkjjvb3m6zy/x86_64/lib/libTAUsh-papi-mpi-pthread-pdt.so [THROTTLED]
+  0.0           30           30           1           0      30000 [SAMPLE] __tls_get_addr 
+  0.0           30           30           1           0      30000 [SAMPLE] mv2_smp_fast_write_contig 
+  0.0           29           29           1           0      29999 .TAU application => [CONTEXT] .TAU application => [SAMPLE] stats(double*, int, int, double*, double*) 
+  0.0           29           29           1           0      29999 [SAMPLE] stats(double*, int, int, double*, double*) 
+  0.0            4            4           2           0       2281 MPI_Recv() 
+  0.0            1            1           2           0        591 MPI_Reduce() 
+  0.0         0.67         0.67           4           0        168 MPI_Barrier() 
+  0.0        0.017        0.017           2           0          8 MPI_Type_commit() 
+  0.0        0.013        0.013           1           0         13 MPI_Type_vector() 
+  0.0        0.005        0.005           7           0          1 MPI_Comm_rank() 
+  0.0        0.005        0.005           1           0          5 MPI_Type_contiguous() 
+  0.0        0.004        0.004           3           0          1 MPI_Comm_size() 
+---------------------------------------------------------------------------------------
+
+USER EVENTS Profile :NODE 2, CONTEXT 0, THREAD 0
+---------------------------------------------------------------------------------------
+NumSamples   MaxValue   MinValue  MeanValue  Std. Dev.  Event Name
+---------------------------------------------------------------------------------------
+         2          8          8          8          0  Message size for reduce
+---------------------------------------------------------------------------------------
+
+NODE 3;CONTEXT 0;THREAD 0:
+---------------------------------------------------------------------------------------
+%Time    Exclusive    Inclusive       #Call      #Subrs  Inclusive Name
+              msec   total msec                          usec/call 
+---------------------------------------------------------------------------------------
+100.0     1:10.308     1:18.196           1      300026   78196053 .TAU application
+ 89.2            0     1:09.720        2316           0      30104 .TAU application => [CONTEXT] .TAU application
+ 89.2            0     1:09.720        2316           0      30104 [CONTEXT] .TAU application
+ 85.7     1:07.050     1:07.050        2227           0      30108 .TAU application => [CONTEXT] .TAU application => [SAMPLE] solve(double**, double**, double*, double, double, Plotter*, double&, double&) 
+ 85.7     1:07.050     1:07.050        2227           0      30108 [SAMPLE] solve(double**, double**, double*, double, double, Plotter*, double&, double&) 
+  9.9            0        7,739         256           0      30233 MPI_Waitall() => [CONTEXT] MPI_Waitall() 
+  9.9            0        7,739         256           0      30233 [CONTEXT] MPI_Waitall() 
+  9.4        7,341        7,341      100000           0         73 MPI_Waitall() 
+  6.3        4,949        4,949         164           0      30181 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] MPIDI_CH3I_SMP_pull_header 
+  6.3        4,949        4,949         164           0      30181 [SAMPLE] MPIDI_CH3I_SMP_pull_header 
+  2.3        1,799        1,799          60           0      30000 [SAMPLE] _int_malloc 
+  2.2        1,709        1,709          57           0      30000 .TAU application => [CONTEXT] .TAU application => [SAMPLE] _int_malloc 
+  2.1        1,679        1,679          56           0      29998 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] MPIDI_CH3I_SMP_read_progress 
+  2.1        1,679        1,679          56           0      29998 [SAMPLE] MPIDI_CH3I_SMP_read_progress 
+  0.8          600          600          20           0      30000 [SAMPLE] __memmove_avx_unaligned_erms 
+  0.5          359          359          12           0      30000 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] MPIDI_CH3I_Progress 
+  0.5          359          359          12           0      30000 [SAMPLE] MPIDI_CH3I_Progress 
+  0.4          299          299          10           0      30000 .TAU application => [CONTEXT] .TAU application => [SAMPLE] __memmove_avx_unaligned_erms 
+  0.3          240          240           8           0      30001 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] __memmove_avx_unaligned_erms 
+  0.3          229          229           1           0     229796 MPI_Init() 
+  0.2          180          180           5           0      36001 [SAMPLE] malloc 
+  0.2          161          161      100001           0          2 MPI_Isend() [THROTTLED]
+  0.2          150          150           5           0      30002 .TAU application => [CONTEXT] .TAU application => [SAMPLE] __brk 
+  0.2          150          150           5           0      30002 [SAMPLE] __brk 
+  0.2          120          120           3           0      40005 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] malloc 
+  0.1           96           96      100001           0          1 MPI_Irecv() [THROTTLED]
+  0.1           90           90           3           0      30003 .TAU application => [CONTEXT] .TAU application => [SAMPLE] MPID_Isend 
+  0.1           90           90           3           0      30003 [SAMPLE] MPID_Isend 
+  0.1           90           90           3           0      30002 .TAU application => [CONTEXT] .TAU application => [SAMPLE] _dl_update_slotinfo 
+  0.1           90           90           3           0      30002 [SAMPLE] _dl_update_slotinfo 
+  0.1           89           89           3           0      29999 [SAMPLE] mv2_smp_fast_write_contig 
+  0.1            0           89           3           0      29999 MPI_Isend() [THROTTLED] => [CONTEXT] MPI_Isend() [THROTTLED]
+  0.1            0           89           3           0      29999 [CONTEXT] MPI_Isend() [THROTTLED]
+  0.1           89           89           3           0      29999 [SAMPLE] UNRESOLVED /cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen2/gcc-9.2.0/tau-2.29-x6cvjho7izlv6p5hxo2ponkjjvb3m6zy/x86_64/lib/libTAUsh-papi-mpi-pthread-pdt.so
+  0.1           89           89           3           0      29997 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] _int_malloc 
+  0.1           60           60           2           0      30002 .TAU application => [CONTEXT] .TAU application => [SAMPLE] mv2_smp_fast_write_contig 
+  0.1           60           60           2           0      30001 MPI_Isend() [THROTTLED] => [CONTEXT] MPI_Isend() [THROTTLED] => [SAMPLE] __memmove_avx_unaligned_erms 
+  0.1           59           59           2           0      30000 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] MPIR_Waitall_impl 
+  0.1           59           59           2           0      30000 [SAMPLE] MPIR_Waitall_impl 
+  0.1           59           59           2           0      29998 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] MPIDI_CH3U_Receive_data_unexpected 
+  0.1           59           59           2           0      29998 [SAMPLE] MPIDI_CH3U_Receive_data_unexpected 
+  0.1           59           59           2           0      29996 .TAU application => [CONTEXT] .TAU application => [SAMPLE] UNRESOLVED /cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen2/gcc-9.2.0/tau-2.29-x6cvjho7izlv6p5hxo2ponkjjvb3m6zy/x86_64/lib/libTAUsh-papi-mpi-pthread-pdt.so
+  0.1           59           59           2           0      29996 .TAU application => [CONTEXT] .TAU application => [SAMPLE] malloc 
+  0.1           59           59           2           0      29996 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] MPIDI_CH3U_Receive_data_found 
+  0.1           59           59           2           0      29996 [SAMPLE] MPIDI_CH3U_Receive_data_found 
+  0.1           53           53           1           0      53643 MPI_Finalize() 
+  0.0           30           30           1           0      30025 .TAU application => [CONTEXT] .TAU application => [SAMPLE] init(double*, double*, double*, int, int) 
+  0.0           30           30           1           0      30025 [SAMPLE] init(double*, double*, double*, int, int) 
+  0.0           30           30           1           0      30004 .TAU application => [CONTEXT] .TAU application => [SAMPLE] free 
+  0.0           30           30           1           0      30004 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] MPIDI_CH3_Request_destroy 
+  0.0           30           30           1           0      30004 [SAMPLE] MPIDI_CH3_Request_destroy 
+  0.0           30           30           1           0      30004 [SAMPLE] free 
+  0.0           30           30           1           0      30003 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] UNRESOLVED /cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen2/gcc-9.2.0/tau-2.29-x6cvjho7izlv6p5hxo2ponkjjvb3m6zy/x86_64/lib/libTAUsh-papi-mpi-pthread-pdt.so
+  0.0           30           30           1           0      30001 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] MPIDI_CH3U_Recvq_FDP_or_AEU 
+  0.0           30           30           1           0      30001 [SAMPLE] MPIDI_CH3U_Recvq_FDP_or_AEU 
+  0.0           30           30           1           0      30000 .TAU application => [CONTEXT] .TAU application => [SAMPLE] operator new(unsigned long) 
+  0.0           30           30           1           0      30000 [SAMPLE] operator new(unsigned long) 
+  0.0           29           29           1           0      29998 .TAU application => [CONTEXT] .TAU application => [SAMPLE] _int_free 
+  0.0           29           29           1           0      29998 .TAU application => [CONTEXT] .TAU application => [SAMPLE] stats(double*, int, int, double*, double*) 
+  0.0            0           29           1           0      29998 MPI_Irecv() [THROTTLED] => [CONTEXT] MPI_Irecv() [THROTTLED]
+  0.0           29           29           1           0      29998 MPI_Irecv() [THROTTLED] => [CONTEXT] MPI_Irecv() [THROTTLED] => [SAMPLE] flush_dereg_mrs_external 
+  0.0           29           29           1           0      29998 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] PMPI_Waitall 
+  0.0            0           29           1           0      29998 [CONTEXT] MPI_Irecv() [THROTTLED]
+  0.0           29           29           1           0      29998 [SAMPLE] PMPI_Waitall 
+  0.0           29           29           1           0      29998 [SAMPLE] _int_free 
+  0.0           29           29           1           0      29998 [SAMPLE] flush_dereg_mrs_external [THROTTLED]
+  0.0           29           29           1           0      29998 [SAMPLE] stats(double*, int, int, double*, double*) 
+  0.0           29           29           1           0      29995 MPI_Isend() [THROTTLED] => [CONTEXT] MPI_Isend() [THROTTLED] => [SAMPLE] mv2_smp_fast_write_contig 
+  0.0            2            2           2           0       1016 MPI_Recv() 
+  0.0            1            1           2           0        664 MPI_Reduce() 
+  0.0        0.674        0.674           4           0        168 MPI_Barrier() 
+  0.0        0.016        0.016           2           0          8 MPI_Type_commit() 
+  0.0        0.015        0.015           1           0         15 MPI_Type_vector() 
+  0.0        0.005        0.005           3           0          2 MPI_Comm_size() 
+  0.0        0.005        0.005           1           0          5 MPI_Type_contiguous() 
+  0.0        0.004        0.004           7           0          1 MPI_Comm_rank() 
+---------------------------------------------------------------------------------------
+
+USER EVENTS Profile :NODE 3, CONTEXT 0, THREAD 0
+---------------------------------------------------------------------------------------
+NumSamples   MaxValue   MinValue  MeanValue  Std. Dev.  Event Name
+---------------------------------------------------------------------------------------
+         2          8          8          8          0  Message size for reduce
+---------------------------------------------------------------------------------------
+
+NODE 4;CONTEXT 0;THREAD 0:
+---------------------------------------------------------------------------------------
+%Time    Exclusive    Inclusive       #Call      #Subrs  Inclusive Name
+              msec   total msec                          usec/call 
+---------------------------------------------------------------------------------------
+100.0     1:14.118     1:18.191           1      300026   78191884 .TAU application
+ 94.9            0     1:14.220        2464           0      30122 .TAU application => [CONTEXT] .TAU application
+ 94.9            0     1:14.220        2464           0      30122 [CONTEXT] .TAU application
+ 90.3     1:10.568     1:10.568        2342           0      30132 .TAU application => [CONTEXT] .TAU application => [SAMPLE] solve(double**, double**, double*, double, double, Plotter*, double&, double&) 
+ 90.3     1:10.568     1:10.568        2342           0      30132 [SAMPLE] solve(double**, double**, double*, double, double, Plotter*, double&, double&) 
+  4.5        3,509        3,509      100000           0         35 MPI_Waitall() 
+  4.4            0        3,449         113           0      30526 MPI_Waitall() => [CONTEXT] MPI_Waitall() 
+  4.4            0        3,449         113           0      30526 [CONTEXT] MPI_Waitall() 
+  3.5        2,722        2,722          91           0      29914 .TAU application => [CONTEXT] .TAU application => [SAMPLE] _int_malloc 
+  3.5        2,722        2,722          91           0      29914 [SAMPLE] _int_malloc 
+  2.8        2,219        2,219          73           0      30404 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] MPIDI_CH3I_SMP_pull_header 
+  2.8        2,219        2,219          73           0      30404 [SAMPLE] MPIDI_CH3I_SMP_pull_header 
+  1.0          810          810          26           0      31154 [SAMPLE] __memmove_avx_unaligned_erms 
+  0.7          509          509          17           0      29998 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] MPIDI_CH3I_SMP_read_progress 
+  0.7          509          509          17           0      29998 [SAMPLE] MPIDI_CH3I_SMP_read_progress 
+  0.6          450          450          15           0      30001 .TAU application => [CONTEXT] .TAU application => [SAMPLE] __memmove_avx_unaligned_erms 
+  0.4          330          330          10           0      33000 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] __memmove_avx_unaligned_erms 
+  0.3          226          226           1           0     226303 MPI_Init() 
+  0.2          172          172      100001           0          2 MPI_Isend() [THROTTLED]
+  0.2          119          119           4           0      29998 .TAU application => [CONTEXT] .TAU application => [SAMPLE] UNRESOLVED /cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen2/gcc-9.2.0/tau-2.29-x6cvjho7izlv6p5hxo2ponkjjvb3m6zy/x86_64/lib/libTAUsh-papi-mpi-pthread-pdt.so
+  0.2          119          119           4           0      29998 [SAMPLE] UNRESOLVED /cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen2/gcc-9.2.0/tau-2.29-x6cvjho7izlv6p5hxo2ponkjjvb3m6zy/x86_64/lib/libTAUsh-papi-mpi-pthread-pdt.so
+  0.1          106          106      100001           0          1 MPI_Irecv() [THROTTLED]
+  0.1            0           89           3           0      30000 MPI_Isend() [THROTTLED] => [CONTEXT] MPI_Isend() [THROTTLED]
+  0.1           89           89           3           0      30000 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] MPIDI_CH3_Request_destroy 
+  0.1            0           89           3           0      30000 [CONTEXT] MPI_Isend() [THROTTLED]
+  0.1           89           89           3           0      30000 [SAMPLE] MPIDI_CH3_Request_destroy 
+  0.1           60           60           2           0      30000 MPI_Isend() [THROTTLED] => [CONTEXT] MPI_Isend() [THROTTLED] => [SAMPLE] MPID_Isend 
+  0.1           60           60           2           0      30000 [SAMPLE] MPID_Isend [THROTTLED]
+  0.1           60           60           2           0      30000 .TAU application => [CONTEXT] .TAU application => [SAMPLE] mv2_smp_fast_write_contig 
+  0.1           60           60           2           0      30000 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] MPIDI_CH3I_Comm_find 
+  0.1           60           60           2           0      30000 [SAMPLE] MPIDI_CH3I_Comm_find 
+  0.1           60           60           2           0      30000 [SAMPLE] mv2_smp_fast_write_contig 
+  0.1           59           59           2           0      30000 [SAMPLE] free 
+  0.1           53           53           1           0      53058 MPI_Finalize() 
+  0.0           30           30           1           0      30015 .TAU application => [CONTEXT] .TAU application => [SAMPLE] init(double*, double*, double*, int, int) 
+  0.0           30           30           1           0      30015 [SAMPLE] init(double*, double*, double*, int, int) 
+  0.0           30           30           1           0      30005 .TAU application => [CONTEXT] .TAU application => [SAMPLE] MPIDI_CH3U_Recvq_FDU_or_AEP 
+  0.0           30           30           1           0      30005 [SAMPLE] MPIDI_CH3U_Recvq_FDU_or_AEP 
+  0.0           30           30           1           0      30001 .TAU application => [CONTEXT] .TAU application => [SAMPLE] operator new(unsigned long) 
+  0.0           30           30           1           0      30001 .TAU application => [CONTEXT] .TAU application => [SAMPLE] stats(double*, int, int, double*, double*) 
+  0.0           30           30           1           0      30001 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] MPIR_Waitall_impl 
+  0.0           30           30           1           0      30001 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] malloc 
+  0.0           30           30           1           0      30001 [SAMPLE] MPIR_Waitall_impl 
+  0.0           30           30           1           0      30001 [SAMPLE] malloc 
+  0.0           30           30           1           0      30001 [SAMPLE] operator new(unsigned long) 
+  0.0           30           30           1           0      30001 [SAMPLE] stats(double*, int, int, double*, double*) 
+  0.0           30           30           1           0      30000 .TAU application => [CONTEXT] .TAU application => [SAMPLE] AllocationShouldBeProtected 
+  0.0           30           30           1           0      30000 .TAU application => [CONTEXT] .TAU application => [SAMPLE] MPI_Type_size 
+  0.0           30           30           1           0      30000 .TAU application => [CONTEXT] .TAU application => [SAMPLE] flush_dereg_mrs_external 
+  0.0           30           30           1           0      30000 .TAU application => [CONTEXT] .TAU application => [SAMPLE] free 
+  0.0           30           30           1           0      30000 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] MPIDI_CH3U_Receive_data_found 
+  0.0           30           30           1           0      30000 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] MPIDI_CH3U_Receive_data_unexpected 
+  0.0           30           30           1           0      30000 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] MPIDI_CH3_PktHandler_EagerSend_Contig 
+  0.0           30           30           1           0      30000 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] MPID_Request_complete 
+  0.0           30           30           1           0      30000 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] PMPI_Waitall 
+  0.0           30           30           1           0      30000 [SAMPLE] AllocationShouldBeProtected 
+  0.0           30           30           1           0      30000 [SAMPLE] MPIDI_CH3U_Receive_data_found 
+  0.0           30           30           1           0      30000 [SAMPLE] MPIDI_CH3U_Receive_data_unexpected 
+  0.0           30           30           1           0      30000 [SAMPLE] MPIDI_CH3_PktHandler_EagerSend_Contig 
+  0.0           30           30           1           0      30000 [SAMPLE] MPID_Request_complete 
+  0.0           30           30           1           0      30000 [SAMPLE] MPI_Type_size 
+  0.0           30           30           1           0      30000 [SAMPLE] PMPI_Waitall 
+  0.0           30           30           1           0      30000 [SAMPLE] flush_dereg_mrs_external 
+  0.0            0           29           1           0      29999 MPI_Irecv() [THROTTLED] => [CONTEXT] MPI_Irecv() [THROTTLED]
+  0.0           29           29           1           0      29999 MPI_Irecv() [THROTTLED] => [CONTEXT] MPI_Irecv() [THROTTLED] => [SAMPLE] free 
+  0.0           29           29           1           0      29999 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] MPIDI_CH3I_Progress 
+  0.0            0           29           1           0      29999 [CONTEXT] MPI_Irecv() [THROTTLED]
+  0.0           29           29           1           0      29999 [SAMPLE] MPIDI_CH3I_Progress 
+  0.0           29           29           1           0      29998 .TAU application => [CONTEXT] .TAU application => [SAMPLE] _dl_update_slotinfo 
+  0.0           29           29           1           0      29998 MPI_Isend() [THROTTLED] => [CONTEXT] MPI_Isend() [THROTTLED] => [SAMPLE] __memmove_avx_unaligned_erms 
+  0.0           29           29           1           0      29998 [SAMPLE] _dl_update_slotinfo 
+  0.0           29           29           1           0      29995 .TAU application => [CONTEXT] .TAU application => [SAMPLE] __brk 
+  0.0           29           29           1           0      29995 [SAMPLE] __brk 
+  0.0            3            3           2           0       1847 MPI_Recv() 
+  0.0        0.706        0.706           2           0        353 MPI_Reduce() 
+  0.0        0.658        0.658           4           0        164 MPI_Barrier() 
+  0.0         0.01         0.01           1           0         10 MPI_Type_vector() 
+  0.0        0.009        0.009           2           0          4 MPI_Type_commit() 
+  0.0        0.004        0.004           7           0          1 MPI_Comm_rank() 
+  0.0        0.003        0.003           1           0          3 MPI_Type_contiguous() 
+  0.0        0.002        0.002           3           0          1 MPI_Comm_size() 
+---------------------------------------------------------------------------------------
+
+USER EVENTS Profile :NODE 4, CONTEXT 0, THREAD 0
+---------------------------------------------------------------------------------------
+NumSamples   MaxValue   MinValue  MeanValue  Std. Dev.  Event Name
+---------------------------------------------------------------------------------------
+         2          8          8          8          0  Message size for reduce
+---------------------------------------------------------------------------------------
+
+NODE 5;CONTEXT 0;THREAD 0:
+---------------------------------------------------------------------------------------
+%Time    Exclusive    Inclusive       #Call      #Subrs  Inclusive Name
+              msec   total msec                          usec/call 
+---------------------------------------------------------------------------------------
+100.0     1:13.753     1:18.196           1      300026   78196216 .TAU application
+ 94.8            0     1:14.104        2458           0      30148 .TAU application => [CONTEXT] .TAU application
+ 94.8            0     1:14.104        2458           0      30148 [CONTEXT] .TAU application
+ 90.9     1:11.104     1:11.104        2359           0      30142 .TAU application => [CONTEXT] .TAU application => [SAMPLE] solve(double**, double**, double*, double, double, Plotter*, double&, double&) 
+ 90.9     1:11.104     1:11.104        2359           0      30142 [SAMPLE] solve(double**, double**, double*, double, double, Plotter*, double&, double&) 
+  5.0        3,876        3,876      100000           0         39 MPI_Waitall() 
+  4.4            0        3,415         114           0      29957 MPI_Waitall() => [CONTEXT] MPI_Waitall() 
+  4.4            0        3,415         114           0      29957 [CONTEXT] MPI_Waitall() 
+  2.9        2,279        2,279          76           0      29999 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] MPIDI_CH3I_SMP_pull_header 
+  2.9        2,279        2,279          76           0      29999 [SAMPLE] MPIDI_CH3I_SMP_pull_header 
+  2.8        2,189        2,189          72           0      30417 .TAU application => [CONTEXT] .TAU application => [SAMPLE] _int_malloc 
+  2.8        2,189        2,189          72           0      30417 [SAMPLE] _int_malloc 
+  0.8          595          595          20           0      29762 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] MPIDI_CH3I_SMP_read_progress 
+  0.8          595          595          20           0      29762 [SAMPLE] MPIDI_CH3I_SMP_read_progress 
+  0.6          479          479          16           0      29999 [SAMPLE] __memmove_avx_unaligned_erms 
+  0.5          359          359          12           0      30000 [SAMPLE] UNRESOLVED /cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen2/gcc-9.2.0/tau-2.29-x6cvjho7izlv6p5hxo2ponkjjvb3m6zy/x86_64/lib/libTAUsh-papi-mpi-pthread-pdt.so
+  0.4          299          299          10           0      30000 .TAU application => [CONTEXT] .TAU application => [SAMPLE] UNRESOLVED /cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen2/gcc-9.2.0/tau-2.29-x6cvjho7izlv6p5hxo2ponkjjvb3m6zy/x86_64/lib/libTAUsh-papi-mpi-pthread-pdt.so
+  0.3          240          240           8           0      30001 .TAU application => [CONTEXT] .TAU application => [SAMPLE] __memmove_avx_unaligned_erms 
+  0.3          229          229           1           0     229822 MPI_Init() 
+  0.2            0          179           6           0      29998 MPI_Isend() [THROTTLED] => [CONTEXT] MPI_Isend() [THROTTLED]
+  0.2            0          179           6           0      29998 [CONTEXT] MPI_Isend() [THROTTLED]
+  0.2          160          160      100001           0          2 MPI_Isend() [THROTTLED]
+  0.2          149          149           5           0      29998 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] __memmove_avx_unaligned_erms 
+  0.1          115          115      100001           0          1 MPI_Irecv() [THROTTLED]
+  0.1           89           89           3           0      29998 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] MPIDI_CH3I_Progress 
+  0.1           89           89           3           0      29998 [SAMPLE] MPIDI_CH3I_Progress 
+  0.1           89           89           3           0      29997 MPI_Isend() [THROTTLED] => [CONTEXT] MPI_Isend() [THROTTLED] => [SAMPLE] __memmove_avx_unaligned_erms 
+  0.1           60           60           2           0      30002 [SAMPLE] MPID_Isend 
+  0.1           59           59           2           0      30000 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] MPIR_Waitall_impl 
+  0.1           59           59           2           0      30000 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] UNRESOLVED /cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen2/gcc-9.2.0/mvapich2-2.3.6-3c3rtf3ca32c3t3m5gl4kka2bt7fzdmk/lib/libmpi.so.12.1.1
+  0.1           59           59           2           0      30000 [SAMPLE] MPIR_Waitall_impl 
+  0.1           59           59           2           0      30000 [SAMPLE] UNRESOLVED /cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen2/gcc-9.2.0/mvapich2-2.3.6-3c3rtf3ca32c3t3m5gl4kka2bt7fzdmk/lib/libmpi.so.12.1.1 
+  0.1           59           59           2           0      29998 .TAU application => [CONTEXT] .TAU application => [SAMPLE] free 
+  0.1           59           59           2           0      29998 [SAMPLE] free 
+  0.1           53           53           1           0      53860 MPI_Finalize() 
+  0.0            0           30           1           0      30407 MPI_Recv() => [CONTEXT] MPI_Recv() 
+  0.0           30           30           1           0      30407 MPI_Recv() => [CONTEXT] MPI_Recv() => [SAMPLE] __GI_process_vm_readv 
+  0.0            0           30           1           0      30407 [CONTEXT] MPI_Recv() 
+  0.0           30           30           1           0      30407 [SAMPLE] __GI_process_vm_readv 
+  0.0           30           30           1           0      30021 .TAU application => [CONTEXT] .TAU application => [SAMPLE] init(double*, double*, double*, int, int) 
+  0.0           30           30           1           0      30021 [SAMPLE] init(double*, double*, double*, int, int) 
+  0.0           30           30           1           0      30005 .TAU application => [CONTEXT] .TAU application => [SAMPLE] MPID_Isend 
+  0.0           30           30           1           0      30003 .TAU application => [CONTEXT] .TAU application => [SAMPLE] __tls_get_addr 
+  0.0           30           30           1           0      30003 [SAMPLE] __tls_get_addr 
+  0.0           30           30           1           0      30001 .TAU application => [CONTEXT] .TAU application => [SAMPLE] operator new[](unsigned long) 
+  0.0           30           30           1           0      30001 .TAU application => [CONTEXT] .TAU application => [SAMPLE] stats(double*, int, int, double*, double*) 
+  0.0           30           30           1           0      30001 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] MPIDI_CH3I_Comm_find 
+  0.0           30           30           1           0      30001 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] PMPI_Waitall 
+  0.0           30           30           1           0      30001 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] __GI___pthread_getspecific 
+  0.0           30           30           1           0      30001 [SAMPLE] MPIDI_CH3I_Comm_find 
+  0.0           30           30           1           0      30001 [SAMPLE] PMPI_Waitall 
+  0.0           30           30           1           0      30001 [SAMPLE] __GI___pthread_getspecific 
+  0.0           30           30           1           0      30001 [SAMPLE] operator new[](unsigned long) 
+  0.0           30           30           1           0      30001 [SAMPLE] stats(double*, int, int, double*, double*) 
+  0.0           30           30           1           0      30000 MPI_Isend() [THROTTLED] => [CONTEXT] MPI_Isend() [THROTTLED] => [SAMPLE] MPID_Isend 
+  0.0           30           30           1           0      30000 MPI_Isend() [THROTTLED] => [CONTEXT] MPI_Isend() [THROTTLED] => [SAMPLE] UNRESOLVED /cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen2/gcc-9.2.0/tau-2.29-x6cvjho7izlv6p5hxo2ponkjjvb3m6zy/x86_64/lib/libTAUsh-papi-mpi-pthread-pdt.so
+  0.0           30           30           1           0      30000 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] UNRESOLVED /cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen2/gcc-9.2.0/tau-2.29-x6cvjho7izlv6p5hxo2ponkjjvb3m6zy/x86_64/lib/libTAUsh-papi-mpi-pthread-pdt.so
+  0.0           29           29           1           0      29999 .TAU application => [CONTEXT] .TAU application => [SAMPLE] MPID_Request_create 
+  0.0           29           29           1           0      29999 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] MPID_Request_release 
+  0.0           29           29           1           0      29999 [SAMPLE] MPID_Request_create 
+  0.0           29           29           1           0      29999 [SAMPLE] MPID_Request_release 
+  0.0           29           29           1           0      29998 .TAU application => [CONTEXT] .TAU application => [SAMPLE] _dl_update_slotinfo 
+  0.0           29           29           1           0      29998 MPI_Isend() [THROTTLED] => [CONTEXT] MPI_Isend() [THROTTLED] => [SAMPLE] mv2_smp_fast_write_contig 
+  0.0           29           29           1           0      29998 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] MPID_Request_complete 
+  0.0           29           29           1           0      29998 [SAMPLE] MPID_Request_complete 
+  0.0           29           29           1           0      29998 [SAMPLE] _dl_update_slotinfo 
+  0.0           29           29           1           0      29998 [SAMPLE] mv2_smp_fast_write_contig [THROTTLED]
+  0.0            5            5           2           0       2648 MPI_Recv() 
+  0.0        0.712        0.712           2           0        356 MPI_Reduce() 
+  0.0        0.641        0.641           4           0        160 MPI_Barrier() 
+  0.0        0.009        0.009           1           0          9 MPI_Type_vector() 
+  0.0        0.008        0.008           2           0          4 MPI_Type_commit() 
+  0.0        0.004        0.004           3           0          1 MPI_Comm_size() 
+  0.0        0.003        0.003           7           0          0 MPI_Comm_rank() 
+  0.0        0.003        0.003           1           0          3 MPI_Type_contiguous() 
+---------------------------------------------------------------------------------------
+
+USER EVENTS Profile :NODE 5, CONTEXT 0, THREAD 0
+---------------------------------------------------------------------------------------
+NumSamples   MaxValue   MinValue  MeanValue  Std. Dev.  Event Name
+---------------------------------------------------------------------------------------
+         2          8          8          8          0  Message size for reduce
+---------------------------------------------------------------------------------------
+
+NODE 6;CONTEXT 0;THREAD 0:
+---------------------------------------------------------------------------------------
+%Time    Exclusive    Inclusive       #Call      #Subrs  Inclusive Name
+              msec   total msec                          usec/call 
+---------------------------------------------------------------------------------------
+100.0     1:13.835     1:18.196           1      300026   78196300 .TAU application
+ 94.9            0     1:14.220        2466           0      30097 .TAU application => [CONTEXT] .TAU application
+ 94.9            0     1:14.220        2466           0      30097 [CONTEXT] .TAU application
+ 90.3     1:10.620     1:10.620        2346           0      30102 .TAU application => [CONTEXT] .TAU application => [SAMPLE] solve(double**, double**, double*, double, double, Plotter*, double&, double&) 
+ 90.3     1:10.620     1:10.620        2346           0      30102 [SAMPLE] solve(double**, double**, double*, double, double, Plotter*, double&, double&) 
+  4.8        3,779        3,779      100000           0         38 MPI_Waitall() 
+  4.2            0        3,299         110           0      29999 MPI_Waitall() => [CONTEXT] MPI_Waitall() 
+  4.2            0        3,299         110           0      29999 [CONTEXT] MPI_Waitall() 
+  3.7        2,880        2,880          96           0      30000 [SAMPLE] _int_malloc 
+  3.5        2,730        2,730          91           0      30000 .TAU application => [CONTEXT] .TAU application => [SAMPLE] _int_malloc 
+  2.5        1,919        1,919          64           0      29998 [SAMPLE] MPIDI_CH3I_SMP_pull_header 
+  2.4        1,889        1,889          63           0      29999 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] MPIDI_CH3I_SMP_pull_header 
+  0.9          720          720          23           0      31305 [SAMPLE] __memmove_avx_unaligned_erms 
+  0.9          719          719          24           0      29997 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] MPIDI_CH3I_SMP_read_progress 
+  0.9          719          719          24           0      29997 [SAMPLE] MPIDI_CH3I_SMP_read_progress 
+  0.4          300          300          10           0      30002 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] __memmove_avx_unaligned_erms 
+  0.4          299          299          10           0      30000 .TAU application => [CONTEXT] .TAU application => [SAMPLE] __memmove_avx_unaligned_erms 
+  0.4          299          299          10           0      29999 [SAMPLE] UNRESOLVED /cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen2/gcc-9.2.0/tau-2.29-x6cvjho7izlv6p5hxo2ponkjjvb3m6zy/x86_64/lib/libTAUsh-papi-mpi-pthread-pdt.so
+  0.3          230          230           1           0     230108 MPI_Init() 
+  0.2          189          189      100001           0          2 MPI_Isend() [THROTTLED]
+  0.2          179          179           6           0      29998 .TAU application => [CONTEXT] .TAU application => [SAMPLE] UNRESOLVED /cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen2/gcc-9.2.0/tau-2.29-x6cvjho7izlv6p5hxo2ponkjjvb3m6zy/x86_64/lib/libTAUsh-papi-mpi-pthread-pdt.so
+  0.2            0          150           4           0      37501 MPI_Isend() [THROTTLED] => [CONTEXT] MPI_Isend() [THROTTLED]
+  0.2            0          150           4           0      37501 [CONTEXT] MPI_Isend() [THROTTLED]
+  0.2          150          150           5           0      30001 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] _int_malloc 
+  0.2            0          120           4           0      30001 MPI_Irecv() [THROTTLED] => [CONTEXT] MPI_Irecv() [THROTTLED]
+  0.2            0          120           4           0      30001 [CONTEXT] MPI_Irecv() [THROTTLED]
+  0.2          120          120           4           0      30000 .TAU application => [CONTEXT] .TAU application => [SAMPLE] operator new(unsigned long) 
+  0.2          120          120           4           0      30000 [SAMPLE] operator new(unsigned long) 
+  0.1          100          100      100001           0          1 MPI_Irecv() [THROTTLED]
+  0.1           90           90           3           0      30001 .TAU application => [CONTEXT] .TAU application => [SAMPLE] MPIDI_CH3U_Recvq_FDU_or_AEP 
+  0.1           90           90           3           0      30001 [SAMPLE] MPIDI_CH3U_Recvq_FDU_or_AEP 
+  0.1           60           60           2           0      30002 MPI_Isend() [THROTTLED] => [CONTEXT] MPI_Isend() [THROTTLED] => [SAMPLE] UNRESOLVED /cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen2/gcc-9.2.0/tau-2.29-x6cvjho7izlv6p5hxo2ponkjjvb3m6zy/x86_64/lib/libTAUsh-papi-mpi-pthread-pdt.so
+  0.1           60           60           2           0      30000 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] MPIDI_CH3I_Progress 
+  0.1           60           60           2           0      30000 [SAMPLE] MPIDI_CH3I_Progress 
+  0.1           60           60           2           0      30000 [SAMPLE] __tls_get_addr 
+  0.1           60           60           2           0      30000 MPI_Irecv() [THROTTLED] => [CONTEXT] MPI_Irecv() [THROTTLED] => [SAMPLE] __memmove_avx_unaligned_erms 
+  0.1           59           59           1           0      59999 MPI_Isend() [THROTTLED] => [CONTEXT] MPI_Isend() [THROTTLED] => [SAMPLE] __memmove_avx_unaligned_erms 
+  0.1           53           53           1           0      53660 MPI_Finalize() 
+  0.0           30           30           1           0      30015 .TAU application => [CONTEXT] .TAU application => [SAMPLE] init(double*, double*, double*, int, int) 
+  0.0           30           30           1           0      30015 [SAMPLE] init(double*, double*, double*, int, int) 
+  0.0           30           30           1           0      30007 .TAU application => [CONTEXT] .TAU application => [SAMPLE] __brk 
+  0.0           30           30           1           0      30007 [SAMPLE] __brk 
+  0.0           30           30           1           0      30003 MPI_Irecv() [THROTTLED] => [CONTEXT] MPI_Irecv() [THROTTLED] => [SAMPLE] free 
+  0.0           30           30           1           0      30003 [SAMPLE] free [THROTTLED]
+  0.0           30           30           1           0      30002 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] MPID_Request_create 
+  0.0           30           30           1           0      30002 [SAMPLE] MPID_Request_create 
+  0.0           30           30           1           0      30001 .TAU application => [CONTEXT] .TAU application => [SAMPLE] MPID_Irecv 
+  0.0           30           30           1           0      30001 .TAU application => [CONTEXT] .TAU application => [SAMPLE] __tls_get_addr 
+  0.0           30           30           1           0      30001 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] MPIDI_CH3_Request_destroy 
+  0.0           30           30           1           0      30001 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] PMPI_Waitall 
+  0.0           30           30           1           0      30001 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] UNRESOLVED /cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen2/gcc-9.2.0/tau-2.29-x6cvjho7izlv6p5hxo2ponkjjvb3m6zy/x86_64/lib/libTAUsh-papi-mpi-pthread-pdt.so
+  0.0           30           30           1           0      30001 [SAMPLE] MPIDI_CH3_Request_destroy 
+  0.0           30           30           1           0      30001 [SAMPLE] MPID_Irecv 
+  0.0           30           30           1           0      30001 [SAMPLE] PMPI_Waitall 
+  0.0           30           30           1           0      30000 .TAU application => [CONTEXT] .TAU application => [SAMPLE] PMPI_Irecv 
+  0.0           30           30           1           0      30000 MPI_Irecv() [THROTTLED] => [CONTEXT] MPI_Irecv() [THROTTLED] => [SAMPLE] UNRESOLVED /cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen2/gcc-9.2.0/tau-2.29-x6cvjho7izlv6p5hxo2ponkjjvb3m6zy/x86_64/lib/libTAUsh-papi-mpi-pthread-pdt.so
+  0.0           30           30           1           0      30000 MPI_Isend() [THROTTLED] => [CONTEXT] MPI_Isend() [THROTTLED] => [SAMPLE] MPI_Type_size 
+  0.0           30           30           1           0      30000 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] MPIU_Handle_obj_free 
+  0.0           30           30           1           0      30000 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] __tls_get_addr 
+  0.0           30           30           1           0      30000 [SAMPLE] MPIU_Handle_obj_free 
+  0.0           30           30           1           0      30000 [SAMPLE] MPI_Type_size [THROTTLED]
+  0.0           30           30           1           0      30000 [SAMPLE] PMPI_Irecv 
+  0.0           29           29           1           0      29998 .TAU application => [CONTEXT] .TAU application => [SAMPLE] MPI_Isend 
+  0.0           29           29           1           0      29998 [SAMPLE] MPI_Isend 
+  0.0            0           29           1           0      29989 MPI_Recv() => [CONTEXT] MPI_Recv() 
+  0.0           29           29           1           0      29989 MPI_Recv() => [CONTEXT] MPI_Recv() => [SAMPLE] MPIDI_CH3I_SMP_pull_header 
+  0.0            0           29           1           0      29989 [CONTEXT] MPI_Recv() 
+  0.0            7            7           2           0       3516 MPI_Recv() 
+  0.0        0.669        0.669           4           0        167 MPI_Barrier() 
+  0.0        0.059        0.059           2           0         30 MPI_Reduce() 
+  0.0         0.01         0.01           1           0         10 MPI_Type_vector() 
+  0.0        0.009        0.009           2           0          4 MPI_Type_commit() 
+  0.0        0.003        0.003           7           0          0 MPI_Comm_rank() 
+  0.0        0.003        0.003           3           0          1 MPI_Comm_size() 
+  0.0        0.003        0.003           1           0          3 MPI_Type_contiguous() 
+---------------------------------------------------------------------------------------
+
+USER EVENTS Profile :NODE 6, CONTEXT 0, THREAD 0
+---------------------------------------------------------------------------------------
+NumSamples   MaxValue   MinValue  MeanValue  Std. Dev.  Event Name
+---------------------------------------------------------------------------------------
+         2          8          8          8          0  Message size for reduce
+---------------------------------------------------------------------------------------
+
+NODE 7;CONTEXT 0;THREAD 0:
+---------------------------------------------------------------------------------------
+%Time    Exclusive    Inclusive       #Call      #Subrs  Inclusive Name
+              msec   total msec                          usec/call 
+---------------------------------------------------------------------------------------
+100.0       54,546     1:18.198           1      300026   78198524 .TAU application
+ 69.9            0       54,694        1822           0      30019 .TAU application => [CONTEXT] .TAU application
+ 69.9            0       54,694        1822           0      30019 [CONTEXT] .TAU application
+ 66.5       51,994       51,994        1732           0      30020 .TAU application => [CONTEXT] .TAU application => [SAMPLE] solve(double**, double**, double*, double, double, Plotter*, double&, double&) 
+ 66.5       51,994       51,994        1732           0      30020 [SAMPLE] solve(double**, double**, double*, double, double, Plotter*, double&, double&) 
+ 29.6       23,132       23,132      100000           0        231 MPI_Waitall() 
+ 28.8            0       22,525         750           0      30035 MPI_Waitall() => [CONTEXT] MPI_Waitall() 
+ 28.8            0       22,525         750           0      30035 [CONTEXT] MPI_Waitall() 
+ 20.9       16,363       16,363         545           0      30026 [SAMPLE] MPIDI_CH3I_SMP_pull_header 
+ 20.9       16,333       16,333         544           0      30026 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] MPIDI_CH3I_SMP_pull_header 
+  6.9        5,381        5,381         179           0      30067 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] MPIDI_CH3I_SMP_read_progress 
+  6.9        5,381        5,381         179           0      30067 [SAMPLE] MPIDI_CH3I_SMP_read_progress 
+  2.8        2,159        2,159          72           0      30000 [SAMPLE] _int_malloc 
+  2.7        2,129        2,129          71           0      30000 .TAU application => [CONTEXT] .TAU application => [SAMPLE] _int_malloc 
+  1.0          779          779          26           0      30000 [SAMPLE] __memmove_avx_unaligned_erms 
+  0.5          419          419          14           0      30000 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] __memmove_avx_unaligned_erms 
+  0.3          239          239           8           0      29999 .TAU application => [CONTEXT] .TAU application => [SAMPLE] __memmove_avx_unaligned_erms 
+  0.3          230          230           1           0     230481 MPI_Init() 
+  0.3          210          210           7           0      30004 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] MPIDI_CH3I_Progress 
+  0.3          210          210           7           0      30004 [SAMPLE] MPIDI_CH3I_Progress 
+  0.2          156          156      100001           0          2 MPI_Isend() [THROTTLED]
+  0.2            0          119           4           0      30000 MPI_Isend() [THROTTLED] => [CONTEXT] MPI_Isend() [THROTTLED]
+  0.2          119          119           4           0      30000 MPI_Isend() [THROTTLED] => [CONTEXT] MPI_Isend() [THROTTLED] => [SAMPLE] __memmove_avx_unaligned_erms 
+  0.2            0          119           4           0      30000 [CONTEXT] MPI_Isend() [THROTTLED]
+  0.1           60           60           2           0      30005 .TAU application => [CONTEXT] .TAU application => [SAMPLE] __brk 
+  0.1           60           60           2           0      30005 [SAMPLE] __brk 
+  0.1           60           60           2           0      30002 .TAU application => [CONTEXT] .TAU application => [SAMPLE] UNRESOLVED /cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen2/gcc-9.2.0/tau-2.29-x6cvjho7izlv6p5hxo2ponkjjvb3m6zy/x86_64/lib/libTAUsh-papi-mpi-pthread-pdt.so
+  0.1           60           60           2           0      30002 [SAMPLE] UNRESOLVED /cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen2/gcc-9.2.0/tau-2.29-x6cvjho7izlv6p5hxo2ponkjjvb3m6zy/x86_64/lib/libTAUsh-papi-mpi-pthread-pdt.so
+  0.1           60           60           2           0      30002 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] MPIDI_CH3_PktHandler_EagerSend_Contig 
+  0.1           60           60           2           0      30002 [SAMPLE] MPIDI_CH3_PktHandler_EagerSend_Contig 
+  0.1           59           59      100001           0          1 MPI_Irecv() [THROTTLED]
+  0.1           55           55           1           0      55479 MPI_Finalize() 
+  0.0           30           30           1           0      30026 .TAU application => [CONTEXT] .TAU application => [SAMPLE] init(double*, double*, double*, int, int) 
+  0.0           30           30           1           0      30026 [SAMPLE] init(double*, double*, double*, int, int) 
+  0.0           30           30           1           0      30006 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] MPIDI_CH3_Request_destroy 
+  0.0           30           30           1           0      30006 [SAMPLE] MPIDI_CH3_Request_destroy 
+  0.0           30           30           1           0      30005 .TAU application => [CONTEXT] .TAU application => [SAMPLE] MPID_Isend 
+  0.0           30           30           1           0      30005 [SAMPLE] MPID_Isend 
+  0.0           30           30           1           0      30001 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] MPIR_Waitall_impl 
+  0.0           30           30           1           0      30001 [SAMPLE] MPIR_Waitall_impl 
+  0.0           30           30           1           0      30000 .TAU application => [CONTEXT] .TAU application => [SAMPLE] MPIDI_CH3_EagerContigShortSend 
+  0.0           30           30           1           0      30000 .TAU application => [CONTEXT] .TAU application => [SAMPLE] stats(double*, int, int, double*, double*) 
+  0.0           30           30           1           0      30000 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] UNRESOLVED /cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen2/gcc-9.2.0/mvapich2-2.3.6-3c3rtf3ca32c3t3m5gl4kka2bt7fzdmk/lib/libmpi.so.12.1.1
+  0.0           30           30           1           0      30000 [SAMPLE] MPIDI_CH3_EagerContigShortSend 
+  0.0           30           30           1           0      30000 [SAMPLE] UNRESOLVED /cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen2/gcc-9.2.0/mvapich2-2.3.6-3c3rtf3ca32c3t3m5gl4kka2bt7fzdmk/lib/libmpi.so.12.1.1 
+  0.0           30           30           1           0      30000 [SAMPLE] stats(double*, int, int, double*, double*) 
+  0.0           29           29           1           0      29999 .TAU application => [CONTEXT] .TAU application => [SAMPLE] mv2_smp_fast_write_contig 
+  0.0           29           29           1           0      29999 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] _int_malloc 
+  0.0           29           29           1           0      29999 [SAMPLE] mv2_smp_fast_write_contig 
+  0.0           29           29           1           0      29996 .TAU application => [CONTEXT] .TAU application => [SAMPLE] MPID_Irecv 
+  0.0           29           29           1           0      29996 [SAMPLE] MPID_Irecv 
+  0.0           29           29           1           0      29992 .TAU application => [CONTEXT] .TAU application => [SAMPLE] __tls_get_addr 
+  0.0           29           29           1           0      29992 [SAMPLE] __tls_get_addr 
+  0.0            0           29           1           0      29989 MPI_Irecv() [THROTTLED] => [CONTEXT] MPI_Irecv() [THROTTLED]
+  0.0           29           29           1           0      29989 MPI_Irecv() [THROTTLED] => [CONTEXT] MPI_Irecv() [THROTTLED] => [SAMPLE] _dl_update_slotinfo 
+  0.0            0           29           1           0      29989 [CONTEXT] MPI_Irecv() [THROTTLED]
+  0.0           29           29           1           0      29989 [SAMPLE] _dl_update_slotinfo [THROTTLED]
+  0.0            0           29           1           0      29981 MPI_Recv() => [CONTEXT] MPI_Recv() 
+  0.0           29           29           1           0      29981 MPI_Recv() => [CONTEXT] MPI_Recv() => [SAMPLE] MPIDI_CH3I_SMP_pull_header 
+  0.0            0           29           1           0      29981 [CONTEXT] MPI_Recv() 
+  0.0           16           16           2           0       8355 MPI_Recv() 
+  0.0        0.737        0.737           2           0        368 MPI_Reduce() 
+  0.0        0.654        0.654           4           0        164 MPI_Barrier() 
+  0.0        0.016        0.016           2           0          8 MPI_Type_commit() 
+  0.0        0.014        0.014           1           0         14 MPI_Type_vector() 
+  0.0        0.005        0.005           1           0          5 MPI_Type_contiguous() 
+  0.0        0.004        0.004           7           0          1 MPI_Comm_rank() 
+  0.0        0.003        0.003           3           0          1 MPI_Comm_size() 
+---------------------------------------------------------------------------------------
+
+USER EVENTS Profile :NODE 7, CONTEXT 0, THREAD 0
+---------------------------------------------------------------------------------------
+NumSamples   MaxValue   MinValue  MeanValue  Std. Dev.  Event Name
+---------------------------------------------------------------------------------------
+         2          8          8          8          0  Message size for reduce
+---------------------------------------------------------------------------------------
+
+NODE 8;CONTEXT 0;THREAD 0:
+---------------------------------------------------------------------------------------
+%Time    Exclusive    Inclusive       #Call      #Subrs  Inclusive Name
+              msec   total msec                          usec/call 
+---------------------------------------------------------------------------------------
+100.0       54,832     1:18.198           1      300026   78198517 .TAU application
+ 69.8            0       54,571        1817           0      30034 .TAU application => [CONTEXT] .TAU application
+ 69.8            0       54,571        1817           0      30034 [CONTEXT] .TAU application
+ 68.2       53,311       53,311        1775           0      30035 .TAU application => [CONTEXT] .TAU application => [SAMPLE] solve(double**, double**, double*, double, double, Plotter*, double&, double&) 
+ 68.2       53,311       53,311        1775           0      30035 [SAMPLE] solve(double**, double**, double*, double, double, Plotter*, double&, double&) 
+ 29.3       22,878       22,878      100000           0        229 MPI_Waitall() 
+ 29.1            0       22,738         757           0      30038 MPI_Waitall() => [CONTEXT] MPI_Waitall() 
+ 29.1            0       22,738         757           0      30038 [CONTEXT] MPI_Waitall() 
+ 21.7       16,948       16,948         564           0      30051 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] MPIDI_CH3I_SMP_pull_header 
+ 21.7       16,948       16,948         564           0      30051 [SAMPLE] MPIDI_CH3I_SMP_pull_header 
+  6.3        4,953        4,953         165           0      30020 [SAMPLE] MPIDI_CH3I_SMP_read_progress 
+  6.3        4,923        4,923         164           0      30021 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] MPIDI_CH3I_SMP_read_progress 
+  1.1          869          869          29           0      30000 .TAU application => [CONTEXT] .TAU application => [SAMPLE] _int_malloc 
+  1.1          869          869          29           0      30000 [SAMPLE] _int_malloc 
+  0.5          420          420          14           0      30002 [SAMPLE] __memmove_avx_unaligned_erms 
+  0.5          356          356          12           0      29716 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] MPIDI_CH3I_Progress 
+  0.5          356          356          12           0      29716 [SAMPLE] MPIDI_CH3I_Progress 
+  0.3          270          270           9           0      30002 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] __memmove_avx_unaligned_erms 
+  0.3          232          232           1           0     232584 MPI_Init() 
+  0.2          150          150           5           0      30002 .TAU application => [CONTEXT] .TAU application => [SAMPLE] __memmove_avx_unaligned_erms 
+  0.2          131          131      100001           0          1 MPI_Isend() [THROTTLED]
+  0.1           90           90           3           0      30001 [SAMPLE] UNRESOLVED /cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen2/gcc-9.2.0/tau-2.29-x6cvjho7izlv6p5hxo2ponkjjvb3m6zy/x86_64/lib/libTAUsh-papi-mpi-pthread-pdt.so
+  0.1           60           60           2           0      30001 .TAU application => [CONTEXT] .TAU application => [SAMPLE] UNRESOLVED /cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen2/gcc-9.2.0/tau-2.29-x6cvjho7izlv6p5hxo2ponkjjvb3m6zy/x86_64/lib/libTAUsh-papi-mpi-pthread-pdt.so
+  0.1           59           59           2           0      29999 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] MPIDI_CH3_Request_destroy 
+  0.1           59           59           2           0      29999 [SAMPLE] MPIDI_CH3_Request_destroy 
+  0.1           59           59      100001           0          1 MPI_Irecv() [THROTTLED]
+  0.1           53           53           1           0      53419 MPI_Finalize() 
+  0.0           30           30           1           0      30033 .TAU application => [CONTEXT] .TAU application => [SAMPLE] init(double*, double*, double*, int, int) 
+  0.0           30           30           1           0      30033 [SAMPLE] init(double*, double*, double*, int, int) 
+  0.0           30           30           1           0      30011 .TAU application => [CONTEXT] .TAU application => [SAMPLE] MPID_Isend 
+  0.0           30           30           1           0      30011 [SAMPLE] MPID_Isend 
+  0.0           30           30           1           0      30001 .TAU application => [CONTEXT] .TAU application => [SAMPLE] __brk 
+  0.0            0           30           1           0      30001 MPI_Isend() [THROTTLED] => [CONTEXT] MPI_Isend() [THROTTLED]
+  0.0           30           30           1           0      30001 MPI_Isend() [THROTTLED] => [CONTEXT] MPI_Isend() [THROTTLED] => [SAMPLE] MPIDI_CH3_EagerContigShortSend 
+  0.0           30           30           1           0      30001 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] UNRESOLVED /cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen2/gcc-9.2.0/mvapich2-2.3.6-3c3rtf3ca32c3t3m5gl4kka2bt7fzdmk/lib/libmpi.so.12.1.1
+  0.0           30           30           1           0      30001 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] __tls_get_addr 
+  0.0            0           30           1           0      30001 [CONTEXT] MPI_Isend() [THROTTLED]
+  0.0           30           30           1           0      30001 [SAMPLE] MPIDI_CH3_EagerContigShortSend [THROTTLED]
+  0.0           30           30           1           0      30001 [SAMPLE] UNRESOLVED /cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen2/gcc-9.2.0/mvapich2-2.3.6-3c3rtf3ca32c3t3m5gl4kka2bt7fzdmk/lib/libmpi.so.12.1.1 
+  0.0           30           30           1           0      30001 [SAMPLE] __brk 
+  0.0           30           30           1           0      30001 [SAMPLE] __tls_get_addr 
+  0.0           30           30           1           0      30000 .TAU application => [CONTEXT] .TAU application => [SAMPLE] MPI_Type_size 
+  0.0           30           30           1           0      30000 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] MPIU_Handle_obj_alloc_unsafe 
+  0.0           30           30           1           0      30000 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] UNRESOLVED /cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen2/gcc-9.2.0/tau-2.29-x6cvjho7izlv6p5hxo2ponkjjvb3m6zy/x86_64/lib/libTAUsh-papi-mpi-pthread-pdt.so
+  0.0           30           30           1           0      30000 [SAMPLE] MPIU_Handle_obj_alloc_unsafe 
+  0.0           30           30           1           0      30000 [SAMPLE] MPI_Type_size 
+  0.0           29           29           1           0      29999 .TAU application => [CONTEXT] .TAU application => [SAMPLE] stats(double*, int, int, double*, double*) 
+  0.0           29           29           1           0      29999 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] MPID_Request_create 
+  0.0           29           29           1           0      29999 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] MPID_Request_release 
+  0.0           29           29           1           0      29999 [SAMPLE] MPID_Request_create 
+  0.0           29           29           1           0      29999 [SAMPLE] MPID_Request_release 
+  0.0           29           29           1           0      29999 [SAMPLE] stats(double*, int, int, double*, double*) 
+  0.0           29           29           1           0      29996 .TAU application => [CONTEXT] .TAU application => [SAMPLE] malloc 
+  0.0           29           29           1           0      29996 [SAMPLE] malloc 
+  0.0            0           29           1           0      29972 MPI_Recv() => [CONTEXT] MPI_Recv() 
+  0.0           29           29           1           0      29972 MPI_Recv() => [CONTEXT] MPI_Recv() => [SAMPLE] MPIDI_CH3I_SMP_read_progress 
+  0.0            0           29           1           0      29972 [CONTEXT] MPI_Recv() 
+  0.0            8            8           2           0       4237 MPI_Recv() 
+  0.0        0.803        0.803           2           0        402 MPI_Reduce() 
+  0.0        0.608        0.608           4           0        152 MPI_Barrier() 
+  0.0        0.013        0.013           1           0         13 MPI_Type_vector() 
+  0.0        0.012        0.012           2           0          6 MPI_Type_commit() 
+  0.0        0.005        0.005           7           0          1 MPI_Comm_rank() 
+  0.0        0.003        0.003           3           0          1 MPI_Comm_size() 
+  0.0        0.003        0.003           1           0          3 MPI_Type_contiguous() 
+---------------------------------------------------------------------------------------
+
+USER EVENTS Profile :NODE 8, CONTEXT 0, THREAD 0
+---------------------------------------------------------------------------------------
+NumSamples   MaxValue   MinValue  MeanValue  Std. Dev.  Event Name
+---------------------------------------------------------------------------------------
+         2          8          8          8          0  Message size for reduce
+---------------------------------------------------------------------------------------
+
+NODE 9;CONTEXT 0;THREAD 0:
+---------------------------------------------------------------------------------------
+%Time    Exclusive    Inclusive       #Call      #Subrs  Inclusive Name
+              msec   total msec                          usec/call 
+---------------------------------------------------------------------------------------
+100.0       55,032     1:18.192           1      300026   78192769 .TAU application
+ 69.4            0       54,270        1805           0      30067 .TAU application => [CONTEXT] .TAU application
+ 69.4            0       54,270        1805           0      30067 [CONTEXT] .TAU application
+ 67.4       52,710       52,710        1753           0      30069 .TAU application => [CONTEXT] .TAU application => [SAMPLE] solve(double**, double**, double*, double, double, Plotter*, double&, double&) 
+ 67.4       52,710       52,710        1753           0      30069 [SAMPLE] solve(double**, double**, double*, double, double, Plotter*, double&, double&) 
+ 29.7            0       23,219         773           0      30039 MPI_Waitall() => [CONTEXT] MPI_Waitall() 
+ 29.7            0       23,219         773           0      30039 [CONTEXT] MPI_Waitall() 
+ 29.0       22,668       22,668      100000           0        227 MPI_Waitall() 
+ 22.1       17,279       17,279         575           0      30052 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] MPIDI_CH3I_SMP_pull_header 
+ 22.1       17,279       17,279         575           0      30052 [SAMPLE] MPIDI_CH3I_SMP_pull_header 
+  6.6        5,159        5,159         172           0      29999 [SAMPLE] MPIDI_CH3I_SMP_read_progress 
+  6.6        5,129        5,129         171           0      30000 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] MPIDI_CH3I_SMP_read_progress 
+  1.5        1,170        1,170          39           0      30001 [SAMPLE] _int_malloc 
+  1.4        1,110        1,110          37           0      30001 .TAU application => [CONTEXT] .TAU application => [SAMPLE] _int_malloc 
+  0.5          360          360          12           0      30000 [SAMPLE] __memmove_avx_unaligned_erms 
+  0.3          226          226           1           0     226300 MPI_Init() 
+  0.3          209          209           7           0      30000 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] MPIDI_CH3I_Progress 
+  0.3          209          209           7           0      30000 [SAMPLE] MPIDI_CH3I_Progress 
+  0.2          180          180           6           0      30000 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] __memmove_avx_unaligned_erms 
+  0.2          150          150           5           0      30000 .TAU application => [CONTEXT] .TAU application => [SAMPLE] __memmove_avx_unaligned_erms 
+  0.2          150          150           5           0      30000 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] UNRESOLVED /cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen2/gcc-9.2.0/mvapich2-2.3.6-3c3rtf3ca32c3t3m5gl4kka2bt7fzdmk/lib/libmpi.so.12.1.1
+  0.2          150          150           5           0      30000 [SAMPLE] UNRESOLVED /cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen2/gcc-9.2.0/mvapich2-2.3.6-3c3rtf3ca32c3t3m5gl4kka2bt7fzdmk/lib/libmpi.so.12.1.1 
+  0.2          137          137      100001           0          1 MPI_Isend() [THROTTLED]
+  0.1           90           90           3           0      30001 [SAMPLE] malloc 
+  0.1           62           62      100001           0          1 MPI_Irecv() [THROTTLED]
+  0.1           60           60           2           0      30007 .TAU application => [CONTEXT] .TAU application => [SAMPLE] __brk 
+  0.1           60           60           2           0      30007 [SAMPLE] __brk 
+  0.1           60           60           2           0      30002 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] malloc 
+  0.1           60           60           2           0      30000 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] _int_malloc 
+  0.1           59           59           2           0      29999 [SAMPLE] UNRESOLVED /cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen2/gcc-9.2.0/tau-2.29-x6cvjho7izlv6p5hxo2ponkjjvb3m6zy/x86_64/lib/libTAUsh-papi-mpi-pthread-pdt.so
+  0.1           59           59           2           0      29998 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] PMPI_Waitall 
+  0.1           59           59           2           0      29998 [SAMPLE] PMPI_Waitall 
+  0.1           53           53           1           0      53956 MPI_Finalize() 
+  0.0           30           30           1           0      30038 .TAU application => [CONTEXT] .TAU application => [SAMPLE] init(double*, double*, double*, int, int) 
+  0.0           30           30           1           0      30038 [SAMPLE] init(double*, double*, double*, int, int) 
+  0.0           30           30           1           0      30002 .TAU application => [CONTEXT] .TAU application => [SAMPLE] MPID_Irecv 
+  0.0           30           30           1           0      30002 [SAMPLE] MPID_Irecv 
+  0.0           30           30           1           0      30001 .TAU application => [CONTEXT] .TAU application => [SAMPLE] MPID_Isend 
+  0.0           30           30           1           0      30001 .TAU application => [CONTEXT] .TAU application => [SAMPLE] malloc 
+  0.0           30           30           1           0      30001 .TAU application => [CONTEXT] .TAU application => [SAMPLE] mv2_smp_fast_write_contig 
+  0.0           30           30           1           0      30001 [SAMPLE] MPID_Isend 
+  0.0           30           30           1           0      30001 [SAMPLE] mv2_smp_fast_write_contig 
+  0.0           30           30           1           0      30000 .TAU application => [CONTEXT] .TAU application => [SAMPLE] __tls_get_addr 
+  0.0           30           30           1           0      30000 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] UNRESOLVED /cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen2/gcc-9.2.0/tau-2.29-x6cvjho7izlv6p5hxo2ponkjjvb3m6zy/x86_64/lib/libTAUsh-papi-mpi-pthread-pdt.so
+  0.0           30           30           1           0      30000 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] __GI___pthread_getspecific 
+  0.0           30           30           1           0      30000 [SAMPLE] __GI___pthread_getspecific 
+  0.0           30           30           1           0      30000 [SAMPLE] __tls_get_addr 
+  0.0            0           29           1           0      29999 MPI_Isend() [THROTTLED] => [CONTEXT] MPI_Isend() [THROTTLED]
+  0.0           29           29           1           0      29999 MPI_Isend() [THROTTLED] => [CONTEXT] MPI_Isend() [THROTTLED] => [SAMPLE] __memmove_avx_unaligned_erms 
+  0.0           29           29           1           0      29999 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] MPIDI_CH3I_Comm_find 
+  0.0            0           29           1           0      29999 [CONTEXT] MPI_Isend() [THROTTLED]
+  0.0           29           29           1           0      29999 [SAMPLE] MPIDI_CH3I_Comm_find 
+  0.0           29           29           1           0      29998 .TAU application => [CONTEXT] .TAU application => [SAMPLE] UNRESOLVED /cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen2/gcc-9.2.0/tau-2.29-x6cvjho7izlv6p5hxo2ponkjjvb3m6zy/x86_64/lib/libTAUsh-papi-mpi-pthread-pdt.so
+  0.0           29           29           1           0      29998 .TAU application => [CONTEXT] .TAU application => [SAMPLE] stats(double*, int, int, double*, double*) 
+  0.0           29           29           1           0      29998 [SAMPLE] stats(double*, int, int, double*, double*) 
+  0.0            0           29           1           0      29967 MPI_Recv() => [CONTEXT] MPI_Recv() 
+  0.0           29           29           1           0      29967 MPI_Recv() => [CONTEXT] MPI_Recv() => [SAMPLE] MPIDI_CH3I_SMP_read_progress 
+  0.0            0           29           1           0      29967 [CONTEXT] MPI_Recv() 
+  0.0            9            9           2           0       4996 MPI_Recv() 
+  0.0            1            1           2           0        598 MPI_Reduce() 
+  0.0        0.607        0.607           4           0        152 MPI_Barrier() 
+  0.0        0.016        0.016           2           0          8 MPI_Type_commit() 
+  0.0        0.008        0.008           1           0          8 MPI_Type_vector() 
+  0.0        0.005        0.005           1           0          5 MPI_Type_contiguous() 
+  0.0        0.004        0.004           7           0          1 MPI_Comm_rank() 
+  0.0        0.003        0.003           3           0          1 MPI_Comm_size() 
+---------------------------------------------------------------------------------------
+
+USER EVENTS Profile :NODE 9, CONTEXT 0, THREAD 0
+---------------------------------------------------------------------------------------
+NumSamples   MaxValue   MinValue  MeanValue  Std. Dev.  Event Name
+---------------------------------------------------------------------------------------
+         2          8          8          8          0  Message size for reduce
+---------------------------------------------------------------------------------------
+
+NODE 10;CONTEXT 0;THREAD 0:
+---------------------------------------------------------------------------------------
+%Time    Exclusive    Inclusive       #Call      #Subrs  Inclusive Name
+              msec   total msec                          usec/call 
+---------------------------------------------------------------------------------------
+100.0     1:03.835     1:18.198           1      300026   78198152 .TAU application
+ 82.0            0     1:04.111        2130           0      30099 .TAU application => [CONTEXT] .TAU application
+ 82.0            0     1:04.111        2130           0      30099 [CONTEXT] .TAU application
+ 77.6     1:00.661     1:00.661        2015           0      30105 .TAU application => [CONTEXT] .TAU application => [SAMPLE] solve(double**, double**, double*, double, double, Plotter*, double&, double&) 
+ 77.6     1:00.661     1:00.661        2015           0      30105 [SAMPLE] solve(double**, double**, double*, double, double, Plotter*, double&, double&) 
+ 17.7       13,842       13,842      100000           0        138 MPI_Waitall() 
+ 16.9            0       13,228         440           0      30065 MPI_Waitall() => [CONTEXT] MPI_Waitall() 
+ 16.9            0       13,228         440           0      30065 [CONTEXT] MPI_Waitall() 
+ 12.8       10,018       10,018         334           0      29996 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] MPIDI_CH3I_SMP_pull_header 
+ 12.8       10,018       10,018         334           0      29996 [SAMPLE] MPIDI_CH3I_SMP_pull_header 
+  3.7        2,909        2,909          97           0      30000 .TAU application => [CONTEXT] .TAU application => [SAMPLE] _int_malloc 
+  3.7        2,909        2,909          97           0      30000 [SAMPLE] _int_malloc 
+  3.3        2,579        2,579          86           0      29999 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] MPIDI_CH3I_SMP_read_progress 
+  3.3        2,579        2,579          86           0      29999 [SAMPLE] MPIDI_CH3I_SMP_read_progress 
+  0.6          480          480          15           0      32000 [SAMPLE] __memmove_avx_unaligned_erms 
+  0.3          239          239           8           0      30000 .TAU application => [CONTEXT] .TAU application => [SAMPLE] __memmove_avx_unaligned_erms 
+  0.3          232          232           1           0     232197 MPI_Init() 
+  0.2            0          179           6           0      30000 MPI_Isend() [THROTTLED] => [CONTEXT] MPI_Isend() [THROTTLED]
+  0.2            0          179           6           0      30000 [CONTEXT] MPI_Isend() [THROTTLED]
+  0.2          149          149           5           0      30000 [SAMPLE] UNRESOLVED /cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen2/gcc-9.2.0/tau-2.29-x6cvjho7izlv6p5hxo2ponkjjvb3m6zy/x86_64/lib/libTAUsh-papi-mpi-pthread-pdt.so
+  0.2          141          141      100001           0          1 MPI_Isend() [THROTTLED]
+  0.2          120          120           3           0      40001 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] __memmove_avx_unaligned_erms 
+  0.2          120          120           4           0      30000 MPI_Isend() [THROTTLED] => [CONTEXT] MPI_Isend() [THROTTLED] => [SAMPLE] __memmove_avx_unaligned_erms 
+  0.2          119          119           4           0      29999 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] MPIDI_CH3I_Progress 
+  0.2          119          119           4           0      29999 [SAMPLE] MPIDI_CH3I_Progress 
+  0.1            0           90           3           0      30002 MPI_Irecv() [THROTTLED] => [CONTEXT] MPI_Irecv() [THROTTLED]
+  0.1            0           90           3           0      30002 [CONTEXT] MPI_Irecv() [THROTTLED]
+  0.1           89           89           3           0      29999 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] UNRESOLVED /cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen2/gcc-9.2.0/mvapich2-2.3.6-3c3rtf3ca32c3t3m5gl4kka2bt7fzdmk/lib/libmpi.so.12.1.1
+  0.1           89           89           3           0      29999 [SAMPLE] UNRESOLVED /cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen2/gcc-9.2.0/mvapich2-2.3.6-3c3rtf3ca32c3t3m5gl4kka2bt7fzdmk/lib/libmpi.so.12.1.1 
+  0.1           85           85      100001           0          1 MPI_Irecv() [THROTTLED]
+  0.1           60           60           2           0      30004 .TAU application => [CONTEXT] .TAU application => [SAMPLE] init(double*, double*, double*, int, int) 
+  0.1           60           60           2           0      30004 [SAMPLE] init(double*, double*, double*, int, int) 
+  0.1           60           60           2           0      30002 .TAU application => [CONTEXT] .TAU application => [SAMPLE] __brk 
+  0.1           60           60           2           0      30002 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] UNRESOLVED /cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen2/gcc-9.2.0/tau-2.29-x6cvjho7izlv6p5hxo2ponkjjvb3m6zy/x86_64/lib/libTAUsh-papi-mpi-pthread-pdt.so
+  0.1           60           60           2           0      30002 [SAMPLE] __brk 
+  0.1           60           60           2           0      30000 .TAU application => [CONTEXT] .TAU application => [SAMPLE] UNRESOLVED /cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen2/gcc-9.2.0/tau-2.29-x6cvjho7izlv6p5hxo2ponkjjvb3m6zy/x86_64/lib/libTAUsh-papi-mpi-pthread-pdt.so
+  0.1           60           60           2           0      30000 MPI_Irecv() [THROTTLED] => [CONTEXT] MPI_Irecv() [THROTTLED] => [SAMPLE] MPID_Irecv 
+  0.1           60           60           2           0      30000 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] MPIDI_CH3I_Comm_find 
+  0.1           60           60           2           0      30000 [SAMPLE] MPIDI_CH3I_Comm_find 
+  0.1           60           60           2           0      30000 [SAMPLE] MPID_Irecv [THROTTLED]
+  0.1           53           53           1           0      53414 MPI_Finalize() 
+  0.0           30           30           1           0      30005 MPI_Irecv() [THROTTLED] => [CONTEXT] MPI_Irecv() [THROTTLED] => [SAMPLE] MPIDI_CH3U_Request_unpack_uebuf 
+  0.0           30           30           1           0      30005 [SAMPLE] MPIDI_CH3U_Request_unpack_uebuf [THROTTLED]
+  0.0           30           30           1           0      30002 MPI_Isend() [THROTTLED] => [CONTEXT] MPI_Isend() [THROTTLED] => [SAMPLE] mv2_smp_fast_write_contig 
+  0.0           30           30           1           0      30002 [SAMPLE] mv2_smp_fast_write_contig [THROTTLED]
+  0.0           30           30           1           0      30001 .TAU application => [CONTEXT] .TAU application => [SAMPLE] MPIDI_CH3U_Recvq_FDU_or_AEP 
+  0.0           30           30           1           0      30001 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] MPIDI_CH3U_Recvq_FDP_or_AEU 
+  0.0           30           30           1           0      30001 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] MPIU_Handle_obj_free 
+  0.0           30           30           1           0      30001 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] PMPI_Waitall 
+  0.0           30           30           1           0      30001 [SAMPLE] MPIDI_CH3U_Recvq_FDP_or_AEU 
+  0.0           30           30           1           0      30001 [SAMPLE] MPIDI_CH3U_Recvq_FDU_or_AEP 
+  0.0           30           30           1           0      30001 [SAMPLE] MPIU_Handle_obj_free 
+  0.0           30           30           1           0      30001 [SAMPLE] PMPI_Waitall 
+  0.0           30           30           1           0      30000 .TAU application => [CONTEXT] .TAU application => [SAMPLE] operator new(unsigned long) 
+  0.0           30           30           1           0      30000 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] MPID_Request_complete 
+  0.0           30           30           1           0      30000 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] MPIR_Waitall_impl 
+  0.0           30           30           1           0      30000 [SAMPLE] MPID_Request_complete 
+  0.0           30           30           1           0      30000 [SAMPLE] MPIR_Waitall_impl 
+  0.0           30           30           1           0      30000 [SAMPLE] operator new(unsigned long) 
+  0.0           29           29           1           0      29999 .TAU application => [CONTEXT] .TAU application => [SAMPLE] MPID_Isend 
+  0.0           29           29           1           0      29999 [SAMPLE] MPID_Isend 
+  0.0           29           29           1           0      29998 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] MPIDI_CH3_Request_destroy 
+  0.0           29           29           1           0      29998 [SAMPLE] MPIDI_CH3_Request_destroy 
+  0.0           29           29           1           0      29996 .TAU application => [CONTEXT] .TAU application => [SAMPLE] stats(double*, int, int, double*, double*) 
+  0.0           29           29           1           0      29996 [SAMPLE] stats(double*, int, int, double*, double*) 
+  0.0           29           29           1           0      29995 MPI_Isend() [THROTTLED] => [CONTEXT] MPI_Isend() [THROTTLED] => [SAMPLE] UNRESOLVED /cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen2/gcc-9.2.0/tau-2.29-x6cvjho7izlv6p5hxo2ponkjjvb3m6zy/x86_64/lib/libTAUsh-papi-mpi-pthread-pdt.so
+  0.0            5            5           2           0       2892 MPI_Recv() 
+  0.0            1            1           2           0        728 MPI_Reduce() 
+  0.0        0.617        0.617           4           0        154 MPI_Barrier() 
+  0.0        0.015        0.015           2           0          8 MPI_Type_commit() 
+  0.0         0.01         0.01           1           0         10 MPI_Type_vector() 
+  0.0        0.004        0.004           1           0          4 MPI_Type_contiguous() 
+  0.0        0.003        0.003           3           0          1 MPI_Comm_size() 
+  0.0        0.002        0.002           7           0          0 MPI_Comm_rank() 
+---------------------------------------------------------------------------------------
+
+USER EVENTS Profile :NODE 10, CONTEXT 0, THREAD 0
+---------------------------------------------------------------------------------------
+NumSamples   MaxValue   MinValue  MeanValue  Std. Dev.  Event Name
+---------------------------------------------------------------------------------------
+         2          8          8          8          0  Message size for reduce
+---------------------------------------------------------------------------------------
+
+NODE 11;CONTEXT 0;THREAD 0:
+---------------------------------------------------------------------------------------
+%Time    Exclusive    Inclusive       #Call      #Subrs  Inclusive Name
+              msec   total msec                          usec/call 
+---------------------------------------------------------------------------------------
+100.0     1:04.168     1:18.199           1      300026   78199515 .TAU application
+ 81.3            0     1:03.565        2111           0      30112 .TAU application => [CONTEXT] .TAU application
+ 81.3            0     1:03.565        2111           0      30112 [CONTEXT] .TAU application
+ 76.2       59,605       59,605        1979           0      30119 .TAU application => [CONTEXT] .TAU application => [SAMPLE] solve(double**, double**, double*, double, double, Plotter*, double&, double&) 
+ 76.2       59,605       59,605        1979           0      30119 [SAMPLE] solve(double**, double**, double*, double, double, Plotter*, double&, double&) 
+ 17.6            0       13,744         456           0      30141 MPI_Waitall() => [CONTEXT] MPI_Waitall() 
+ 17.6            0       13,744         456           0      30141 [CONTEXT] MPI_Waitall() 
+ 17.3       13,494       13,494      100000           0        135 MPI_Waitall() 
+ 12.6        9,844        9,844         327           0      30104 [SAMPLE] MPIDI_CH3I_SMP_pull_header 
+ 12.6        9,814        9,814         326           0      30105 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] MPIDI_CH3I_SMP_pull_header 
+  4.3        3,360        3,360         112           0      30000 [SAMPLE] _int_malloc 
+  4.1        3,180        3,180         106           0      30000 .TAU application => [CONTEXT] .TAU application => [SAMPLE] _int_malloc 
+  3.8        2,999        2,999          99           0      30303 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] MPIDI_CH3I_SMP_read_progress 
+  3.8        2,999        2,999          99           0      30303 [SAMPLE] MPIDI_CH3I_SMP_read_progress 
+  0.7          510          510          17           0      30000 [SAMPLE] __memmove_avx_unaligned_erms 
+  0.3          270          270           9           0      30000 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] MPIDI_CH3I_Progress 
+  0.3          270          270           9           0      30000 [SAMPLE] MPIDI_CH3I_Progress 
+  0.3          240          240           8           0      30000 .TAU application => [CONTEXT] .TAU application => [SAMPLE] __memmove_avx_unaligned_erms 
+  0.3          233          233           1           0     233018 MPI_Init() 
+  0.2          180          180           6           0      30000 .TAU application => [CONTEXT] .TAU application => [SAMPLE] MPID_Isend 
+  0.2          180          180           6           0      30000 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] __memmove_avx_unaligned_erms 
+  0.2          180          180           6           0      30000 [SAMPLE] MPID_Isend 
+  0.2          179          179           6           0      29999 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] _int_malloc 
+  0.2          148          148      100001           0          1 MPI_Isend() [THROTTLED]
+  0.2          120          120           4           0      30000 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] MPIDI_CH3_Request_destroy 
+  0.2          120          120           4           0      30000 [SAMPLE] MPIDI_CH3_Request_destroy 
+  0.2            0          119           4           0      30000 MPI_Isend() [THROTTLED] => [CONTEXT] MPI_Isend() [THROTTLED]
+  0.2            0          119           4           0      30000 [CONTEXT] MPI_Isend() [THROTTLED]
+  0.1           91           91      100001           0          1 MPI_Irecv() [THROTTLED]
+  0.1           90           90           3           0      30000 [SAMPLE] UNRESOLVED /cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen2/gcc-9.2.0/tau-2.29-x6cvjho7izlv6p5hxo2ponkjjvb3m6zy/x86_64/lib/libTAUsh-papi-mpi-pthread-pdt.so
+  0.1           89           89           3           0      29999 MPI_Isend() [THROTTLED] => [CONTEXT] MPI_Isend() [THROTTLED] => [SAMPLE] __memmove_avx_unaligned_erms 
+  0.1           60           60           2           0      30004 .TAU application => [CONTEXT] .TAU application => [SAMPLE] init(double*, double*, double*, int, int) 
+  0.1           60           60           2           0      30004 [SAMPLE] init(double*, double*, double*, int, int) 
+  0.1           60           60           2           0      30002 .TAU application => [CONTEXT] .TAU application => [SAMPLE] MPIDI_CH3_EagerContigShortSend 
+  0.1           60           60           2           0      30002 [SAMPLE] MPIDI_CH3_EagerContigShortSend 
+  0.1           60           60           2           0      30000 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] MPIDI_CH3U_Receive_data_unexpected 
+  0.1           60           60           2           0      30000 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] MPIDI_CH3U_Recvq_FDP_or_AEU 
+  0.1           60           60           2           0      30000 [SAMPLE] MPIDI_CH3U_Receive_data_unexpected 
+  0.1           60           60           2           0      30000 [SAMPLE] MPIDI_CH3U_Recvq_FDP_or_AEU 
+  0.1           60           60           2           0      30000 .TAU application => [CONTEXT] .TAU application => [SAMPLE] MPIDI_CH3U_Request_unpack_uebuf 
+  0.1           60           60           2           0      30000 .TAU application => [CONTEXT] .TAU application => [SAMPLE] UNRESOLVED /cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen2/gcc-9.2.0/tau-2.29-x6cvjho7izlv6p5hxo2ponkjjvb3m6zy/x86_64/lib/libTAUsh-papi-mpi-pthread-pdt.so
+  0.1           60           60           2           0      30000 [SAMPLE] MPIDI_CH3U_Request_unpack_uebuf 
+  0.1           59           59           2           0      29998 [SAMPLE] mv2_smp_fast_write_contig 
+  0.1           53           53           1           0      53963 MPI_Finalize() 
+  0.0           30           30           1           0      30002 .TAU application => [CONTEXT] .TAU application => [SAMPLE] Tau_stop_class_allocation 
+  0.0           30           30           1           0      30002 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] MPIDI_CH3I_Comm_find 
+  0.0           30           30           1           0      30002 [SAMPLE] MPIDI_CH3I_Comm_find 
+  0.0           30           30           1           0      30002 [SAMPLE] Tau_stop_class_allocation 
+  0.0           30           30           1           0      30000 .TAU application => [CONTEXT] .TAU application => [SAMPLE] MPIU_Handle_obj_alloc_unsafe 
+  0.0           30           30           1           0      30000 MPI_Isend() [THROTTLED] => [CONTEXT] MPI_Isend() [THROTTLED] => [SAMPLE] mv2_smp_fast_write_contig 
+  0.0           30           30           1           0      30000 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] UNRESOLVED /cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen2/gcc-9.2.0/tau-2.29-x6cvjho7izlv6p5hxo2ponkjjvb3m6zy/x86_64/lib/libTAUsh-papi-mpi-pthread-pdt.so
+  0.0           30           30           1           0      30000 [SAMPLE] MPIU_Handle_obj_alloc_unsafe 
+  0.0           29           29           1           0      29999 .TAU application => [CONTEXT] .TAU application => [SAMPLE] __GI___sbrk 
+  0.0           29           29           1           0      29999 [SAMPLE] __GI___sbrk 
+  0.0            0           29           1           0      29998 MPI_Reduce() => [CONTEXT] MPI_Reduce() 
+  0.0           29           29           1           0      29998 MPI_Reduce() => [CONTEXT] MPI_Reduce() => [SAMPLE] MPIDI_CH3I_SMP_pull_header 
+  0.0            0           29           1           0      29998 [CONTEXT] MPI_Reduce() 
+  0.0           29           29           1           0      29996 .TAU application => [CONTEXT] .TAU application => [SAMPLE] mv2_smp_fast_write_contig 
+  0.0            7            7           2           0       3654 MPI_Recv() 
+  0.0            2            2           2           0       1024 MPI_Reduce() 
+  0.0        0.612        0.612           4           0        153 MPI_Barrier() 
+  0.0         0.01         0.01           2           0          5 MPI_Type_commit() 
+  0.0        0.009        0.009           1           0          9 MPI_Type_vector() 
+  0.0        0.004        0.004           7           0          1 MPI_Comm_rank() 
+  0.0        0.004        0.004           3           0          1 MPI_Comm_size() 
+  0.0        0.002        0.002           1           0          2 MPI_Type_contiguous() 
+---------------------------------------------------------------------------------------
+
+USER EVENTS Profile :NODE 11, CONTEXT 0, THREAD 0
+---------------------------------------------------------------------------------------
+NumSamples   MaxValue   MinValue  MeanValue  Std. Dev.  Event Name
+---------------------------------------------------------------------------------------
+         2          8          8          8          0  Message size for reduce
+---------------------------------------------------------------------------------------
+
+NODE 12;CONTEXT 0;THREAD 0:
+---------------------------------------------------------------------------------------
+%Time    Exclusive    Inclusive       #Call      #Subrs  Inclusive Name
+              msec   total msec                          usec/call 
+---------------------------------------------------------------------------------------
+100.0     1:03.840     1:18.198           1      300026   78198503 .TAU application
+ 82.0            0     1:04.086        2126           0      30144 .TAU application => [CONTEXT] .TAU application
+ 82.0            0     1:04.086        2126           0      30144 [CONTEXT] .TAU application
+ 79.2     1:01.900     1:01.900        2053           0      30151 .TAU application => [CONTEXT] .TAU application => [SAMPLE] solve(double**, double**, double*, double, double, Plotter*, double&, double&) 
+ 79.2     1:01.900     1:01.900        2053           0      30151 [SAMPLE] solve(double**, double**, double*, double, double, Plotter*, double&, double&) 
+ 17.7       13,808       13,808      100000           0        138 MPI_Waitall() 
+ 16.8            0       13,166         437           0      30130 MPI_Waitall() => [CONTEXT] MPI_Waitall() 
+ 16.8            0       13,166         437           0      30130 [CONTEXT] MPI_Waitall() 
+ 12.0        9,417        9,417         313           0      30086 [SAMPLE] MPIDI_CH3I_SMP_pull_header 
+ 12.0        9,387        9,387         312           0      30087 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] MPIDI_CH3I_SMP_pull_header 
+  4.1        3,239        3,239         107           0      30280 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] MPIDI_CH3I_SMP_read_progress 
+  4.1        3,239        3,239         107           0      30280 [SAMPLE] MPIDI_CH3I_SMP_read_progress 
+  1.8        1,436        1,436          48           0      29922 [SAMPLE] _int_malloc 
+  1.8        1,406        1,406          47           0      29921 .TAU application => [CONTEXT] .TAU application => [SAMPLE] _int_malloc 
+  1.0          780          780          26           0      30000 [SAMPLE] __memmove_avx_unaligned_erms 
+  0.5          420          420          14           0      30001 .TAU application => [CONTEXT] .TAU application => [SAMPLE] __memmove_avx_unaligned_erms 
+  0.3          232          232           1           0     232582 MPI_Init() 
+  0.2          180          180           6           0      30000 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] __memmove_avx_unaligned_erms 
+  0.2          156          156      100001           0          2 MPI_Isend() [THROTTLED]
+  0.2            0          149           5           0      30000 MPI_Isend() [THROTTLED] => [CONTEXT] MPI_Isend() [THROTTLED]
+  0.2            0          149           5           0      30000 [CONTEXT] MPI_Isend() [THROTTLED]
+  0.2          149          149           5           0      29999 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] MPIDI_CH3I_Progress 
+  0.2          149          149           5           0      29999 [SAMPLE] MPIDI_CH3I_Progress 
+  0.2          120          120           4           0      30000 .TAU application => [CONTEXT] .TAU application => [SAMPLE] UNRESOLVED /cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen2/gcc-9.2.0/tau-2.29-x6cvjho7izlv6p5hxo2ponkjjvb3m6zy/x86_64/lib/libTAUsh-papi-mpi-pthread-pdt.so
+  0.2          120          120           4           0      30000 [SAMPLE] UNRESOLVED /cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen2/gcc-9.2.0/tau-2.29-x6cvjho7izlv6p5hxo2ponkjjvb3m6zy/x86_64/lib/libTAUsh-papi-mpi-pthread-pdt.so
+  0.2            0          119           4           0      30000 MPI_Irecv() [THROTTLED] => [CONTEXT] MPI_Irecv() [THROTTLED]
+  0.2          119          119           4           0      30000 MPI_Isend() [THROTTLED] => [CONTEXT] MPI_Isend() [THROTTLED] => [SAMPLE] __memmove_avx_unaligned_erms 
+  0.2            0          119           4           0      30000 [CONTEXT] MPI_Irecv() [THROTTLED]
+  0.1           94           94      100001           0          1 MPI_Irecv() [THROTTLED]
+  0.1           60           60           2           0      30004 .TAU application => [CONTEXT] .TAU application => [SAMPLE] init(double*, double*, double*, int, int) 
+  0.1           60           60           2           0      30004 [SAMPLE] init(double*, double*, double*, int, int) 
+  0.1           60           60           2           0      30000 [SAMPLE] MPID_Isend 
+  0.1           59           59           2           0      30000 .TAU application => [CONTEXT] .TAU application => [SAMPLE] __tls_get_addr 
+  0.1           59           59           2           0      30000 MPI_Irecv() [THROTTLED] => [CONTEXT] MPI_Irecv() [THROTTLED] => [SAMPLE] __memmove_avx_unaligned_erms 
+  0.1           59           59           2           0      30000 [SAMPLE] __tls_get_addr 
+  0.1           53           53           1           0      53404 MPI_Finalize() 
+  0.0           30           30           1           0      30002 .TAU application => [CONTEXT] .TAU application => [SAMPLE] __brk 
+  0.0           30           30           1           0      30002 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] MPIDI_CH3U_Recvq_FDP_or_AEU 
+  0.0           30           30           1           0      30002 [SAMPLE] MPIDI_CH3U_Recvq_FDP_or_AEU 
+  0.0           30           30           1           0      30002 [SAMPLE] __brk 
+  0.0           30           30           1           0      30001 .TAU application => [CONTEXT] .TAU application => [SAMPLE] MPID_Isend 
+  0.0           30           30           1           0      30001 MPI_Irecv() [THROTTLED] => [CONTEXT] MPI_Irecv() [THROTTLED] => [SAMPLE] __memcpy_avx_unaligned 
+  0.0           30           30           1           0      30001 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] MPIDI_CH3U_Receive_data_unexpected 
+  0.0           30           30           1           0      30001 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] _int_malloc 
+  0.0           30           30           1           0      30001 [SAMPLE] MPIDI_CH3U_Receive_data_unexpected 
+  0.0           30           30           1           0      30001 [SAMPLE] __memcpy_avx_unaligned [THROTTLED]
+  0.0           30           30           1           0      30000 .TAU application => [CONTEXT] .TAU application => [SAMPLE] _dl_update_slotinfo 
+  0.0           30           30           1           0      30000 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] MPIDI_CH3U_Receive_data_found 
+  0.0           30           30           1           0      30000 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] MPIR_Waitall_impl 
+  0.0           30           30           1           0      30000 [SAMPLE] MPIDI_CH3U_Receive_data_found 
+  0.0           30           30           1           0      30000 [SAMPLE] MPIR_Waitall_impl 
+  0.0           30           30           1           0      30000 [SAMPLE] _dl_update_slotinfo 
+  0.0           29           29           1           0      29999 .TAU application => [CONTEXT] .TAU application => [SAMPLE] MPIDI_CH3U_Recvq_FDU_or_AEP 
+  0.0           29           29           1           0      29999 MPI_Irecv() [THROTTLED] => [CONTEXT] MPI_Irecv() [THROTTLED] => [SAMPLE] MPID_Request_create 
+  0.0           29           29           1           0      29999 MPI_Isend() [THROTTLED] => [CONTEXT] MPI_Isend() [THROTTLED] => [SAMPLE] MPID_Isend 
+  0.0            0           29           1           0      29999 MPI_Reduce() => [CONTEXT] MPI_Reduce() 
+  0.0           29           29           1           0      29999 MPI_Reduce() => [CONTEXT] MPI_Reduce() => [SAMPLE] MPIDI_CH3I_SMP_pull_header 
+  0.0           29           29           1           0      29999 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] MPIU_Handle_obj_alloc_unsafe 
+  0.0            0           29           1           0      29999 [CONTEXT] MPI_Reduce() 
+  0.0           29           29           1           0      29999 [SAMPLE] MPIDI_CH3U_Recvq_FDU_or_AEP 
+  0.0           29           29           1           0      29999 [SAMPLE] MPID_Request_create [THROTTLED]
+  0.0           29           29           1           0      29999 [SAMPLE] MPIU_Handle_obj_alloc_unsafe 
+  0.0           29           29           1           0      29998 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] UNRESOLVED /cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen2/gcc-9.2.0/mvapich2-2.3.6-3c3rtf3ca32c3t3m5gl4kka2bt7fzdmk/lib/libmpi.so.12.1.1
+  0.0           29           29           1           0      29998 [SAMPLE] UNRESOLVED /cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen2/gcc-9.2.0/mvapich2-2.3.6-3c3rtf3ca32c3t3m5gl4kka2bt7fzdmk/lib/libmpi.so.12.1.1 
+  0.0            8            8           2           0       4466 MPI_Recv() 
+  0.0            2            2           2           0       1160 MPI_Reduce() 
+  0.0        0.615        0.615           4           0        154 MPI_Barrier() 
+  0.0        0.011        0.011           2           0          6 MPI_Type_commit() 
+  0.0        0.009        0.009           1           0          9 MPI_Type_vector() 
+  0.0        0.004        0.004           3           0          1 MPI_Comm_size() 
+  0.0        0.003        0.003           7           0          0 MPI_Comm_rank() 
+  0.0        0.003        0.003           1           0          3 MPI_Type_contiguous() 
+---------------------------------------------------------------------------------------
+
+USER EVENTS Profile :NODE 12, CONTEXT 0, THREAD 0
+---------------------------------------------------------------------------------------
+NumSamples   MaxValue   MinValue  MeanValue  Std. Dev.  Event Name
+---------------------------------------------------------------------------------------
+         2          8          8          8          0  Message size for reduce
+---------------------------------------------------------------------------------------
+
+NODE 13;CONTEXT 0;THREAD 0:
+---------------------------------------------------------------------------------------
+%Time    Exclusive    Inclusive       #Call      #Subrs  Inclusive Name
+              msec   total msec                          usec/call 
+---------------------------------------------------------------------------------------
+100.0     1:03.808     1:18.196           1      300026   78196308 .TAU application
+ 80.8            0     1:03.147        2102           0      30042 .TAU application => [CONTEXT] .TAU application
+ 80.8            0     1:03.147        2102           0      30042 [CONTEXT] .TAU application
+ 77.0     1:00.176     1:00.176        2003           0      30043 .TAU application => [CONTEXT] .TAU application => [SAMPLE] solve(double**, double**, double*, double, double, Plotter*, double&, double&) 
+ 77.0     1:00.176     1:00.176        2003           0      30043 [SAMPLE] solve(double**, double**, double*, double, double, Plotter*, double&, double&) 
+ 17.9            0       13,982         463           0      30199 MPI_Waitall() => [CONTEXT] MPI_Waitall() 
+ 17.9            0       13,982         463           0      30199 [CONTEXT] MPI_Waitall() 
+ 17.7       13,835       13,835      100000           0        138 MPI_Waitall() 
+ 13.5       10,595       10,595         350           0      30273 [SAMPLE] MPIDI_CH3I_SMP_pull_header 
+ 13.5       10,565       10,565         349           0      30274 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] MPIDI_CH3I_SMP_pull_header 
+  3.5        2,758        2,758          92           0      29979 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] MPIDI_CH3I_SMP_read_progress 
+  3.5        2,758        2,758          92           0      29979 [SAMPLE] MPIDI_CH3I_SMP_read_progress 
+  3.0        2,311        2,311          77           0      30020 [SAMPLE] _int_malloc 
+  2.9        2,251        2,251          75           0      30020 .TAU application => [CONTEXT] .TAU application => [SAMPLE] _int_malloc 
+  0.7          540          540          18           0      30000 [SAMPLE] __memmove_avx_unaligned_erms 
+  0.5          390          390          13           0      30000 .TAU application => [CONTEXT] .TAU application => [SAMPLE] __memmove_avx_unaligned_erms 
+  0.3          230          230           1           0     230369 MPI_Init() 
+  0.2          152          152      100001           0          2 MPI_Isend() [THROTTLED]
+  0.2          150          150           5           0      30001 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] MPIDI_CH3I_Progress 
+  0.2          150          150           5           0      30001 [SAMPLE] MPIDI_CH3I_Progress 
+  0.2            0          149           5           0      30000 MPI_Isend() [THROTTLED] => [CONTEXT] MPI_Isend() [THROTTLED]
+  0.2            0          149           5           0      30000 [CONTEXT] MPI_Isend() [THROTTLED]
+  0.2          120          120           4           0      30000 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] __memmove_avx_unaligned_erms 
+  0.2          119          119           4           0      30000 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] MPIDI_CH3I_Comm_find 
+  0.2          119          119           4           0      30000 [SAMPLE] MPIDI_CH3I_Comm_find 
+  0.2          119          119           4           0      29999 [SAMPLE] UNRESOLVED /cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen2/gcc-9.2.0/tau-2.29-x6cvjho7izlv6p5hxo2ponkjjvb3m6zy/x86_64/lib/libTAUsh-papi-mpi-pthread-pdt.so
+  0.1          101          101      100001           0          1 MPI_Irecv() [THROTTLED]
+  0.1           89           89           3           0      29999 .TAU application => [CONTEXT] .TAU application => [SAMPLE] UNRESOLVED /cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen2/gcc-9.2.0/tau-2.29-x6cvjho7izlv6p5hxo2ponkjjvb3m6zy/x86_64/lib/libTAUsh-papi-mpi-pthread-pdt.so
+  0.1           60           60           2           0      30004 .TAU application => [CONTEXT] .TAU application => [SAMPLE] init(double*, double*, double*, int, int) 
+  0.1           60           60           2           0      30004 [SAMPLE] init(double*, double*, double*, int, int) 
+  0.1           60           60           2           0      30000 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] _int_malloc 
+  0.1           53           53           1           0      53393 MPI_Finalize() 
+  0.0           30           30           1           0      30001 .TAU application => [CONTEXT] .TAU application => [SAMPLE] operator new(unsigned long) 
+  0.0           30           30           1           0      30001 .TAU application => [CONTEXT] .TAU application => [SAMPLE] operator new[](unsigned long) 
+  0.0           30           30           1           0      30001 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] PMPI_Waitall 
+  0.0           30           30           1           0      30001 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] UNRESOLVED /cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen2/gcc-9.2.0/mvapich2-2.3.6-3c3rtf3ca32c3t3m5gl4kka2bt7fzdmk/lib/libmpi.so.12.1.1
+  0.0           30           30           1           0      30001 [SAMPLE] PMPI_Waitall 
+  0.0           30           30           1           0      30001 [SAMPLE] UNRESOLVED /cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen2/gcc-9.2.0/mvapich2-2.3.6-3c3rtf3ca32c3t3m5gl4kka2bt7fzdmk/lib/libmpi.so.12.1.1 
+  0.0           30           30           1           0      30001 [SAMPLE] operator new(unsigned long) 
+  0.0           30           30           1           0      30001 [SAMPLE] operator new[](unsigned long) 
+  0.0           30           30           1           0      30000 .TAU application => [CONTEXT] .TAU application => [SAMPLE] MPIDI_CH3U_Recvq_FDU_or_AEP 
+  0.0           30           30           1           0      30000 .TAU application => [CONTEXT] .TAU application => [SAMPLE] MPID_Irecv 
+  0.0           30           30           1           0      30000 .TAU application => [CONTEXT] .TAU application => [SAMPLE] free 
+  0.0           30           30           1           0      30000 MPI_Isend() [THROTTLED] => [CONTEXT] MPI_Isend() [THROTTLED] => [SAMPLE] UNRESOLVED /cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen2/gcc-9.2.0/tau-2.29-x6cvjho7izlv6p5hxo2ponkjjvb3m6zy/x86_64/lib/libTAUsh-papi-mpi-pthread-pdt.so
+  0.0           30           30           1           0      30000 MPI_Isend() [THROTTLED] => [CONTEXT] MPI_Isend() [THROTTLED] => [SAMPLE] __memmove_avx_unaligned_erms 
+  0.0           30           30           1           0      30000 MPI_Isend() [THROTTLED] => [CONTEXT] MPI_Isend() [THROTTLED] => [SAMPLE] mv2_smp_fast_write_contig 
+  0.0           30           30           1           0      30000 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] MPIDI_CH3U_Recvq_FDP_or_AEU 
+  0.0           30           30           1           0      30000 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] MPID_Request_create 
+  0.0           30           30           1           0      30000 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] malloc 
+  0.0           30           30           1           0      30000 [SAMPLE] MPIDI_CH3U_Recvq_FDP_or_AEU 
+  0.0           30           30           1           0      30000 [SAMPLE] MPIDI_CH3U_Recvq_FDU_or_AEP 
+  0.0           30           30           1           0      30000 [SAMPLE] MPID_Irecv 
+  0.0           30           30           1           0      30000 [SAMPLE] MPID_Request_create 
+  0.0           30           30           1           0      30000 [SAMPLE] free 
+  0.0           30           30           1           0      30000 [SAMPLE] malloc 
+  0.0           30           30           1           0      30000 [SAMPLE] mv2_smp_fast_write_contig [THROTTLED]
+  0.0           29           29           1           0      29999 MPI_Isend() [THROTTLED] => [CONTEXT] MPI_Isend() [THROTTLED] => [SAMPLE] AllocationShouldBeProtected 
+  0.0           29           29           1           0      29999 MPI_Isend() [THROTTLED] => [CONTEXT] MPI_Isend() [THROTTLED] => [SAMPLE] MPID_Isend 
+  0.0           29           29           1           0      29999 [SAMPLE] AllocationShouldBeProtected [THROTTLED]
+  0.0           29           29           1           0      29999 [SAMPLE] MPID_Isend [THROTTLED]
+  0.0           29           29           1           0      29998 .TAU application => [CONTEXT] .TAU application => [SAMPLE] flush_dereg_mrs_external 
+  0.0           29           29           1           0      29998 [SAMPLE] flush_dereg_mrs_external 
+  0.0            0           29           1           0      29997 MPI_Reduce() => [CONTEXT] MPI_Reduce() 
+  0.0           29           29           1           0      29997 MPI_Reduce() => [CONTEXT] MPI_Reduce() => [SAMPLE] MPIDI_CH3I_SMP_pull_header 
+  0.0            0           29           1           0      29997 [CONTEXT] MPI_Reduce() 
+  0.0           29           29           1           0      29996 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] MPID_Request_release 
+  0.0           29           29           1           0      29996 [SAMPLE] MPID_Request_release 
+  0.0           28           28           1           0      28502 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] MPIDI_CH3_Request_destroy 
+  0.0           28           28           1           0      28502 [SAMPLE] MPIDI_CH3_Request_destroy 
+  0.0           10           10           2           0       5236 MPI_Recv() 
+  0.0            3            3           2           0       1570 MPI_Reduce() 
+  0.0         0.61         0.61           4           0        152 MPI_Barrier() 
+  0.0        0.014        0.014           1           0         14 MPI_Type_vector() 
+  0.0        0.012        0.012           2           0          6 MPI_Type_commit() 
+  0.0        0.003        0.003           3           0          1 MPI_Comm_size() 
+  0.0        0.003        0.003           1           0          3 MPI_Type_contiguous() 
+  0.0        0.002        0.002           7           0          0 MPI_Comm_rank() 
+---------------------------------------------------------------------------------------
+
+USER EVENTS Profile :NODE 13, CONTEXT 0, THREAD 0
+---------------------------------------------------------------------------------------
+NumSamples   MaxValue   MinValue  MeanValue  Std. Dev.  Event Name
+---------------------------------------------------------------------------------------
+         2          8          8          8          0  Message size for reduce
+---------------------------------------------------------------------------------------
+
+NODE 14;CONTEXT 0;THREAD 0:
+---------------------------------------------------------------------------------------
+%Time    Exclusive    Inclusive       #Call      #Subrs  Inclusive Name
+              msec   total msec                          usec/call 
+---------------------------------------------------------------------------------------
+100.0       51,886     1:18.184           1      300026   78184159 .TAU application
+ 66.7            0       52,125        1737           0      30009 .TAU application => [CONTEXT] .TAU application
+ 66.7            0       52,125        1737           0      30009 [CONTEXT] .TAU application
+ 65.7       51,405       51,405        1713           0      30009 .TAU application => [CONTEXT] .TAU application => [SAMPLE] solve(double**, double**, double*, double, double, Plotter*, double&, double&) 
+ 65.7       51,405       51,405        1713           0      30009 [SAMPLE] solve(double**, double**, double*, double, double, Plotter*, double&, double&) 
+ 33.1       25,843       25,843      100000           0        258 MPI_Waitall() 
+ 31.7            0       24,796         823           0      30129 MPI_Waitall() => [CONTEXT] MPI_Waitall() 
+ 31.7            0       24,796         823           0      30129 [CONTEXT] MPI_Waitall() 
+ 23.1       18,071       18,071         602           0      30019 [SAMPLE] MPIDI_CH3I_SMP_pull_header 
+ 23.1       18,041       18,041         601           0      30019 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] MPIDI_CH3I_SMP_pull_header 
+  6.9        5,404        5,404         177           0      30536 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] MPIDI_CH3I_SMP_read_progress 
+  6.9        5,404        5,404         177           0      30536 [SAMPLE] MPIDI_CH3I_SMP_read_progress 
+  1.6        1,230        1,230          41           0      30000 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] MPIDI_CH3I_Progress 
+  1.6        1,230        1,230          41           0      30000 [SAMPLE] MPIDI_CH3I_Progress 
+  0.5          360          360          12           0      30000 .TAU application => [CONTEXT] .TAU application => [SAMPLE] _int_malloc 
+  0.5          360          360          12           0      30000 [SAMPLE] _int_malloc 
+  0.3          218          218           1           0     218256 MPI_Init() 
+  0.2          179          179           6           0      29944 [SAMPLE] __memmove_avx_unaligned_erms 
+  0.2          120          120           4           0      30000 [SAMPLE] UNRESOLVED /cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen2/gcc-9.2.0/tau-2.29-x6cvjho7izlv6p5hxo2ponkjjvb3m6zy/x86_64/lib/libTAUsh-papi-mpi-pthread-pdt.so
+  0.1          106          106      100001           0          1 MPI_Isend() [THROTTLED]
+  0.1           90           90           3           0      30000 .TAU application => [CONTEXT] .TAU application => [SAMPLE] __memmove_avx_unaligned_erms 
+  0.1            0           89           3           0      29887 MPI_Isend() [THROTTLED] => [CONTEXT] MPI_Isend() [THROTTLED]
+  0.1           89           89           3           0      29887 MPI_Isend() [THROTTLED] => [CONTEXT] MPI_Isend() [THROTTLED] => [SAMPLE] __memmove_avx_unaligned_erms 
+  0.1            0           89           3           0      29887 [CONTEXT] MPI_Isend() [THROTTLED]
+  0.1           60           60           2           0      30000 .TAU application => [CONTEXT] .TAU application => [SAMPLE] mv2_smp_fast_write_contig 
+  0.1           60           60           2           0      30000 [SAMPLE] malloc 
+  0.1           60           60           2           0      30000 [SAMPLE] mv2_smp_fast_write_contig 
+  0.1            0           60           2           0      30000 MPI_Irecv() [THROTTLED] => [CONTEXT] MPI_Irecv() [THROTTLED]
+  0.1           60           60           2           0      30000 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] UNRESOLVED /cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen2/gcc-9.2.0/tau-2.29-x6cvjho7izlv6p5hxo2ponkjjvb3m6zy/x86_64/lib/libTAUsh-papi-mpi-pthread-pdt.so
+  0.1            0           60           2           0      30000 [CONTEXT] MPI_Irecv() [THROTTLED]
+  0.1           59           59           2           0      30000 [SAMPLE] PMPI_Irecv 
+  0.1           53           53           1           0      53375 MPI_Finalize() 
+  0.1           46           46      100001           0          0 MPI_Irecv() [THROTTLED]
+  0.0           30           30           1           0      30029 .TAU application => [CONTEXT] .TAU application => [SAMPLE] init(double*, double*, double*, int, int) 
+  0.0           30           30           1           0      30029 [SAMPLE] init(double*, double*, double*, int, int) 
+  0.0           30           30           1           0      30001 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] UNRESOLVED /cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen2/gcc-9.2.0/mvapich2-2.3.6-3c3rtf3ca32c3t3m5gl4kka2bt7fzdmk/lib/libmpi.so.12.1.1
+  0.0           30           30           1           0      30001 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] malloc 
+  0.0           30           30           1           0      30001 [SAMPLE] UNRESOLVED /cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen2/gcc-9.2.0/mvapich2-2.3.6-3c3rtf3ca32c3t3m5gl4kka2bt7fzdmk/lib/libmpi.so.12.1.1 
+  0.0           30           30           1           0      30000 .TAU application => [CONTEXT] .TAU application => [SAMPLE] UNRESOLVED /cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen2/gcc-9.2.0/tau-2.29-x6cvjho7izlv6p5hxo2ponkjjvb3m6zy/x86_64/lib/libTAUsh-papi-mpi-pthread-pdt.so
+  0.0           30           30           1           0      30000 .TAU application => [CONTEXT] .TAU application => [SAMPLE] _dl_update_slotinfo 
+  0.0           30           30           1           0      30000 .TAU application => [CONTEXT] .TAU application => [SAMPLE] malloc 
+  0.0           30           30           1           0      30000 MPI_Irecv() [THROTTLED] => [CONTEXT] MPI_Irecv() [THROTTLED] => [SAMPLE] PMPI_Irecv 
+  0.0           30           30           1           0      30000 MPI_Irecv() [THROTTLED] => [CONTEXT] MPI_Irecv() [THROTTLED] => [SAMPLE] UNRESOLVED /cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen2/gcc-9.2.0/tau-2.29-x6cvjho7izlv6p5hxo2ponkjjvb3m6zy/x86_64/lib/libTAUsh-papi-mpi-pthread-pdt.so
+  0.0            0           30           1           0      30000 MPI_Reduce() => [CONTEXT] MPI_Reduce() 
+  0.0           30           30           1           0      30000 MPI_Reduce() => [CONTEXT] MPI_Reduce() => [SAMPLE] MPIDU_Sched_progress 
+  0.0            0           30           1           0      30000 [CONTEXT] MPI_Reduce() 
+  0.0           30           30           1           0      30000 [SAMPLE] MPIDU_Sched_progress 
+  0.0           30           30           1           0      30000 [SAMPLE] _dl_update_slotinfo 
+  0.0           29           29           1           0      29999 .TAU application => [CONTEXT] .TAU application => [SAMPLE] MPID_Isend 
+  0.0           29           29           1           0      29999 .TAU application => [CONTEXT] .TAU application => [SAMPLE] PMPI_Irecv 
+  0.0           29           29           1           0      29999 [SAMPLE] MPID_Isend 
+  0.0           29           29           1           0      29998 .TAU application => [CONTEXT] .TAU application => [SAMPLE] __tls_get_addr_slow 
+  0.0           29           29           1           0      29998 [SAMPLE] __tls_get_addr_slow 
+  0.0            0           29           1           0      29977 MPI_Recv() => [CONTEXT] MPI_Recv() 
+  0.0           29           29           1           0      29977 MPI_Recv() => [CONTEXT] MPI_Recv() => [SAMPLE] MPIDI_CH3I_SMP_pull_header 
+  0.0            0           29           1           0      29977 [CONTEXT] MPI_Recv() 
+  0.0           24           24           2           0      12476 MPI_Recv() 
+  0.0            3            3           2           0       1614 MPI_Reduce() 
+  0.0        0.613        0.613           4           0        153 MPI_Barrier() 
+  0.0        0.016        0.016           2           0          8 MPI_Type_commit() 
+  0.0        0.014        0.014           1           0         14 MPI_Type_vector() 
+  0.0        0.004        0.004           7           0          1 MPI_Comm_rank() 
+  0.0        0.004        0.004           3           0          1 MPI_Comm_size() 
+  0.0        0.004        0.004           1           0          4 MPI_Type_contiguous() 
+---------------------------------------------------------------------------------------
+
+USER EVENTS Profile :NODE 14, CONTEXT 0, THREAD 0
+---------------------------------------------------------------------------------------
+NumSamples   MaxValue   MinValue  MeanValue  Std. Dev.  Event Name
+---------------------------------------------------------------------------------------
+         2          8          8          8          0  Message size for reduce
+---------------------------------------------------------------------------------------
+
+NODE 15;CONTEXT 0;THREAD 0:
+---------------------------------------------------------------------------------------
+%Time    Exclusive    Inclusive       #Call      #Subrs  Inclusive Name
+              msec   total msec                          usec/call 
+---------------------------------------------------------------------------------------
+100.0       51,961     1:18.184           1      300026   78184156 .TAU application
+ 65.9            0       51,537        1717           0      30016 .TAU application => [CONTEXT] .TAU application
+ 65.9            0       51,537        1717           0      30016 [CONTEXT] .TAU application
+ 65.3       51,057       51,057        1701           0      30016 .TAU application => [CONTEXT] .TAU application => [SAMPLE] solve(double**, double**, double*, double, double, Plotter*, double&, double&) 
+ 65.3       51,057       51,057        1701           0      30016 [SAMPLE] solve(double**, double**, double*, double, double, Plotter*, double&, double&) 
+ 33.0       25,772       25,772      100000           0        258 MPI_Waitall() 
+ 32.5            0       25,410         845           0      30072 MPI_Waitall() => [CONTEXT] MPI_Waitall() 
+ 32.5            0       25,410         845           0      30072 [CONTEXT] MPI_Waitall() 
+ 24.4       19,109       19,109         635           0      30094 [SAMPLE] MPIDI_CH3I_SMP_pull_header 
+ 24.4       19,049       19,049         633           0      30094 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] MPIDI_CH3I_SMP_pull_header 
+  7.2        5,641        5,641         188           0      30006 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] MPIDI_CH3I_SMP_read_progress 
+  7.2        5,641        5,641         188           0      30006 [SAMPLE] MPIDI_CH3I_SMP_read_progress 
+  0.8          659          659          22           0      30000 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] MPIDI_CH3I_Progress 
+  0.8          659          659          22           0      30000 [SAMPLE] MPIDI_CH3I_Progress 
+  0.4          300          300          10           0      30000 [SAMPLE] _int_malloc 
+  0.3          270          270           9           0      30000 .TAU application => [CONTEXT] .TAU application => [SAMPLE] _int_malloc 
+  0.3          218          218           1           0     218271 MPI_Init() 
+  0.2          149          149           5           0      30000 [SAMPLE] __memmove_avx_unaligned_erms 
+  0.1          102          102      100001           0          1 MPI_Isend() [THROTTLED]
+  0.1           90           90           3           0      30000 .TAU application => [CONTEXT] .TAU application => [SAMPLE] __memmove_avx_unaligned_erms 
+  0.1           53           53           1           0      53365 MPI_Finalize() 
+  0.1           44           44      100001           0          0 MPI_Irecv() [THROTTLED]
+  0.0           30           30           1           0      30029 .TAU application => [CONTEXT] .TAU application => [SAMPLE] init(double*, double*, double*, int, int) 
+  0.0           30           30           1           0      30029 [SAMPLE] init(double*, double*, double*, int, int) 
+  0.0            0           30           1           0      30001 MPI_Reduce() => [CONTEXT] MPI_Reduce() 
+  0.0           30           30           1           0      30001 MPI_Reduce() => [CONTEXT] MPI_Reduce() => [SAMPLE] MPIDI_CH3I_SMP_pull_header 
+  0.0            0           30           1           0      30001 [CONTEXT] MPI_Reduce() 
+  0.0           30           30           1           0      30000 .TAU application => [CONTEXT] .TAU application => [SAMPLE] UNRESOLVED /cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen2/gcc-9.2.0/tau-2.29-x6cvjho7izlv6p5hxo2ponkjjvb3m6zy/x86_64/lib/libTAUsh-papi-mpi-pthread-pdt.so
+  0.0           30           30           1           0      30000 .TAU application => [CONTEXT] .TAU application => [SAMPLE] __GI___sbrk 
+  0.0            0           30           1           0      30000 MPI_Isend() [THROTTLED] => [CONTEXT] MPI_Isend() [THROTTLED]
+  0.0           30           30           1           0      30000 MPI_Isend() [THROTTLED] => [CONTEXT] MPI_Isend() [THROTTLED] => [SAMPLE] __memmove_avx_unaligned_erms 
+  0.0            0           30           1           0      30000 [CONTEXT] MPI_Isend() [THROTTLED]
+  0.0           30           30           1           0      30000 [SAMPLE] UNRESOLVED /cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen2/gcc-9.2.0/tau-2.29-x6cvjho7izlv6p5hxo2ponkjjvb3m6zy/x86_64/lib/libTAUsh-papi-mpi-pthread-pdt.so
+  0.0           30           30           1           0      30000 [SAMPLE] __GI___sbrk 
+  0.0           29           29           1           0      29999 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] __memmove_avx_unaligned_erms 
+  0.0           29           29           1           0      29999 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] _int_malloc 
+  0.0           29           29           1           0      29996 .TAU application => [CONTEXT] .TAU application => [SAMPLE] MPI_Isend 
+  0.0           29           29           1           0      29996 [SAMPLE] MPI_Isend 
+  0.0            0           29           1           0      29977 MPI_Recv() => [CONTEXT] MPI_Recv() 
+  0.0           29           29           1           0      29977 MPI_Recv() => [CONTEXT] MPI_Recv() => [SAMPLE] MPIDI_CH3I_SMP_pull_header 
+  0.0            0           29           1           0      29977 [CONTEXT] MPI_Recv() 
+  0.0           26           26           2           0      13256 MPI_Recv() 
+  0.0            3            3           2           0       1984 MPI_Reduce() 
+  0.0        0.536        0.536           4           0        134 MPI_Barrier() 
+  0.0        0.009        0.009           2           0          4 MPI_Type_commit() 
+  0.0        0.008        0.008           1           0          8 MPI_Type_vector() 
+  0.0        0.004        0.004           7           0          1 MPI_Comm_rank() 
+  0.0        0.004        0.004           3           0          1 MPI_Comm_size() 
+  0.0        0.003        0.003           1           0          3 MPI_Type_contiguous() 
+---------------------------------------------------------------------------------------
+
+USER EVENTS Profile :NODE 15, CONTEXT 0, THREAD 0
+---------------------------------------------------------------------------------------
+NumSamples   MaxValue   MinValue  MeanValue  Std. Dev.  Event Name
+---------------------------------------------------------------------------------------
+         2          8          8          8          0  Message size for reduce
+---------------------------------------------------------------------------------------
+
+FUNCTION SUMMARY (total):
+---------------------------------------------------------------------------------------
+%Time    Exclusive    Inclusive       #Call      #Subrs  Inclusive Name
+              msec   total msec                          usec/call 
+---------------------------------------------------------------------------------------
+100.0    16:12.106    20:51.120          16 4.80044E+06   78195034 .TAU application
+ 77.8            0    16:12.865       32343           0      30080 .TAU application => [CONTEXT] .TAU application
+ 77.8            0    16:12.865       32343           0      30080 [CONTEXT] .TAU application
+ 75.0    15:38.705    15:38.705       31205           0      30082 .TAU application => [CONTEXT] .TAU application => [SAMPLE] solve(double**, double**, double*, double, double, Plotter*, double&, double&) 
+ 75.0    15:38.705    15:38.705       31205           0      30082 [SAMPLE] solve(double**, double**, double*, double, double, Plotter*, double&, double&) 
+ 21.6     4:30.822     4:30.822     1.6E+06           0        169 MPI_Waitall() 
+ 21.1            0     4:23.467        8758           0      30083 MPI_Waitall() => [CONTEXT] MPI_Waitall() 
+ 21.1            0     4:23.467        8758           0      30083 [CONTEXT] MPI_Waitall() 
+ 15.5     3:13.646     3:13.646        6439           0      30074 [SAMPLE] MPIDI_CH3I_SMP_pull_header 
+ 15.5     3:13.316     3:13.316        6428           0      30074 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] MPIDI_CH3I_SMP_pull_header 
+  4.6       57,735       57,735        1919           0      30086 [SAMPLE] MPIDI_CH3I_SMP_read_progress 
+  4.6       57,675       57,675        1917           0      30087 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] MPIDI_CH3I_SMP_read_progress 
+  2.0       25,490       25,490         849           0      30024 [SAMPLE] _int_malloc 
+  2.0       24,860       24,860         828           0      30024 .TAU application => [CONTEXT] .TAU application => [SAMPLE] _int_malloc 
+  0.6        7,559        7,559         249           0      30359 [SAMPLE] __memmove_avx_unaligned_erms 
+  0.4        5,516        5,516         184           0      29982 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] MPIDI_CH3I_Progress 
+  0.4        5,516        5,516         184           0      29982 [SAMPLE] MPIDI_CH3I_Progress 
+  0.3        3,662        3,662          16           0     228884 MPI_Init() 
+  0.3        3,599        3,599         120           0      29997 .TAU application => [CONTEXT] .TAU application => [SAMPLE] __memmove_avx_unaligned_erms 
+  0.2        2,820        2,820          92           0      30653 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] __memmove_avx_unaligned_erms 
+  0.2        2,260        2,260 1.60002E+06           0          1 MPI_Isend() [THROTTLED]
+  0.2        1,919        1,919          64           0      30000 [SAMPLE] UNRESOLVED /cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen2/gcc-9.2.0/tau-2.29-x6cvjho7izlv6p5hxo2ponkjjvb3m6zy/x86_64/lib/libTAUsh-papi-mpi-pthread-pdt.so
+  0.1            0        1,619          53           0      30559 MPI_Isend() [THROTTLED] => [CONTEXT] MPI_Isend() [THROTTLED]
+  0.1            0        1,619          53           0      30559 [CONTEXT] MPI_Isend() [THROTTLED]
+  0.1        1,349        1,349          45           0      29999 .TAU application => [CONTEXT] .TAU application => [SAMPLE] UNRESOLVED /cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen2/gcc-9.2.0/tau-2.29-x6cvjho7izlv6p5hxo2ponkjjvb3m6zy/x86_64/lib/libTAUsh-papi-mpi-pthread-pdt.so
+  0.1        1,209        1,209 1.60002E+06           0          1 MPI_Irecv() [THROTTLED]
+  0.1        1,019        1,019          33           0      30898 MPI_Isend() [THROTTLED] => [CONTEXT] MPI_Isend() [THROTTLED] => [SAMPLE] __memmove_avx_unaligned_erms 
+  0.1          857          857          16           0      53606 MPI_Finalize() 
+  0.1          629          629          21           0      29999 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] _int_malloc 
+  0.0          600          600          20           0      30017 .TAU application => [CONTEXT] .TAU application => [SAMPLE] init(double*, double*, double*, int, int) 
+  0.0          600          600          20           0      30017 [SAMPLE] init(double*, double*, double*, int, int) 
+  0.0            0          569          19           0      30000 MPI_Irecv() [THROTTLED] => [CONTEXT] MPI_Irecv() [THROTTLED]
+  0.0            0          569          19           0      30000 [CONTEXT] MPI_Irecv() [THROTTLED]
+  0.0          569          569          19           0      30000 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] UNRESOLVED /cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen2/gcc-9.2.0/mvapich2-2.3.6-3c3rtf3ca32c3t3m5gl4kka2bt7fzdmk/lib/libmpi.so.12.1.1
+  0.0          569          569          19           0      30000 [SAMPLE] UNRESOLVED /cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen2/gcc-9.2.0/mvapich2-2.3.6-3c3rtf3ca32c3t3m5gl4kka2bt7fzdmk/lib/libmpi.so.12.1.1 
+  0.0          540          540          18           0      30002 [SAMPLE] MPID_Isend 
+  0.0          480          480          16           0      30003 .TAU application => [CONTEXT] .TAU application => [SAMPLE] __brk 
+  0.0          480          480          16           0      30003 [SAMPLE] __brk 
+  0.0          480          480          16           0      30002 .TAU application => [CONTEXT] .TAU application => [SAMPLE] MPID_Isend 
+  0.0          450          450          14           0      32143 [SAMPLE] malloc 
+  0.0          418          418          14           0      29894 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] MPIDI_CH3_Request_destroy 
+  0.0          418          418          14           0      29894 [SAMPLE] MPIDI_CH3_Request_destroy 
+  0.0          389          389          13           0      30000 [SAMPLE] mv2_smp_fast_write_contig 
+  0.0          330          330          11           0      30000 .TAU application => [CONTEXT] .TAU application => [SAMPLE] mv2_smp_fast_write_contig 
+  0.0          330          330          11           0      30000 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] MPIDI_CH3I_Comm_find 
+  0.0          330          330          11           0      30000 [SAMPLE] MPIDI_CH3I_Comm_find 
+  0.0          300          300          10           0      30001 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] UNRESOLVED /cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen2/gcc-9.2.0/tau-2.29-x6cvjho7izlv6p5hxo2ponkjjvb3m6zy/x86_64/lib/libTAUsh-papi-mpi-pthread-pdt.so
+  0.0          299          299          10           0      30000 [SAMPLE] __tls_get_addr 
+  0.0          270          270           8           0      33752 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] malloc 
+  0.0          270          270           9           0      30000 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] MPIR_Waitall_impl 
+  0.0          270          270           9           0      30000 [SAMPLE] MPIR_Waitall_impl 
+  0.0          240          240           8           0      30000 .TAU application => [CONTEXT] .TAU application => [SAMPLE] _dl_update_slotinfo 
+  0.0          240          240           8           0      30000 .TAU application => [CONTEXT] .TAU application => [SAMPLE] operator new(unsigned long) 
+  0.0          240          240           8           0      30000 [SAMPLE] _dl_update_slotinfo 
+  0.0          240          240           8           0      30000 [SAMPLE] operator new(unsigned long) 
+  0.0          239          239           8           0      30000 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] PMPI_Waitall 
+  0.0          239          239           8           0      30000 [SAMPLE] PMPI_Waitall 
+  0.0          239          239           8           0      29999 .TAU application => [CONTEXT] .TAU application => [SAMPLE] __tls_get_addr 
+  0.0          239          239           8           0      29999 .TAU application => [CONTEXT] .TAU application => [SAMPLE] stats(double*, int, int, double*, double*) 
+  0.0          239          239           8           0      29999 [SAMPLE] stats(double*, int, int, double*, double*) 
+  0.0            0          210           7           0      30039 MPI_Recv() => [CONTEXT] MPI_Recv() 
+  0.0            0          210           7           0      30039 [CONTEXT] MPI_Recv() 
+  0.0          210          210           7           0      30001 .TAU application => [CONTEXT] .TAU application => [SAMPLE] MPIDI_CH3U_Recvq_FDU_or_AEP 
+  0.0          210          210           7           0      30001 [SAMPLE] MPIDI_CH3U_Recvq_FDU_or_AEP 
+  0.0            0          209           7           0      29999 MPI_Reduce() => [CONTEXT] MPI_Reduce() 
+  0.0            0          209           7           0      29999 [CONTEXT] MPI_Reduce() 
+  0.0          180          180           6           0      30001 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] MPIDI_CH3U_Recvq_FDP_or_AEU 
+  0.0          180          180           6           0      30001 [SAMPLE] MPIDI_CH3U_Recvq_FDP_or_AEU 
+  0.0          180          180           6           0      30000 MPI_Isend() [THROTTLED] => [CONTEXT] MPI_Isend() [THROTTLED] => [SAMPLE] UNRESOLVED /cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen2/gcc-9.2.0/tau-2.29-x6cvjho7izlv6p5hxo2ponkjjvb3m6zy/x86_64/lib/libTAUsh-papi-mpi-pthread-pdt.so
+  0.0          180          180           6           0      30000 [SAMPLE] free 
+  0.0          179          179           6           0      30000 MPI_Isend() [THROTTLED] => [CONTEXT] MPI_Isend() [THROTTLED] => [SAMPLE] MPID_Isend 
+  0.0          179          179           6           0      30000 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] MPIDI_CH3U_Receive_data_unexpected 
+  0.0          179          179           6           0      30000 [SAMPLE] MPIDI_CH3U_Receive_data_unexpected 
+  0.0          179          179           6           0      29999 MPI_Reduce() => [CONTEXT] MPI_Reduce() => [SAMPLE] MPIDI_CH3I_SMP_pull_header 
+  0.0          179          179           6           0      29998 .TAU application => [CONTEXT] .TAU application => [SAMPLE] malloc 
+  0.0          150          150           5           0      30000 [SAMPLE] MPID_Request_create 
+  0.0          150          150           5           0      30000 .TAU application => [CONTEXT] .TAU application => [SAMPLE] free 
+  0.0          149          149           5           0      30000 .TAU application => [CONTEXT] .TAU application => [SAMPLE] MPID_Irecv 
+  0.0          149          149           5           0      30000 [SAMPLE] MPID_Irecv 
+  0.0          149          149           5           0      29999 MPI_Isend() [THROTTLED] => [CONTEXT] MPI_Isend() [THROTTLED] => [SAMPLE] mv2_smp_fast_write_contig 
+  0.0          144          144          30           0       4808 MPI_Recv() 
+  0.0          120          120           4           0      30001 .TAU application => [CONTEXT] .TAU application => [SAMPLE] MPIDI_CH3_EagerContigShortSend 
+  0.0          120          120           4           0      30001 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] MPID_Request_create 
+  0.0          120          120           4           0      30001 [SAMPLE] MPIDI_CH3_EagerContigShortSend 
+  0.0          120          120           4           0      30000 MPI_Irecv() [THROTTLED] => [CONTEXT] MPI_Irecv() [THROTTLED] => [SAMPLE] UNRESOLVED /cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen2/gcc-9.2.0/tau-2.29-x6cvjho7izlv6p5hxo2ponkjjvb3m6zy/x86_64/lib/libTAUsh-papi-mpi-pthread-pdt.so
+  0.0          119          119           4           0      30000 MPI_Irecv() [THROTTLED] => [CONTEXT] MPI_Irecv() [THROTTLED] => [SAMPLE] __memmove_avx_unaligned_erms 
+  0.0          119          119           4           0      30000 [SAMPLE] MPID_Isend [THROTTLED]
+  0.0          119          119           4           0      30000 [SAMPLE] MPIU_Handle_obj_alloc_unsafe 
+  0.0          119          119           4           0      29998 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] MPIDI_CH3U_Receive_data_found 
+  0.0          119          119           4           0      29998 [SAMPLE] MPIDI_CH3U_Receive_data_found 
+  0.0          119          119           4           0      29981 MPI_Recv() => [CONTEXT] MPI_Recv() => [SAMPLE] MPIDI_CH3I_SMP_pull_header 
+  0.0           90           90           3           0      30001 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] MPIDI_CH3_PktHandler_EagerSend_Contig 
+  0.0           90           90           3           0      30001 [SAMPLE] MPIDI_CH3_PktHandler_EagerSend_Contig 
+  0.0           90           90           3           0      30000 [SAMPLE] mv2_smp_fast_write_contig [THROTTLED]
+  0.0           89           89           3           0      30000 [SAMPLE] PMPI_Irecv 
+  0.0           89           89           3           0      29999 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] MPID_Request_complete 
+  0.0           89           89           3           0      29999 [SAMPLE] MPID_Request_complete 
+  0.0           89           89           3           0      29998 .TAU application => [CONTEXT] .TAU application => [SAMPLE] MPI_Isend 
+  0.0           89           89           3           0      29998 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] MPID_Request_release 
+  0.0           89           89           3           0      29998 [SAMPLE] MPID_Request_release 
+  0.0           89           89           3           0      29998 [SAMPLE] MPI_Isend 
+  0.0           60           60           2           0      30001 .TAU application => [CONTEXT] .TAU application => [SAMPLE] operator new[](unsigned long) 
+  0.0           60           60           2           0      30001 MPI_Irecv() [THROTTLED] => [CONTEXT] MPI_Irecv() [THROTTLED] => [SAMPLE] free 
+  0.0           60           60           2           0      30001 [SAMPLE] operator new[](unsigned long) 
+  0.0           60           60           2           0      30000 MPI_Irecv() [THROTTLED] => [CONTEXT] MPI_Irecv() [THROTTLED] => [SAMPLE] PMPI_Irecv 
+  0.0           60           60           2           0      30000 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] MPIU_Handle_obj_free 
+  0.0           60           60           2           0      30000 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] __GI___pthread_getspecific 
+  0.0           60           60           2           0      30000 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] __tls_get_addr 
+  0.0           60           60           2           0      30000 [SAMPLE] MPIU_Handle_obj_free 
+  0.0           60           60           2           0      30000 [SAMPLE] __GI___pthread_getspecific 
+  0.0           60           60           2           0      30000 .TAU application => [CONTEXT] .TAU application => [SAMPLE] MPIDI_CH3U_Request_unpack_uebuf 
+  0.0           60           60           2           0      30000 .TAU application => [CONTEXT] .TAU application => [SAMPLE] MPI_Type_size 
+  0.0           60           60           2           0      30000 MPI_Irecv() [THROTTLED] => [CONTEXT] MPI_Irecv() [THROTTLED] => [SAMPLE] MPID_Irecv 
+  0.0           60           60           2           0      30000 [SAMPLE] MPIDI_CH3U_Request_unpack_uebuf 
+  0.0           60           60           2           0      30000 [SAMPLE] MPID_Irecv [THROTTLED]
+  0.0           60           60           2           0      30000 [SAMPLE] MPI_Type_size 
+  0.0           59           59           2           0      30000 .TAU application => [CONTEXT] .TAU application => [SAMPLE] MPIU_Handle_obj_alloc_unsafe 
+  0.0           59           59           2           0      30000 .TAU application => [CONTEXT] .TAU application => [SAMPLE] PMPI_Irecv 
+  0.0           59           59           2           0      30000 .TAU application => [CONTEXT] .TAU application => [SAMPLE] __GI___sbrk 
+  0.0           59           59           2           0      30000 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] MPIU_Handle_obj_alloc_unsafe 
+  0.0           59           59           2           0      30000 [SAMPLE] __GI___sbrk 
+  0.0           59           59           2           0      29999 .TAU application => [CONTEXT] .TAU application => [SAMPLE] flush_dereg_mrs_external 
+  0.0           59           59           2           0      29999 [SAMPLE] flush_dereg_mrs_external 
+  0.0           59           59           2           0      29970 MPI_Recv() => [CONTEXT] MPI_Recv() => [SAMPLE] MPIDI_CH3I_SMP_read_progress 
+  0.0           30           30           1           0      30407 MPI_Recv() => [CONTEXT] MPI_Recv() => [SAMPLE] __GI_process_vm_readv 
+  0.0           30           30           1           0      30407 [SAMPLE] __GI_process_vm_readv 
+  0.0           30           30           1           0      30005 .TAU application => [CONTEXT] .TAU application => [SAMPLE] Tau_malloc 
+  0.0           30           30           1           0      30005 MPI_Irecv() [THROTTLED] => [CONTEXT] MPI_Irecv() [THROTTLED] => [SAMPLE] MPIDI_CH3U_Request_unpack_uebuf 
+  0.0           30           30           1           0      30005 [SAMPLE] MPIDI_CH3U_Request_unpack_uebuf [THROTTLED]
+  0.0           30           30           1           0      30005 [SAMPLE] Tau_malloc 
+  0.0           30           30           1           0      30003 [SAMPLE] free [THROTTLED]
+  0.0           30           30           1           0      30002 .TAU application => [CONTEXT] .TAU application => [SAMPLE] Tau_stop_class_allocation 
+  0.0           30           30           1           0      30002 [SAMPLE] Tau_stop_class_allocation 
+  0.0           30           30           1           0      30001 MPI_Irecv() [THROTTLED] => [CONTEXT] MPI_Irecv() [THROTTLED] => [SAMPLE] __memcpy_avx_unaligned 
+  0.0           30           30           1           0      30001 MPI_Isend() [THROTTLED] => [CONTEXT] MPI_Isend() [THROTTLED] => [SAMPLE] MPIDI_CH3_EagerContigShortSend 
+  0.0           30           30           1           0      30001 [SAMPLE] MPIDI_CH3_EagerContigShortSend [THROTTLED]
+  0.0           30           30           1           0      30001 [SAMPLE] PMPI_Irecv [THROTTLED]
+  0.0           30           30           1           0      30001 [SAMPLE] __memcpy_avx_unaligned [THROTTLED]
+  0.0           30           30           1           0      30000 .TAU application => [CONTEXT] .TAU application => [SAMPLE] AllocationShouldBeProtected 
+  0.0           30           30           1           0      30000 MPI_Isend() [THROTTLED] => [CONTEXT] MPI_Isend() [THROTTLED] => [SAMPLE] MPI_Type_size 
+  0.0           30           30           1           0      30000 MPI_Reduce() => [CONTEXT] MPI_Reduce() => [SAMPLE] MPIDU_Sched_progress 
+  0.0           30           30           1           0      30000 [SAMPLE] AllocationShouldBeProtected 
+  0.0           30           30           1           0      30000 [SAMPLE] MPIDU_Sched_progress 
+  0.0           30           30           1           0      30000 [SAMPLE] MPI_Type_size [THROTTLED]
+  0.0           30           30           1           0      30000 [SAMPLE] UNRESOLVED /cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen2/gcc-9.2.0/tau-2.29-x6cvjho7izlv6p5hxo2ponkjjvb3m6zy/x86_64/lib/libTAUsh-papi-mpi-pthread-pdt.so [THROTTLED]
+  0.0           29           29           1           0      29999 .TAU application => [CONTEXT] .TAU application => [SAMPLE] MPID_Request_create 
+  0.0           29           29           1           0      29999 MPI_Irecv() [THROTTLED] => [CONTEXT] MPI_Irecv() [THROTTLED] => [SAMPLE] MPID_Request_create 
+  0.0           29           29           1           0      29999 MPI_Isend() [THROTTLED] => [CONTEXT] MPI_Isend() [THROTTLED] => [SAMPLE] AllocationShouldBeProtected 
+  0.0           29           29           1           0      29999 [SAMPLE] AllocationShouldBeProtected [THROTTLED]
+  0.0           29           29           1           0      29999 [SAMPLE] MPID_Request_create [THROTTLED]
+  0.0           29           29           1           0      29998 .TAU application => [CONTEXT] .TAU application => [SAMPLE] __tls_get_addr_slow 
+  0.0           29           29           1           0      29998 .TAU application => [CONTEXT] .TAU application => [SAMPLE] _int_free 
+  0.0           29           29           1           0      29998 MPI_Irecv() [THROTTLED] => [CONTEXT] MPI_Irecv() [THROTTLED] => [SAMPLE] flush_dereg_mrs_external 
+  0.0           29           29           1           0      29998 [SAMPLE] __tls_get_addr_slow 
+  0.0           29           29           1           0      29998 [SAMPLE] _int_free 
+  0.0           29           29           1           0      29998 [SAMPLE] flush_dereg_mrs_external [THROTTLED]
+  0.0           29           29           1           0      29989 MPI_Irecv() [THROTTLED] => [CONTEXT] MPI_Irecv() [THROTTLED] => [SAMPLE] _dl_update_slotinfo 
+  0.0           29           29           1           0      29989 [SAMPLE] _dl_update_slotinfo [THROTTLED]
+  0.0            0           29           1           0      29986 MPI_Send() => [CONTEXT] MPI_Send() 
+  0.0           29           29           1           0      29986 MPI_Send() => [CONTEXT] MPI_Send() => [SAMPLE] MPIDI_CH3I_SMP_pull_header 
+  0.0            0           29           1           0      29986 [CONTEXT] MPI_Send() 
+  0.0           27           27          32           0        853 MPI_Reduce() 
+  0.0           20           20          30           0        686 MPI_Send() 
+  0.0            9            9          64           0        149 MPI_Barrier() 
+  0.0        0.206        0.206          32           0          6 MPI_Type_commit() 
+  0.0        0.182        0.182          16           0         11 MPI_Type_vector() 
+  0.0         0.06         0.06         112           0          1 MPI_Comm_rank() 
+  0.0        0.059        0.059          16           0          4 MPI_Type_contiguous() 
+  0.0        0.055        0.055          48           0          1 MPI_Comm_size() 
+
+FUNCTION SUMMARY (mean):
+---------------------------------------------------------------------------------------
+%Time    Exclusive    Inclusive       #Call      #Subrs  Inclusive Name
+              msec   total msec                          usec/call 
+---------------------------------------------------------------------------------------
+100.0     1:00.756     1:18.195           1      300028   78195034 .TAU application
+ 77.8            0     1:00.804     2021.44           0      30080 .TAU application => [CONTEXT] .TAU application
+ 77.8            0     1:00.804     2021.44           0      30080 [CONTEXT] .TAU application
+ 75.0       58,669       58,669     1950.31           0      30082 .TAU application => [CONTEXT] .TAU application => [SAMPLE] solve(double**, double**, double*, double, double, Plotter*, double&, double&) 
+ 75.0       58,669       58,669     1950.31           0      30082 [SAMPLE] solve(double**, double**, double*, double, double, Plotter*, double&, double&) 
+ 21.6       16,926       16,926      100000           0        169 MPI_Waitall() 
+ 21.1            0       16,466     547.375           0      30083 MPI_Waitall() => [CONTEXT] MPI_Waitall() 
+ 21.1            0       16,466     547.375           0      30083 [CONTEXT] MPI_Waitall() 
+ 15.5       12,102       12,102     402.438           0      30074 [SAMPLE] MPIDI_CH3I_SMP_pull_header 
+ 15.5       12,082       12,082      401.75           0      30074 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] MPIDI_CH3I_SMP_pull_header 
+  4.6        3,608        3,608     119.938           0      30086 [SAMPLE] MPIDI_CH3I_SMP_read_progress 
+  4.6        3,604        3,604     119.812           0      30087 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] MPIDI_CH3I_SMP_read_progress 
+  2.0        1,593        1,593     53.0625           0      30024 [SAMPLE] _int_malloc 
+  2.0        1,553        1,553       51.75           0      30024 .TAU application => [CONTEXT] .TAU application => [SAMPLE] _int_malloc 
+  0.6          472          472     15.5625           0      30359 [SAMPLE] __memmove_avx_unaligned_erms 
+  0.4          344          344        11.5           0      29982 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] MPIDI_CH3I_Progress 
+  0.4          344          344        11.5           0      29982 [SAMPLE] MPIDI_CH3I_Progress 
+  0.3          228          228           1           0     228884 MPI_Init() 
+  0.3          224          224         7.5           0      29997 .TAU application => [CONTEXT] .TAU application => [SAMPLE] __memmove_avx_unaligned_erms 
+  0.2          176          176        5.75           0      30653 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] __memmove_avx_unaligned_erms 
+  0.2          141          141      100001           0          1 MPI_Isend() [THROTTLED]
+  0.2          119          119           4           0      30000 [SAMPLE] UNRESOLVED /cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen2/gcc-9.2.0/tau-2.29-x6cvjho7izlv6p5hxo2ponkjjvb3m6zy/x86_64/lib/libTAUsh-papi-mpi-pthread-pdt.so
+  0.1            0          101      3.3125           0      30559 MPI_Isend() [THROTTLED] => [CONTEXT] MPI_Isend() [THROTTLED]
+  0.1            0          101      3.3125           0      30559 [CONTEXT] MPI_Isend() [THROTTLED]
+  0.1           84           84      2.8125           0      29999 .TAU application => [CONTEXT] .TAU application => [SAMPLE] UNRESOLVED /cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen2/gcc-9.2.0/tau-2.29-x6cvjho7izlv6p5hxo2ponkjjvb3m6zy/x86_64/lib/libTAUsh-papi-mpi-pthread-pdt.so
+  0.1           75           75      100001           0          1 MPI_Irecv() [THROTTLED]
+  0.1           63           63      2.0625           0      30898 MPI_Isend() [THROTTLED] => [CONTEXT] MPI_Isend() [THROTTLED] => [SAMPLE] __memmove_avx_unaligned_erms 
+  0.1           53           53           1           0      53606 MPI_Finalize() 
+  0.1           39           39      1.3125           0      29999 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] _int_malloc 
+  0.0           37           37        1.25           0      30017 .TAU application => [CONTEXT] .TAU application => [SAMPLE] init(double*, double*, double*, int, int) 
+  0.0           37           37        1.25           0      30017 [SAMPLE] init(double*, double*, double*, int, int) 
+  0.0            0           35      1.1875           0      30000 MPI_Irecv() [THROTTLED] => [CONTEXT] MPI_Irecv() [THROTTLED]
+  0.0            0           35      1.1875           0      30000 [CONTEXT] MPI_Irecv() [THROTTLED]
+  0.0           35           35      1.1875           0      30000 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] UNRESOLVED /cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen2/gcc-9.2.0/mvapich2-2.3.6-3c3rtf3ca32c3t3m5gl4kka2bt7fzdmk/lib/libmpi.so.12.1.1
+  0.0           35           35      1.1875           0      30000 [SAMPLE] UNRESOLVED /cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen2/gcc-9.2.0/mvapich2-2.3.6-3c3rtf3ca32c3t3m5gl4kka2bt7fzdmk/lib/libmpi.so.12.1.1 
+  0.0           33           33       1.125           0      30002 [SAMPLE] MPID_Isend 
+  0.0           30           30           1           0      30003 .TAU application => [CONTEXT] .TAU application => [SAMPLE] __brk 
+  0.0           30           30           1           0      30003 [SAMPLE] __brk 
+  0.0           30           30           1           0      30002 .TAU application => [CONTEXT] .TAU application => [SAMPLE] MPID_Isend 
+  0.0           28           28       0.875           0      32143 [SAMPLE] malloc 
+  0.0           26           26       0.875           0      29894 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] MPIDI_CH3_Request_destroy 
+  0.0           26           26       0.875           0      29894 [SAMPLE] MPIDI_CH3_Request_destroy 
+  0.0           24           24      0.8125           0      30000 [SAMPLE] mv2_smp_fast_write_contig 
+  0.0           20           20      0.6875           0      30000 .TAU application => [CONTEXT] .TAU application => [SAMPLE] mv2_smp_fast_write_contig 
+  0.0           20           20      0.6875           0      30000 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] MPIDI_CH3I_Comm_find 
+  0.0           20           20      0.6875           0      30000 [SAMPLE] MPIDI_CH3I_Comm_find 
+  0.0           18           18       0.625           0      30001 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] UNRESOLVED /cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen2/gcc-9.2.0/tau-2.29-x6cvjho7izlv6p5hxo2ponkjjvb3m6zy/x86_64/lib/libTAUsh-papi-mpi-pthread-pdt.so
+  0.0           18           18       0.625           0      30000 [SAMPLE] __tls_get_addr 
+  0.0           16           16         0.5           0      33752 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] malloc 
+  0.0           16           16      0.5625           0      30000 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] MPIR_Waitall_impl 
+  0.0           16           16      0.5625           0      30000 [SAMPLE] MPIR_Waitall_impl 
+  0.0           15           15         0.5           0      30000 .TAU application => [CONTEXT] .TAU application => [SAMPLE] _dl_update_slotinfo 
+  0.0           15           15         0.5           0      30000 .TAU application => [CONTEXT] .TAU application => [SAMPLE] operator new(unsigned long) 
+  0.0           15           15         0.5           0      30000 [SAMPLE] _dl_update_slotinfo 
+  0.0           15           15         0.5           0      30000 [SAMPLE] operator new(unsigned long) 
+  0.0           14           14         0.5           0      30000 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] PMPI_Waitall 
+  0.0           14           14         0.5           0      30000 [SAMPLE] PMPI_Waitall 
+  0.0           14           14         0.5           0      29999 .TAU application => [CONTEXT] .TAU application => [SAMPLE] __tls_get_addr 
+  0.0           14           14         0.5           0      29999 .TAU application => [CONTEXT] .TAU application => [SAMPLE] stats(double*, int, int, double*, double*) 
+  0.0           14           14         0.5           0      29999 [SAMPLE] stats(double*, int, int, double*, double*) 
+  0.0            0           13      0.4375           0      30039 MPI_Recv() => [CONTEXT] MPI_Recv() 
+  0.0            0           13      0.4375           0      30039 [CONTEXT] MPI_Recv() 
+  0.0           13           13      0.4375           0      30001 .TAU application => [CONTEXT] .TAU application => [SAMPLE] MPIDI_CH3U_Recvq_FDU_or_AEP 
+  0.0           13           13      0.4375           0      30001 [SAMPLE] MPIDI_CH3U_Recvq_FDU_or_AEP 
+  0.0            0           13      0.4375           0      29999 MPI_Reduce() => [CONTEXT] MPI_Reduce() 
+  0.0            0           13      0.4375           0      29999 [CONTEXT] MPI_Reduce() 
+  0.0           11           11       0.375           0      30001 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] MPIDI_CH3U_Recvq_FDP_or_AEU 
+  0.0           11           11       0.375           0      30001 [SAMPLE] MPIDI_CH3U_Recvq_FDP_or_AEU 
+  0.0           11           11       0.375           0      30000 MPI_Isend() [THROTTLED] => [CONTEXT] MPI_Isend() [THROTTLED] => [SAMPLE] UNRESOLVED /cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen2/gcc-9.2.0/tau-2.29-x6cvjho7izlv6p5hxo2ponkjjvb3m6zy/x86_64/lib/libTAUsh-papi-mpi-pthread-pdt.so
+  0.0           11           11       0.375           0      30000 [SAMPLE] free 
+  0.0           11           11       0.375           0      30000 MPI_Isend() [THROTTLED] => [CONTEXT] MPI_Isend() [THROTTLED] => [SAMPLE] MPID_Isend 
+  0.0           11           11       0.375           0      30000 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] MPIDI_CH3U_Receive_data_unexpected 
+  0.0           11           11       0.375           0      30000 [SAMPLE] MPIDI_CH3U_Receive_data_unexpected 
+  0.0           11           11       0.375           0      29999 MPI_Reduce() => [CONTEXT] MPI_Reduce() => [SAMPLE] MPIDI_CH3I_SMP_pull_header 
+  0.0           11           11       0.375           0      29998 .TAU application => [CONTEXT] .TAU application => [SAMPLE] malloc 
+  0.0            9            9      0.3125           0      30000 [SAMPLE] MPID_Request_create 
+  0.0            9            9      0.3125           0      30000 .TAU application => [CONTEXT] .TAU application => [SAMPLE] free 
+  0.0            9            9      0.3125           0      30000 .TAU application => [CONTEXT] .TAU application => [SAMPLE] MPID_Irecv 
+  0.0            9            9      0.3125           0      30000 [SAMPLE] MPID_Irecv 
+  0.0            9            9      0.3125           0      29999 MPI_Isend() [THROTTLED] => [CONTEXT] MPI_Isend() [THROTTLED] => [SAMPLE] mv2_smp_fast_write_contig 
+  0.0            9            9       1.875           0       4808 MPI_Recv() 
+  0.0            7            7        0.25           0      30001 .TAU application => [CONTEXT] .TAU application => [SAMPLE] MPIDI_CH3_EagerContigShortSend 
+  0.0            7            7        0.25           0      30001 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] MPID_Request_create 
+  0.0            7            7        0.25           0      30001 [SAMPLE] MPIDI_CH3_EagerContigShortSend 
+  0.0            7            7        0.25           0      30000 MPI_Irecv() [THROTTLED] => [CONTEXT] MPI_Irecv() [THROTTLED] => [SAMPLE] UNRESOLVED /cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen2/gcc-9.2.0/tau-2.29-x6cvjho7izlv6p5hxo2ponkjjvb3m6zy/x86_64/lib/libTAUsh-papi-mpi-pthread-pdt.so
+  0.0            7            7        0.25           0      30000 MPI_Irecv() [THROTTLED] => [CONTEXT] MPI_Irecv() [THROTTLED] => [SAMPLE] __memmove_avx_unaligned_erms 
+  0.0            7            7        0.25           0      30000 [SAMPLE] MPID_Isend [THROTTLED]
+  0.0            7            7        0.25           0      30000 [SAMPLE] MPIU_Handle_obj_alloc_unsafe 
+  0.0            7            7        0.25           0      29998 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] MPIDI_CH3U_Receive_data_found 
+  0.0            7            7        0.25           0      29998 [SAMPLE] MPIDI_CH3U_Receive_data_found 
+  0.0            7            7        0.25           0      29981 MPI_Recv() => [CONTEXT] MPI_Recv() => [SAMPLE] MPIDI_CH3I_SMP_pull_header 
+  0.0            5            5      0.1875           0      30001 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] MPIDI_CH3_PktHandler_EagerSend_Contig 
+  0.0            5            5      0.1875           0      30001 [SAMPLE] MPIDI_CH3_PktHandler_EagerSend_Contig 
+  0.0            5            5      0.1875           0      30000 [SAMPLE] mv2_smp_fast_write_contig [THROTTLED]
+  0.0            5            5      0.1875           0      30000 [SAMPLE] PMPI_Irecv 
+  0.0            5            5      0.1875           0      29999 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] MPID_Request_complete 
+  0.0            5            5      0.1875           0      29999 [SAMPLE] MPID_Request_complete 
+  0.0            5            5      0.1875           0      29998 .TAU application => [CONTEXT] .TAU application => [SAMPLE] MPI_Isend 
+  0.0            5            5      0.1875           0      29998 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] MPID_Request_release 
+  0.0            5            5      0.1875           0      29998 [SAMPLE] MPID_Request_release 
+  0.0            5            5      0.1875           0      29998 [SAMPLE] MPI_Isend 
+  0.0            3            3       0.125           0      30001 .TAU application => [CONTEXT] .TAU application => [SAMPLE] operator new[](unsigned long) 
+  0.0            3            3       0.125           0      30001 MPI_Irecv() [THROTTLED] => [CONTEXT] MPI_Irecv() [THROTTLED] => [SAMPLE] free 
+  0.0            3            3       0.125           0      30001 [SAMPLE] operator new[](unsigned long) 
+  0.0            3            3       0.125           0      30000 MPI_Irecv() [THROTTLED] => [CONTEXT] MPI_Irecv() [THROTTLED] => [SAMPLE] PMPI_Irecv 
+  0.0            3            3       0.125           0      30000 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] MPIU_Handle_obj_free 
+  0.0            3            3       0.125           0      30000 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] __GI___pthread_getspecific 
+  0.0            3            3       0.125           0      30000 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] __tls_get_addr 
+  0.0            3            3       0.125           0      30000 [SAMPLE] MPIU_Handle_obj_free 
+  0.0            3            3       0.125           0      30000 [SAMPLE] __GI___pthread_getspecific 
+  0.0            3            3       0.125           0      30000 .TAU application => [CONTEXT] .TAU application => [SAMPLE] MPIDI_CH3U_Request_unpack_uebuf 
+  0.0            3            3       0.125           0      30000 .TAU application => [CONTEXT] .TAU application => [SAMPLE] MPI_Type_size 
+  0.0            3            3       0.125           0      30000 MPI_Irecv() [THROTTLED] => [CONTEXT] MPI_Irecv() [THROTTLED] => [SAMPLE] MPID_Irecv 
+  0.0            3            3       0.125           0      30000 [SAMPLE] MPIDI_CH3U_Request_unpack_uebuf 
+  0.0            3            3       0.125           0      30000 [SAMPLE] MPID_Irecv [THROTTLED]
+  0.0            3            3       0.125           0      30000 [SAMPLE] MPI_Type_size 
+  0.0            3            3       0.125           0      30000 .TAU application => [CONTEXT] .TAU application => [SAMPLE] MPIU_Handle_obj_alloc_unsafe 
+  0.0            3            3       0.125           0      30000 .TAU application => [CONTEXT] .TAU application => [SAMPLE] PMPI_Irecv 
+  0.0            3            3       0.125           0      30000 .TAU application => [CONTEXT] .TAU application => [SAMPLE] __GI___sbrk 
+  0.0            3            3       0.125           0      30000 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] MPIU_Handle_obj_alloc_unsafe 
+  0.0            3            3       0.125           0      30000 [SAMPLE] __GI___sbrk 
+  0.0            3            3       0.125           0      29999 .TAU application => [CONTEXT] .TAU application => [SAMPLE] flush_dereg_mrs_external 
+  0.0            3            3       0.125           0      29999 [SAMPLE] flush_dereg_mrs_external 
+  0.0            3            3       0.125           0      29970 MPI_Recv() => [CONTEXT] MPI_Recv() => [SAMPLE] MPIDI_CH3I_SMP_read_progress 
+  0.0            1            1      0.0625           0      30407 MPI_Recv() => [CONTEXT] MPI_Recv() => [SAMPLE] __GI_process_vm_readv 
+  0.0            1            1      0.0625           0      30407 [SAMPLE] __GI_process_vm_readv 
+  0.0            1            1      0.0625           0      30005 .TAU application => [CONTEXT] .TAU application => [SAMPLE] Tau_malloc 
+  0.0            1            1      0.0625           0      30005 MPI_Irecv() [THROTTLED] => [CONTEXT] MPI_Irecv() [THROTTLED] => [SAMPLE] MPIDI_CH3U_Request_unpack_uebuf 
+  0.0            1            1      0.0625           0      30005 [SAMPLE] MPIDI_CH3U_Request_unpack_uebuf [THROTTLED]
+  0.0            1            1      0.0625           0      30005 [SAMPLE] Tau_malloc 
+  0.0            1            1      0.0625           0      30003 [SAMPLE] free [THROTTLED]
+  0.0            1            1      0.0625           0      30002 .TAU application => [CONTEXT] .TAU application => [SAMPLE] Tau_stop_class_allocation 
+  0.0            1            1      0.0625           0      30002 [SAMPLE] Tau_stop_class_allocation 
+  0.0            1            1      0.0625           0      30001 MPI_Irecv() [THROTTLED] => [CONTEXT] MPI_Irecv() [THROTTLED] => [SAMPLE] __memcpy_avx_unaligned 
+  0.0            1            1      0.0625           0      30001 MPI_Isend() [THROTTLED] => [CONTEXT] MPI_Isend() [THROTTLED] => [SAMPLE] MPIDI_CH3_EagerContigShortSend 
+  0.0            1            1      0.0625           0      30001 [SAMPLE] MPIDI_CH3_EagerContigShortSend [THROTTLED]
+  0.0            1            1      0.0625           0      30001 [SAMPLE] PMPI_Irecv [THROTTLED]
+  0.0            1            1      0.0625           0      30001 [SAMPLE] __memcpy_avx_unaligned [THROTTLED]
+  0.0            1            1      0.0625           0      30000 .TAU application => [CONTEXT] .TAU application => [SAMPLE] AllocationShouldBeProtected 
+  0.0            1            1      0.0625           0      30000 MPI_Isend() [THROTTLED] => [CONTEXT] MPI_Isend() [THROTTLED] => [SAMPLE] MPI_Type_size 
+  0.0            1            1      0.0625           0      30000 MPI_Reduce() => [CONTEXT] MPI_Reduce() => [SAMPLE] MPIDU_Sched_progress 
+  0.0            1            1      0.0625           0      30000 [SAMPLE] AllocationShouldBeProtected 
+  0.0            1            1      0.0625           0      30000 [SAMPLE] MPIDU_Sched_progress 
+  0.0            1            1      0.0625           0      30000 [SAMPLE] MPI_Type_size [THROTTLED]
+  0.0            1            1      0.0625           0      30000 [SAMPLE] UNRESOLVED /cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen2/gcc-9.2.0/tau-2.29-x6cvjho7izlv6p5hxo2ponkjjvb3m6zy/x86_64/lib/libTAUsh-papi-mpi-pthread-pdt.so [THROTTLED]
+  0.0            1            1      0.0625           0      29999 .TAU application => [CONTEXT] .TAU application => [SAMPLE] MPID_Request_create 
+  0.0            1            1      0.0625           0      29999 MPI_Irecv() [THROTTLED] => [CONTEXT] MPI_Irecv() [THROTTLED] => [SAMPLE] MPID_Request_create 
+  0.0            1            1      0.0625           0      29999 MPI_Isend() [THROTTLED] => [CONTEXT] MPI_Isend() [THROTTLED] => [SAMPLE] AllocationShouldBeProtected 
+  0.0            1            1      0.0625           0      29999 [SAMPLE] AllocationShouldBeProtected [THROTTLED]
+  0.0            1            1      0.0625           0      29999 [SAMPLE] MPID_Request_create [THROTTLED]
+  0.0            1            1      0.0625           0      29998 .TAU application => [CONTEXT] .TAU application => [SAMPLE] __tls_get_addr_slow 
+  0.0            1            1      0.0625           0      29998 .TAU application => [CONTEXT] .TAU application => [SAMPLE] _int_free 
+  0.0            1            1      0.0625           0      29998 MPI_Irecv() [THROTTLED] => [CONTEXT] MPI_Irecv() [THROTTLED] => [SAMPLE] flush_dereg_mrs_external 
+  0.0            1            1      0.0625           0      29998 [SAMPLE] __tls_get_addr_slow 
+  0.0            1            1      0.0625           0      29998 [SAMPLE] _int_free 
+  0.0            1            1      0.0625           0      29998 [SAMPLE] flush_dereg_mrs_external [THROTTLED]
+  0.0            1            1      0.0625           0      29989 MPI_Irecv() [THROTTLED] => [CONTEXT] MPI_Irecv() [THROTTLED] => [SAMPLE] _dl_update_slotinfo 
+  0.0            1            1      0.0625           0      29989 [SAMPLE] _dl_update_slotinfo [THROTTLED]
+  0.0            0            1      0.0625           0      29986 MPI_Send() => [CONTEXT] MPI_Send() 
+  0.0            1            1      0.0625           0      29986 MPI_Send() => [CONTEXT] MPI_Send() => [SAMPLE] MPIDI_CH3I_SMP_pull_header 
+  0.0            0            1      0.0625           0      29986 [CONTEXT] MPI_Send() 
+  0.0            1            1           2           0        853 MPI_Reduce() 
+  0.0            1            1       1.875           0        686 MPI_Send() 
+  0.0        0.595        0.595           4           0        149 MPI_Barrier() 
+  0.0       0.0129       0.0129           2           0          6 MPI_Type_commit() 
+  0.0       0.0114       0.0114           1           0         11 MPI_Type_vector() 
+  0.0      0.00375      0.00375           7           0          1 MPI_Comm_rank() 
+  0.0      0.00369      0.00369           1           0          4 MPI_Type_contiguous() 
+  0.0      0.00344      0.00344           3           0          1 MPI_Comm_size() 

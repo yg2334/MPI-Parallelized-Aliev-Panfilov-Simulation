@@ -1,0 +1,80 @@
+Lmod has detected the following error: These module(s) or extension(s) exist
+but cannot be loaded as requested: "mvapich2/2.3.6"
+   Try: "module spider mvapich2/2.3.6" to see how to load the module(s).
+
+
+
+
+[Simulation begins] Sun Jun  2 14:08:07 2024
+
+dt= 0.00144443, # iters = 100000
+m x n = 1800 x 1800
+processor geometry: 2 x 16
+
+Compiled with MPI ENABLED
+
+[Simulation completes] Sun Jun  2 14:08:32 2024
+
+End at iteration 99999
+Max norm: 9.83592e-01, L2norm: 7.55255e-01
+Running Time: 24.9368 sec. [364 GFlop/sec]
+
+   M x N   px x py Comm?   #iter  T_p, Gflops        Linf, L2
+@ 1800 1800    2 16      Y     100000  24.94 363.8    9.83592e-01 7.55255e-01
+  -----
+
+[Simulation begins] Sun Jun  2 14:08:33 2024
+
+dt= 0.00144443, # iters = 100000
+m x n = 1800 x 1800
+processor geometry: 2 x 16
+
+Compiled with MPI ENABLED
+Communication shut off
+
+[Simulation completes] Sun Jun  2 14:08:58 2024
+
+End at iteration 99999
+Max norm: 4.46702e-01, L2norm: 7.84491e-02
+Running Time: 25.0685 sec. [362 GFlop/sec]
+
+   M x N   px x py Comm?   #iter  T_p, Gflops        Linf, L2
+@ 1800 1800    2 16      N     100000  25.07 361.9    4.46702e-01 7.84491e-02
+  -----
+
+[Simulation begins] Sun Jun  2 14:08:59 2024
+
+dt= 0.00144443, # iters = 100000
+m x n = 1800 x 1800
+processor geometry: 4 x 8
+
+Compiled with MPI ENABLED
+
+[Simulation completes] Sun Jun  2 14:09:25 2024
+
+End at iteration 99999
+Max norm: 9.83612e-01, L2norm: 7.55139e-01
+Running Time: 25.7499 sec. [352 GFlop/sec]
+
+   M x N   px x py Comm?   #iter  T_p, Gflops        Linf, L2
+@ 1800 1800    4 8      Y     100000  25.75 352.3    9.83612e-01 7.55139e-01
+  -----
+
+[Simulation begins] Sun Jun  2 14:09:26 2024
+
+dt= 0.00144443, # iters = 100000
+m x n = 1800 x 1800
+processor geometry: 4 x 8
+
+Compiled with MPI ENABLED
+Communication shut off
+
+[Simulation completes] Sun Jun  2 14:09:52 2024
+
+End at iteration 99999
+Max norm: 2.29018e-39, L2norm: 2.54422e-40
+Running Time: 26.2613 sec. [345 GFlop/sec]
+
+   M x N   px x py Comm?   #iter  T_p, Gflops        Linf, L2
+@ 1800 1800    4 8      N     100000  26.26 345.5    2.29018e-39 2.54422e-40
+  -----

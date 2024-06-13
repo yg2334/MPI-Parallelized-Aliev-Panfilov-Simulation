@@ -1,0 +1,79 @@
+[Simulation begins] Thu Jun  6 05:37:09 2024
+
+dt= 0.00144443, # iters = 100000
+m x n = 1800 x 1800
+processor geometry: 8 x 32
+
+Compiled with MPI ENABLED
+
+[Simulation completes] Thu Jun  6 05:37:15 2024
+
+End at iteration 99999
+Max norm: 9.83612e-01, L2norm: 7.55258e-01
+Running Time: 5.20884 sec. [1.74e+03 GFlop/sec]
+
+   M x N   px x py Comm?   #iter  T_p, Gflops        Linf, L2
+@ 1800 1800    8 32      Y     100000  5.209 1742    9.83612e-01 7.55258e-01
+  -----
+[exp-4-22:mpi_rank_0][rdma_param_handle_heterogeneity] All nodes involved in the job were detected to be homogeneous in terms of processors and interconnects. Setting MV2_HOMOGENEOUS_CLUSTER=1 can improve job startup performance on such systems. The following link has more details on enhancing job startup performance. http://mvapich.cse.ohio-state.edu/performance/job-startup/.
+[exp-4-22:mpi_rank_0][rdma_param_handle_heterogeneity] To suppress this warning, please set MV2_SUPPRESS_JOB_STARTUP_PERFORMANCE_WARNING to 1
+
+[Simulation begins] Thu Jun  6 05:37:30 2024
+
+dt= 0.00144443, # iters = 100000
+m x n = 1800 x 1800
+processor geometry: 8 x 32
+
+Compiled with MPI ENABLED
+Communication shut off
+
+[Simulation completes] Thu Jun  6 05:37:34 2024
+
+End at iteration 99999
+Max norm: 4.46656e-01, L2norm: -nan
+Running Time: 4.09213 sec. [2.22e+03 GFlop/sec]
+
+   M x N   px x py Comm?   #iter  T_p, Gflops        Linf, L2
+@ 1800 1800    8 32      N     100000  4.092 2217    4.46656e-01 -nan
+  -----
+[exp-4-22:mpi_rank_0][rdma_param_handle_heterogeneity] All nodes involved in the job were detected to be homogeneous in terms of processors and interconnects. Setting MV2_HOMOGENEOUS_CLUSTER=1 can improve job startup performance on such systems. The following link has more details on enhancing job startup performance. http://mvapich.cse.ohio-state.edu/performance/job-startup/.
+[exp-4-22:mpi_rank_0][rdma_param_handle_heterogeneity] To suppress this warning, please set MV2_SUPPRESS_JOB_STARTUP_PERFORMANCE_WARNING to 1
+
+[Simulation begins] Thu Jun  6 05:37:49 2024
+
+dt= 0.00144443, # iters = 100000
+m x n = 1800 x 1800
+processor geometry: 16 x 16
+
+Compiled with MPI ENABLED
+
+[Simulation completes] Thu Jun  6 05:37:55 2024
+
+End at iteration 99999
+Max norm: 9.83592e-01, L2norm: 7.55255e-01
+Running Time: 5.55436 sec. [1.63e+03 GFlop/sec]
+
+   M x N   px x py Comm?   #iter  T_p, Gflops        Linf, L2
+@ 1800 1800    16 16      Y     100000  5.554 1633    9.83592e-01 7.55255e-01
+  -----
+[exp-4-22:mpi_rank_0][rdma_param_handle_heterogeneity] All nodes involved in the job were detected to be homogeneous in terms of processors and interconnects. Setting MV2_HOMOGENEOUS_CLUSTER=1 can improve job startup performance on such systems. The following link has more details on enhancing job startup performance. http://mvapich.cse.ohio-state.edu/performance/job-startup/.
+[exp-4-22:mpi_rank_0][rdma_param_handle_heterogeneity] To suppress this warning, please set MV2_SUPPRESS_JOB_STARTUP_PERFORMANCE_WARNING to 1
+
+[Simulation begins] Thu Jun  6 05:38:14 2024
+
+dt= 0.00144443, # iters = 100000
+m x n = 1800 x 1800
+processor geometry: 16 x 16
+
+Compiled with MPI ENABLED
+Communication shut off
+
+[Simulation completes] Thu Jun  6 05:38:18 2024
+
+End at iteration 99999
+Max norm: 5.01275e-01, L2norm: -nan
+Running Time: 3.90106 sec. [2.33e+03 GFlop/sec]
+
+   M x N   px x py Comm?   #iter  T_p, Gflops        Linf, L2
+@ 1800 1800    16 16      N     100000  3.901 2326    5.01275e-01 -nan
+  -----

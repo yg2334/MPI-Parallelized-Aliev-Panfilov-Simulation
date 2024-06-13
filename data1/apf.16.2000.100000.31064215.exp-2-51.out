@@ -1,0 +1,635 @@
+
+[Simulation begins] Tue Jun  4 21:01:36 2024
+
+dt= 0.00687906, # iters = 1000
+m x n = 800 x 800
+processor geometry: 2 x 8
+
+Compiled with MPI ENABLED
+
+[Simulation completes] Tue Jun  4 21:01:36 2024
+
+End at iteration 999
+Max norm: 9.92490e-01, L2norm: 6.39537e-01
+Running Time: 0.124859 sec. [144 GFlop/sec]
+
+   M x N   px x py Comm?   #iter  T_p, Gflops        Linf, L2
+@ 800 800    2 8      Y     1000  0.1249 143.5    9.92490e-01 6.39537e-01
+  -----
+Reading Profile files in profile.*
+
+NODE 0;CONTEXT 0;THREAD 0:
+---------------------------------------------------------------------------------------
+%Time    Exclusive    Inclusive       #Call      #Subrs  Inclusive Name
+              msec   total msec                          usec/call 
+---------------------------------------------------------------------------------------
+100.0          131          392           1        5052     392003 .TAU application
+ 58.5          229          229           1           0     229283 MPI_Init() 
+ 30.6            0          120           4           0      30000 .TAU application => [CONTEXT] .TAU application
+ 30.6          120          120           4           0      30000 .TAU application => [CONTEXT] .TAU application => [SAMPLE] solve(double**, double**, double*, double, double, Plotter*, double&, double&) 
+ 30.6            0          120           4           0      30000 [CONTEXT] .TAU application
+ 30.6          120          120           4           0      30000 [SAMPLE] solve(double**, double**, double*, double, double, Plotter*, double&, double&) 
+  4.8           18           18           1           0      18822 MPI_Finalize() 
+  1.1            4            4          30           0        141 MPI_Send() 
+  1.0            3            3        1000           0          4 MPI_Waitall() 
+  0.3            1            1        2000           0          1 MPI_Isend() 
+  0.3            1            1           4           0        313 MPI_Barrier() 
+  0.2         0.98         0.98        2000           0          0 MPI_Irecv() 
+  0.1        0.265        0.265           2           0        132 MPI_Reduce() 
+  0.0        0.033        0.033           2           0         16 MPI_Type_commit() 
+  0.0        0.028        0.028           1           0         28 MPI_Type_vector() 
+  0.0        0.011        0.011           3           0          4 MPI_Comm_size() 
+  0.0        0.009        0.009           7           0          1 MPI_Comm_rank() 
+  0.0        0.009        0.009           1           0          9 MPI_Type_contiguous() 
+---------------------------------------------------------------------------------------
+
+USER EVENTS Profile :NODE 0, CONTEXT 0, THREAD 0
+---------------------------------------------------------------------------------------
+NumSamples   MaxValue   MinValue  MeanValue  Std. Dev.  Event Name
+---------------------------------------------------------------------------------------
+         2          8          8          8          0  Message size for reduce
+---------------------------------------------------------------------------------------
+
+NODE 1;CONTEXT 0;THREAD 0:
+---------------------------------------------------------------------------------------
+%Time    Exclusive    Inclusive       #Call      #Subrs  Inclusive Name
+              msec   total msec                          usec/call 
+---------------------------------------------------------------------------------------
+100.0          124          390           1        5024     390818 .TAU application
+ 58.5          228          228           1           0     228581 MPI_Init() 
+ 23.0            0           90           3           0      30008 .TAU application => [CONTEXT] .TAU application
+ 23.0           90           90           3           0      30008 .TAU application => [CONTEXT] .TAU application => [SAMPLE] solve(double**, double**, double*, double, double, Plotter*, double&, double&) 
+ 23.0            0           90           3           0      30008 [CONTEXT] .TAU application
+ 23.0           90           90           3           0      30008 [SAMPLE] solve(double**, double**, double*, double, double, Plotter*, double&, double&) 
+  4.7           18           18           1           0      18330 MPI_Finalize() 
+  4.0           15           15        1000           0         16 MPI_Waitall() 
+  0.3            1            1        2000           0          1 MPI_Isend() 
+  0.2        0.946        0.946           4           0        236 MPI_Barrier() 
+  0.2        0.818        0.818        2000           0          0 MPI_Irecv() 
+  0.1        0.524        0.524           2           0        262 MPI_Recv() 
+  0.1        0.329        0.329           2           0        164 MPI_Reduce() 
+  0.0        0.018        0.018           1           0         18 MPI_Type_vector() 
+  0.0        0.013        0.013           2           0          6 MPI_Type_commit() 
+  0.0        0.009        0.009           3           0          3 MPI_Comm_size() 
+  0.0        0.007        0.007           7           0          1 MPI_Comm_rank() 
+  0.0        0.005        0.005           1           0          5 MPI_Type_contiguous() 
+---------------------------------------------------------------------------------------
+
+USER EVENTS Profile :NODE 1, CONTEXT 0, THREAD 0
+---------------------------------------------------------------------------------------
+NumSamples   MaxValue   MinValue  MeanValue  Std. Dev.  Event Name
+---------------------------------------------------------------------------------------
+         2          8          8          8          0  Message size for reduce
+---------------------------------------------------------------------------------------
+
+NODE 2;CONTEXT 0;THREAD 0:
+---------------------------------------------------------------------------------------
+%Time    Exclusive    Inclusive       #Call      #Subrs  Inclusive Name
+              msec   total msec                          usec/call 
+---------------------------------------------------------------------------------------
+100.0          130          390           1        7024     390872 .TAU application
+ 58.6          228          228           1           0     228881 MPI_Init() 
+ 30.7            0          120           4           0      30000 .TAU application => [CONTEXT] .TAU application
+ 30.7          120          120           4           0      30000 .TAU application => [CONTEXT] .TAU application => [SAMPLE] solve(double**, double**, double*, double, double, Plotter*, double&, double&) 
+ 30.7            0          120           4           0      30000 [CONTEXT] .TAU application
+ 30.7          120          120           4           0      30000 [SAMPLE] solve(double**, double**, double*, double, double, Plotter*, double&, double&) 
+  4.6           18           18           1           0      18102 MPI_Finalize() 
+  1.8            7            7        1000           0          7 MPI_Waitall() 
+  0.5            1            1        3000           0          1 MPI_Isend() 
+  0.4            1            1        3000           0          1 MPI_Irecv() 
+  0.4            1            1           4           0        347 MPI_Barrier() 
+  0.2        0.882        0.882           2           0        441 MPI_Recv() 
+  0.0         0.12         0.12           2           0         60 MPI_Reduce() 
+  0.0         0.02         0.02           1           0         20 MPI_Type_vector() 
+  0.0        0.013        0.013           2           0          6 MPI_Type_commit() 
+  0.0        0.008        0.008           7           0          1 MPI_Comm_rank() 
+  0.0        0.008        0.008           3           0          3 MPI_Comm_size() 
+  0.0        0.005        0.005           1           0          5 MPI_Type_contiguous() 
+---------------------------------------------------------------------------------------
+
+USER EVENTS Profile :NODE 2, CONTEXT 0, THREAD 0
+---------------------------------------------------------------------------------------
+NumSamples   MaxValue   MinValue  MeanValue  Std. Dev.  Event Name
+---------------------------------------------------------------------------------------
+         2          8          8          8          0  Message size for reduce
+---------------------------------------------------------------------------------------
+
+NODE 3;CONTEXT 0;THREAD 0:
+---------------------------------------------------------------------------------------
+%Time    Exclusive    Inclusive       #Call      #Subrs  Inclusive Name
+              msec   total msec                          usec/call 
+---------------------------------------------------------------------------------------
+100.0          124          404           1        7024     404661 .TAU application
+ 59.9          242          242           1           0     242590 MPI_Init() 
+ 29.7            0          120           4           0      30000 .TAU application => [CONTEXT] .TAU application
+ 29.7          120          120           4           0      30000 .TAU application => [CONTEXT] .TAU application => [SAMPLE] solve(double**, double**, double*, double, double, Plotter*, double&, double&) 
+ 29.7            0          120           4           0      30000 [CONTEXT] .TAU application
+ 29.7          120          120           4           0      30000 [SAMPLE] solve(double**, double**, double*, double, double, Plotter*, double&, double&) 
+  4.5           18           18           1           0      18201 MPI_Finalize() 
+  3.2           12           12        1000           0         13 MPI_Waitall() 
+  0.5            1            1        3000           0          1 MPI_Isend() 
+  0.4            1            1        3000           0          0 MPI_Irecv() 
+  0.3            1            1           2           0        608 MPI_Recv() 
+  0.3            1            1           4           0        271 MPI_Barrier() 
+  0.1        0.216        0.216           2           0        108 MPI_Reduce() 
+  0.0        0.028        0.028           7           0          4 MPI_Comm_rank() 
+  0.0        0.019        0.019           1           0         19 MPI_Type_vector() 
+  0.0        0.014        0.014           2           0          7 MPI_Type_commit() 
+  0.0        0.006        0.006           3           0          2 MPI_Comm_size() 
+  0.0        0.006        0.006           1           0          6 MPI_Type_contiguous() 
+---------------------------------------------------------------------------------------
+
+USER EVENTS Profile :NODE 3, CONTEXT 0, THREAD 0
+---------------------------------------------------------------------------------------
+NumSamples   MaxValue   MinValue  MeanValue  Std. Dev.  Event Name
+---------------------------------------------------------------------------------------
+         2          8          8          8          0  Message size for reduce
+---------------------------------------------------------------------------------------
+
+NODE 4;CONTEXT 0;THREAD 0:
+---------------------------------------------------------------------------------------
+%Time    Exclusive    Inclusive       #Call      #Subrs  Inclusive Name
+              msec   total msec                          usec/call 
+---------------------------------------------------------------------------------------
+100.0          130          401           1        7024     401083 .TAU application
+ 59.6          238          238           1           0     238854 MPI_Init() 
+ 29.9            0          120           4           0      30001 .TAU application => [CONTEXT] .TAU application
+ 29.9          120          120           4           0      30001 .TAU application => [CONTEXT] .TAU application => [SAMPLE] solve(double**, double**, double*, double, double, Plotter*, double&, double&) 
+ 29.9            0          120           4           0      30001 [CONTEXT] .TAU application
+ 29.9          120          120           4           0      30001 [SAMPLE] solve(double**, double**, double*, double, double, Plotter*, double&, double&) 
+  4.6           18           18           1           0      18397 MPI_Finalize() 
+  1.7            6            6        1000           0          7 MPI_Waitall() 
+  0.5            1            1        3000           0          1 MPI_Isend() 
+  0.5            1            1           2           0        954 MPI_Recv() 
+  0.3            1            1        3000           0          0 MPI_Irecv() 
+  0.2        0.839        0.839           4           0        210 MPI_Barrier() 
+  0.0         0.19         0.19           2           0         95 MPI_Reduce() 
+  0.0        0.031        0.031           1           0         31 MPI_Type_vector() 
+  0.0        0.014        0.014           2           0          7 MPI_Type_commit() 
+  0.0        0.007        0.007           7           0          1 MPI_Comm_rank() 
+  0.0        0.006        0.006           3           0          2 MPI_Comm_size() 
+  0.0        0.004        0.004           1           0          4 MPI_Type_contiguous() 
+---------------------------------------------------------------------------------------
+
+USER EVENTS Profile :NODE 4, CONTEXT 0, THREAD 0
+---------------------------------------------------------------------------------------
+NumSamples   MaxValue   MinValue  MeanValue  Std. Dev.  Event Name
+---------------------------------------------------------------------------------------
+         2          8          8          8          0  Message size for reduce
+---------------------------------------------------------------------------------------
+
+NODE 5;CONTEXT 0;THREAD 0:
+---------------------------------------------------------------------------------------
+%Time    Exclusive    Inclusive       #Call      #Subrs  Inclusive Name
+              msec   total msec                          usec/call 
+---------------------------------------------------------------------------------------
+100.0          124          391           1        7024     391756 .TAU application
+ 58.6          229          229           1           0     229704 MPI_Init() 
+ 23.0            0           90           3           0      30001 .TAU application => [CONTEXT] .TAU application
+ 23.0           90           90           3           0      30001 .TAU application => [CONTEXT] .TAU application => [SAMPLE] solve(double**, double**, double*, double, double, Plotter*, double&, double&) 
+ 23.0            0           90           3           0      30001 [CONTEXT] .TAU application
+ 23.0           90           90           3           0      30001 [SAMPLE] solve(double**, double**, double*, double, double, Plotter*, double&, double&) 
+  7.7            0           30           1           0      30000 MPI_Waitall() => [CONTEXT] MPI_Waitall() 
+  7.7           30           30           1           0      30000 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] MPIDI_CH3U_Recvq_FDP_or_AEU 
+  7.7            0           30           1           0      30000 [CONTEXT] MPI_Waitall() 
+  7.7           30           30           1           0      30000 [SAMPLE] MPIDI_CH3U_Recvq_FDP_or_AEU 
+  4.7           18           18           1           0      18240 MPI_Finalize() 
+  3.2           12           12        1000           0         12 MPI_Waitall() 
+  0.6            2            2           2           0       1146 MPI_Recv() 
+  0.5            2            2        3000           0          1 MPI_Isend() 
+  0.3            1            1        3000           0          0 MPI_Irecv() 
+  0.2        0.781        0.781           4           0        195 MPI_Barrier() 
+  0.0        0.193        0.193           2           0         96 MPI_Reduce() 
+  0.0        0.023        0.023           1           0         23 MPI_Type_vector() 
+  0.0        0.022        0.022           1           0         22 MPI_Type_contiguous() 
+  0.0        0.019        0.019           2           0         10 MPI_Type_commit() 
+  0.0        0.008        0.008           3           0          3 MPI_Comm_size() 
+  0.0        0.007        0.007           7           0          1 MPI_Comm_rank() 
+---------------------------------------------------------------------------------------
+
+USER EVENTS Profile :NODE 5, CONTEXT 0, THREAD 0
+---------------------------------------------------------------------------------------
+NumSamples   MaxValue   MinValue  MeanValue  Std. Dev.  Event Name
+---------------------------------------------------------------------------------------
+         2          8          8          8          0  Message size for reduce
+---------------------------------------------------------------------------------------
+
+NODE 6;CONTEXT 0;THREAD 0:
+---------------------------------------------------------------------------------------
+%Time    Exclusive    Inclusive       #Call      #Subrs  Inclusive Name
+              msec   total msec                          usec/call 
+---------------------------------------------------------------------------------------
+100.0          131          405           1        7024     405568 .TAU application
+ 60.0          243          243           1           0     243517 MPI_Init() 
+ 22.2            0           90           3           0      30001 .TAU application => [CONTEXT] .TAU application
+ 22.2           90           90           3           0      30001 .TAU application => [CONTEXT] .TAU application => [SAMPLE] solve(double**, double**, double*, double, double, Plotter*, double&, double&) 
+ 22.2            0           90           3           0      30001 [CONTEXT] .TAU application
+ 22.2           90           90           3           0      30001 [SAMPLE] solve(double**, double**, double*, double, double, Plotter*, double&, double&) 
+  4.5           18           18           1           0      18230 MPI_Finalize() 
+  1.4            5            5        1000           0          6 MPI_Waitall() 
+  0.7            2            2           2           0       1342 MPI_Recv() 
+  0.5            2            2        3000           0          1 MPI_Isend() 
+  0.3            1            1        3000           0          0 MPI_Irecv() 
+  0.2        0.804        0.804           4           0        201 MPI_Barrier() 
+  0.0        0.084        0.084           2           0         42 MPI_Reduce() 
+  0.0        0.039        0.039           2           0         20 MPI_Type_commit() 
+  0.0        0.035        0.035           1           0         35 MPI_Type_vector() 
+  0.0        0.016        0.016           1           0         16 MPI_Type_contiguous() 
+  0.0        0.006        0.006           7           0          1 MPI_Comm_rank() 
+  0.0        0.006        0.006           3           0          2 MPI_Comm_size() 
+---------------------------------------------------------------------------------------
+
+USER EVENTS Profile :NODE 6, CONTEXT 0, THREAD 0
+---------------------------------------------------------------------------------------
+NumSamples   MaxValue   MinValue  MeanValue  Std. Dev.  Event Name
+---------------------------------------------------------------------------------------
+         2          8          8          8          0  Message size for reduce
+---------------------------------------------------------------------------------------
+
+NODE 7;CONTEXT 0;THREAD 0:
+---------------------------------------------------------------------------------------
+%Time    Exclusive    Inclusive       #Call      #Subrs  Inclusive Name
+              msec   total msec                          usec/call 
+---------------------------------------------------------------------------------------
+100.0          124          401           1        7024     401097 .TAU application
+ 59.6          239          239           1           0     239014 MPI_Init() 
+ 29.9            0          120           3           0      40001 .TAU application => [CONTEXT] .TAU application
+ 29.9          120          120           3           0      40001 .TAU application => [CONTEXT] .TAU application => [SAMPLE] solve(double**, double**, double*, double, double, Plotter*, double&, double&) 
+ 29.9            0          120           3           0      40001 [CONTEXT] .TAU application
+ 29.9          120          120           3           0      40001 [SAMPLE] solve(double**, double**, double*, double, double, Plotter*, double&, double&) 
+  4.6           18           18           1           0      18274 MPI_Finalize() 
+  2.9           11           11        1000           0         12 MPI_Waitall() 
+  0.7            3            3           2           0       1503 MPI_Recv() 
+  0.5            2            2        3000           0          1 MPI_Isend() 
+  0.4            1            1        3000           0          0 MPI_Irecv() 
+  0.2        0.836        0.836           4           0        209 MPI_Barrier() 
+  0.0        0.085        0.085           2           0         42 MPI_Reduce() 
+  0.0        0.035        0.035           1           0         35 MPI_Type_vector() 
+  0.0        0.029        0.029           2           0         14 MPI_Type_commit() 
+  0.0        0.015        0.015           1           0         15 MPI_Type_contiguous() 
+  0.0        0.007        0.007           7           0          1 MPI_Comm_rank() 
+  0.0        0.004        0.004           3           0          1 MPI_Comm_size() 
+---------------------------------------------------------------------------------------
+
+USER EVENTS Profile :NODE 7, CONTEXT 0, THREAD 0
+---------------------------------------------------------------------------------------
+NumSamples   MaxValue   MinValue  MeanValue  Std. Dev.  Event Name
+---------------------------------------------------------------------------------------
+         2          8          8          8          0  Message size for reduce
+---------------------------------------------------------------------------------------
+
+NODE 8;CONTEXT 0;THREAD 0:
+---------------------------------------------------------------------------------------
+%Time    Exclusive    Inclusive       #Call      #Subrs  Inclusive Name
+              msec   total msec                          usec/call 
+---------------------------------------------------------------------------------------
+100.0          125          398           1        7024     398082 .TAU application
+ 59.2          235          235           1           0     235787 MPI_Init() 
+ 30.1            0          120           4           0      30000 .TAU application => [CONTEXT] .TAU application
+ 30.1          120          120           4           0      30000 .TAU application => [CONTEXT] .TAU application => [SAMPLE] solve(double**, double**, double*, double, double, Plotter*, double&, double&) 
+ 30.1            0          120           4           0      30000 [CONTEXT] .TAU application
+ 30.1          120          120           4           0      30000 [SAMPLE] solve(double**, double**, double*, double, double, Plotter*, double&, double&) 
+  4.6           18           18           1           0      18469 MPI_Finalize() 
+  2.8           11           11        1000           0         11 MPI_Waitall() 
+  0.8            3            3           2           0       1568 MPI_Recv() 
+  0.5            2            2        3000           0          1 MPI_Isend() 
+  0.4            1            1        3000           0          1 MPI_Irecv() 
+  0.2         0.62         0.62           4           0        155 MPI_Barrier() 
+  0.0         0.04         0.04           2           0         20 MPI_Reduce() 
+  0.0        0.021        0.021           1           0         21 MPI_Type_contiguous() 
+  0.0        0.019        0.019           2           0         10 MPI_Type_commit() 
+  0.0        0.016        0.016           1           0         16 MPI_Type_vector() 
+  0.0        0.006        0.006           7           0          1 MPI_Comm_rank() 
+  0.0        0.006        0.006           3           0          2 MPI_Comm_size() 
+---------------------------------------------------------------------------------------
+
+USER EVENTS Profile :NODE 8, CONTEXT 0, THREAD 0
+---------------------------------------------------------------------------------------
+NumSamples   MaxValue   MinValue  MeanValue  Std. Dev.  Event Name
+---------------------------------------------------------------------------------------
+         2          8          8          8          0  Message size for reduce
+---------------------------------------------------------------------------------------
+
+NODE 9;CONTEXT 0;THREAD 0:
+---------------------------------------------------------------------------------------
+%Time    Exclusive    Inclusive       #Call      #Subrs  Inclusive Name
+              msec   total msec                          usec/call 
+---------------------------------------------------------------------------------------
+100.0          125          393           1        7024     393845 .TAU application
+ 58.8          231          231           1           0     231565 MPI_Init() 
+ 22.9            0           90           3           0      30002 .TAU application => [CONTEXT] .TAU application
+ 22.9           90           90           3           0      30002 .TAU application => [CONTEXT] .TAU application => [SAMPLE] solve(double**, double**, double*, double, double, Plotter*, double&, double&) 
+ 22.9            0           90           3           0      30002 [CONTEXT] .TAU application
+ 22.9           90           90           3           0      30002 [SAMPLE] solve(double**, double**, double*, double, double, Plotter*, double&, double&) 
+  7.6            0           29           1           0      29995 MPI_Waitall() => [CONTEXT] MPI_Waitall() 
+  7.6           29           29           1           0      29995 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] MPIDI_CH3I_SMP_read_progress 
+  7.6            0           29           1           0      29995 [CONTEXT] MPI_Waitall() 
+  7.6           29           29           1           0      29995 [SAMPLE] MPIDI_CH3I_SMP_read_progress 
+  4.7           18           18           1           0      18469 MPI_Finalize() 
+  2.8           11           11        1000           0         11 MPI_Waitall() 
+  0.9            3            3           2           0       1752 MPI_Recv() 
+  0.5            2            2        3000           0          1 MPI_Isend() 
+  0.4            1            1        3000           0          0 MPI_Irecv() 
+  0.2          0.6          0.6           4           0        150 MPI_Barrier() 
+  0.0        0.099        0.099           2           0         50 MPI_Reduce() 
+  0.0        0.045        0.045           2           0         22 MPI_Type_commit() 
+  0.0        0.033        0.033           1           0         33 MPI_Type_vector() 
+  0.0        0.008        0.008           3           0          3 MPI_Comm_size() 
+  0.0        0.007        0.007           1           0          7 MPI_Type_contiguous() 
+  0.0        0.006        0.006           7           0          1 MPI_Comm_rank() 
+---------------------------------------------------------------------------------------
+
+USER EVENTS Profile :NODE 9, CONTEXT 0, THREAD 0
+---------------------------------------------------------------------------------------
+NumSamples   MaxValue   MinValue  MeanValue  Std. Dev.  Event Name
+---------------------------------------------------------------------------------------
+         2          8          8          8          0  Message size for reduce
+---------------------------------------------------------------------------------------
+
+NODE 10;CONTEXT 0;THREAD 0:
+---------------------------------------------------------------------------------------
+%Time    Exclusive    Inclusive       #Call      #Subrs  Inclusive Name
+              msec   total msec                          usec/call 
+---------------------------------------------------------------------------------------
+100.0          124          391           1        7024     391196 .TAU application
+ 58.5          228          228           1           0     228861 MPI_Init() 
+ 30.7            0          120           4           0      30000 .TAU application => [CONTEXT] .TAU application
+ 30.7          120          120           4           0      30000 .TAU application => [CONTEXT] .TAU application => [SAMPLE] solve(double**, double**, double*, double, double, Plotter*, double&, double&) 
+ 30.7            0          120           4           0      30000 [CONTEXT] .TAU application
+ 30.7          120          120           4           0      30000 [SAMPLE] solve(double**, double**, double*, double, double, Plotter*, double&, double&) 
+  4.7           18           18           1           0      18468 MPI_Finalize() 
+  2.7           10           10        1000           0         11 MPI_Waitall() 
+  1.0            3            3           2           0       1932 MPI_Recv() 
+  0.5            2            2        3000           0          1 MPI_Isend() 
+  0.4            1            1        3000           0          0 MPI_Irecv() 
+  0.2        0.674        0.674           4           0        168 MPI_Barrier() 
+  0.0        0.102        0.102           2           0         51 MPI_Reduce() 
+  0.0        0.018        0.018           2           0          9 MPI_Type_commit() 
+  0.0        0.015        0.015           1           0         15 MPI_Type_vector() 
+  0.0        0.006        0.006           7           0          1 MPI_Comm_rank() 
+  0.0        0.004        0.004           3           0          1 MPI_Comm_size() 
+  0.0        0.003        0.003           1           0          3 MPI_Type_contiguous() 
+---------------------------------------------------------------------------------------
+
+USER EVENTS Profile :NODE 10, CONTEXT 0, THREAD 0
+---------------------------------------------------------------------------------------
+NumSamples   MaxValue   MinValue  MeanValue  Std. Dev.  Event Name
+---------------------------------------------------------------------------------------
+         2          8          8          8          0  Message size for reduce
+---------------------------------------------------------------------------------------
+
+NODE 11;CONTEXT 0;THREAD 0:
+---------------------------------------------------------------------------------------
+%Time    Exclusive    Inclusive       #Call      #Subrs  Inclusive Name
+              msec   total msec                          usec/call 
+---------------------------------------------------------------------------------------
+100.0          125          392           1        7024     392149 .TAU application
+ 58.6          229          229           1           0     229765 MPI_Init() 
+ 30.6            0          120           4           0      30000 .TAU application => [CONTEXT] .TAU application
+ 30.6          120          120           4           0      30000 .TAU application => [CONTEXT] .TAU application => [SAMPLE] solve(double**, double**, double*, double, double, Plotter*, double&, double&) 
+ 30.6            0          120           4           0      30000 [CONTEXT] .TAU application
+ 30.6          120          120           4           0      30000 [SAMPLE] solve(double**, double**, double*, double, double, Plotter*, double&, double&) 
+  4.7           18           18           1           0      18534 MPI_Finalize() 
+  2.6           10           10        1000           0         10 MPI_Waitall() 
+  1.1            4            4           2           0       2104 MPI_Recv() 
+  0.5            2            2        3000           0          1 MPI_Isend() 
+  0.3            1            1        3000           0          0 MPI_Irecv() 
+  0.2        0.738        0.738           4           0        184 MPI_Barrier() 
+  0.0        0.099        0.099           2           0         50 MPI_Reduce() 
+  0.0        0.035        0.035           1           0         35 MPI_Type_vector() 
+  0.0        0.032        0.032           2           0         16 MPI_Type_commit() 
+  0.0        0.007        0.007           3           0          2 MPI_Comm_size() 
+  0.0        0.006        0.006           7           0          1 MPI_Comm_rank() 
+  0.0        0.004        0.004           1           0          4 MPI_Type_contiguous() 
+---------------------------------------------------------------------------------------
+
+USER EVENTS Profile :NODE 11, CONTEXT 0, THREAD 0
+---------------------------------------------------------------------------------------
+NumSamples   MaxValue   MinValue  MeanValue  Std. Dev.  Event Name
+---------------------------------------------------------------------------------------
+         2          8          8          8          0  Message size for reduce
+---------------------------------------------------------------------------------------
+
+NODE 12;CONTEXT 0;THREAD 0:
+---------------------------------------------------------------------------------------
+%Time    Exclusive    Inclusive       #Call      #Subrs  Inclusive Name
+              msec   total msec                          usec/call 
+---------------------------------------------------------------------------------------
+100.0          125          395           1        7024     395746 .TAU application
+ 59.0          233          233           1           0     233527 MPI_Init() 
+ 30.3            0          120           4           0      30000 .TAU application => [CONTEXT] .TAU application
+ 30.3            0          120           4           0      30000 [CONTEXT] .TAU application
+ 22.7           90           90           3           0      30001 .TAU application => [CONTEXT] .TAU application => [SAMPLE] solve(double**, double**, double*, double, double, Plotter*, double&, double&) 
+ 22.7           90           90           3           0      30001 [SAMPLE] solve(double**, double**, double*, double, double, Plotter*, double&, double&) 
+  7.6           29           29           1           0      29999 .TAU application => [CONTEXT] .TAU application => [SAMPLE] UNRESOLVED /cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen2/gcc-9.2.0/tau-2.29-x6cvjho7izlv6p5hxo2ponkjjvb3m6zy/x86_64/lib/libTAUsh-papi-mpi-pthread-pdt.so
+  7.6           29           29           1           0      29999 [SAMPLE] UNRESOLVED /cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen2/gcc-9.2.0/tau-2.29-x6cvjho7izlv6p5hxo2ponkjjvb3m6zy/x86_64/lib/libTAUsh-papi-mpi-pthread-pdt.so
+  4.6           18           18           1           0      18387 MPI_Finalize() 
+  2.5            9            9        1000           0         10 MPI_Waitall() 
+  1.2            4            4           2           0       2364 MPI_Recv() 
+  0.5            1            1        3000           0          1 MPI_Isend() 
+  0.4            1            1        3000           0          0 MPI_Irecv() 
+  0.2        0.677        0.677           4           0        169 MPI_Barrier() 
+  0.0        0.194        0.194           2           0         97 MPI_Reduce() 
+  0.0        0.016        0.016           1           0         16 MPI_Type_vector() 
+  0.0        0.014        0.014           2           0          7 MPI_Type_commit() 
+  0.0        0.007        0.007           7           0          1 MPI_Comm_rank() 
+  0.0        0.006        0.006           3           0          2 MPI_Comm_size() 
+  0.0        0.004        0.004           1           0          4 MPI_Type_contiguous() 
+---------------------------------------------------------------------------------------
+
+USER EVENTS Profile :NODE 12, CONTEXT 0, THREAD 0
+---------------------------------------------------------------------------------------
+NumSamples   MaxValue   MinValue  MeanValue  Std. Dev.  Event Name
+---------------------------------------------------------------------------------------
+         2          8          8          8          0  Message size for reduce
+---------------------------------------------------------------------------------------
+
+NODE 13;CONTEXT 0;THREAD 0:
+---------------------------------------------------------------------------------------
+%Time    Exclusive    Inclusive       #Call      #Subrs  Inclusive Name
+              msec   total msec                          usec/call 
+---------------------------------------------------------------------------------------
+100.0          124          395           1        7024     395816 .TAU application
+ 59.0          233          233           1           0     233506 MPI_Init() 
+ 22.7            0           89           3           0      29994 .TAU application => [CONTEXT] .TAU application
+ 22.7           89           89           3           0      29994 .TAU application => [CONTEXT] .TAU application => [SAMPLE] solve(double**, double**, double*, double, double, Plotter*, double&, double&) 
+ 22.7            0           89           3           0      29994 [CONTEXT] .TAU application
+ 22.7           89           89           3           0      29994 [SAMPLE] solve(double**, double**, double*, double, double, Plotter*, double&, double&) 
+  7.6            0           30           1           0      30022 MPI_Waitall() => [CONTEXT] MPI_Waitall() 
+  7.6           30           30           1           0      30022 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] __memmove_avx_unaligned_erms 
+  7.6            0           30           1           0      30022 [CONTEXT] MPI_Waitall() 
+  7.6           30           30           1           0      30022 [SAMPLE] __memmove_avx_unaligned_erms 
+  4.7           18           18           1           0      18461 MPI_Finalize() 
+  2.4            9            9        1000           0         10 MPI_Waitall() 
+  1.2            4            4           2           0       2472 MPI_Recv() 
+  0.5            1            1        3000           0          1 MPI_Isend() 
+  0.4            1            1        3000           0          0 MPI_Irecv() 
+  0.2        0.726        0.726           4           0        182 MPI_Barrier() 
+  0.1        0.206        0.206           2           0        103 MPI_Reduce() 
+  0.0        0.016        0.016           2           0          8 MPI_Type_commit() 
+  0.0        0.016        0.016           1           0         16 MPI_Type_vector() 
+  0.0        0.007        0.007           7           0          1 MPI_Comm_rank() 
+  0.0        0.005        0.005           3           0          2 MPI_Comm_size() 
+  0.0        0.004        0.004           1           0          4 MPI_Type_contiguous() 
+---------------------------------------------------------------------------------------
+
+USER EVENTS Profile :NODE 13, CONTEXT 0, THREAD 0
+---------------------------------------------------------------------------------------
+NumSamples   MaxValue   MinValue  MeanValue  Std. Dev.  Event Name
+---------------------------------------------------------------------------------------
+         2          8          8          8          0  Message size for reduce
+---------------------------------------------------------------------------------------
+
+NODE 14;CONTEXT 0;THREAD 0:
+---------------------------------------------------------------------------------------
+%Time    Exclusive    Inclusive       #Call      #Subrs  Inclusive Name
+              msec   total msec                          usec/call 
+---------------------------------------------------------------------------------------
+100.0          124          391           1        5024     391107 .TAU application
+ 58.5          228          228           1           0     228926 MPI_Init() 
+ 15.3            0           60           2           0      30004 .TAU application => [CONTEXT] .TAU application
+ 15.3           60           60           2           0      30004 .TAU application => [CONTEXT] .TAU application => [SAMPLE] solve(double**, double**, double*, double, double, Plotter*, double&, double&) 
+ 15.3            0           60           2           0      30004 [CONTEXT] .TAU application
+ 15.3           60           60           2           0      30004 [SAMPLE] solve(double**, double**, double*, double, double, Plotter*, double&, double&) 
+  7.7            0           29           1           0      29994 MPI_Waitall() => [CONTEXT] MPI_Waitall() 
+  7.7           29           29           1           0      29994 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] MPIDI_CH3I_SMP_pull_header 
+  7.7            0           29           1           0      29994 [CONTEXT] MPI_Waitall() 
+  7.7           29           29           1           0      29994 [SAMPLE] MPIDI_CH3I_SMP_pull_header 
+  4.7           18           18           1           0      18376 MPI_Finalize() 
+  2.9           11           11        1000           0         11 MPI_Waitall() 
+  1.3            5            5           2           0       2630 MPI_Recv() 
+  0.3            1            1        2000           0          1 MPI_Isend() 
+  0.2        0.896        0.896        2000           0          0 MPI_Irecv() 
+  0.2        0.721        0.721           4           0        180 MPI_Barrier() 
+  0.1        0.315        0.315           2           0        158 MPI_Reduce() 
+  0.0        0.052        0.052           1           0         52 MPI_Type_vector() 
+  0.0        0.014        0.014           2           0          7 MPI_Type_commit() 
+  0.0        0.011        0.011           1           0         11 MPI_Type_contiguous() 
+  0.0        0.008        0.008           7           0          1 MPI_Comm_rank() 
+  0.0        0.007        0.007           3           0          2 MPI_Comm_size() 
+---------------------------------------------------------------------------------------
+
+USER EVENTS Profile :NODE 14, CONTEXT 0, THREAD 0
+---------------------------------------------------------------------------------------
+NumSamples   MaxValue   MinValue  MeanValue  Std. Dev.  Event Name
+---------------------------------------------------------------------------------------
+         2          8          8          8          0  Message size for reduce
+---------------------------------------------------------------------------------------
+
+NODE 15;CONTEXT 0;THREAD 0:
+---------------------------------------------------------------------------------------
+%Time    Exclusive    Inclusive       #Call      #Subrs  Inclusive Name
+              msec   total msec                          usec/call 
+---------------------------------------------------------------------------------------
+100.0          124          395           1        5024     395736 .TAU application
+ 59.0          233          233           1           0     233526 MPI_Init() 
+ 22.7            0           90           3           0      30001 .TAU application => [CONTEXT] .TAU application
+ 22.7           90           90           3           0      30001 .TAU application => [CONTEXT] .TAU application => [SAMPLE] solve(double**, double**, double*, double, double, Plotter*, double&, double&) 
+ 22.7            0           90           3           0      30001 [CONTEXT] .TAU application
+ 22.7           90           90           3           0      30001 [SAMPLE] solve(double**, double**, double*, double, double, Plotter*, double&, double&) 
+  7.6            0           29           1           0      29999 MPI_Isend() => [CONTEXT] MPI_Isend() 
+  7.6           29           29           1           0      29999 MPI_Isend() => [CONTEXT] MPI_Isend() => [SAMPLE] UNRESOLVED /cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen2/gcc-9.2.0/tau-2.29-x6cvjho7izlv6p5hxo2ponkjjvb3m6zy/x86_64/lib/libTAUsh-papi-mpi-pthread-pdt.so
+  7.6            0           29           1           0      29999 [CONTEXT] MPI_Isend() 
+  7.6           29           29           1           0      29999 [SAMPLE] UNRESOLVED /cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen2/gcc-9.2.0/tau-2.29-x6cvjho7izlv6p5hxo2ponkjjvb3m6zy/x86_64/lib/libTAUsh-papi-mpi-pthread-pdt.so 
+  4.6           18           18           1           0      18372 MPI_Finalize() 
+  2.7           10           10        1000           0         11 MPI_Waitall() 
+  1.5            5            5           2           0       2879 MPI_Recv() 
+  0.3            1            1        2000           0          1 MPI_Isend() 
+  0.2        0.862        0.862        2000           0          0 MPI_Irecv() 
+  0.2        0.633        0.633           4           0        158 MPI_Barrier() 
+  0.1        0.313        0.313           2           0        156 MPI_Reduce() 
+  0.0        0.034        0.034           1           0         34 MPI_Type_vector() 
+  0.0        0.032        0.032           2           0         16 MPI_Type_commit() 
+  0.0        0.011        0.011           1           0         11 MPI_Type_contiguous() 
+  0.0         0.01         0.01           3           0          3 MPI_Comm_size() 
+  0.0        0.007        0.007           7           0          1 MPI_Comm_rank() 
+---------------------------------------------------------------------------------------
+
+USER EVENTS Profile :NODE 15, CONTEXT 0, THREAD 0
+---------------------------------------------------------------------------------------
+NumSamples   MaxValue   MinValue  MeanValue  Std. Dev.  Event Name
+---------------------------------------------------------------------------------------
+         2          8          8          8          0  Message size for reduce
+---------------------------------------------------------------------------------------
+
+FUNCTION SUMMARY (total):
+---------------------------------------------------------------------------------------
+%Time    Exclusive    Inclusive       #Call      #Subrs  Inclusive Name
+              msec   total msec                          usec/call 
+---------------------------------------------------------------------------------------
+100.0        2,021        6,331          16      104412     395721 .TAU application
+ 59.0        3,735        3,735          16           0     233493 MPI_Init() 
+ 26.5            0        1,680          55           0      30546 .TAU application => [CONTEXT] .TAU application
+ 26.5            0        1,680          55           0      30546 [CONTEXT] .TAU application
+ 26.1        1,650        1,650          54           0      30557 .TAU application => [CONTEXT] .TAU application => [SAMPLE] solve(double**, double**, double*, double, double, Plotter*, double&, double&) 
+ 26.1        1,650        1,650          54           0      30557 [SAMPLE] solve(double**, double**, double*, double, double, Plotter*, double&, double&) 
+  4.6          294          294          16           0      18383 MPI_Finalize() 
+  2.5          160          160       16000           0         10 MPI_Waitall() 
+  1.9            0          120           4           0      30003 MPI_Waitall() => [CONTEXT] MPI_Waitall() 
+  1.9            0          120           4           0      30003 [CONTEXT] MPI_Waitall() 
+  0.8           47           47          30           0       1597 MPI_Recv() 
+  0.5           30           30           1           0      30022 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] __memmove_avx_unaligned_erms 
+  0.5           30           30           1           0      30022 [SAMPLE] __memmove_avx_unaligned_erms 
+  0.5           30           30           1           0      30000 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] MPIDI_CH3U_Recvq_FDP_or_AEU 
+  0.5           30           30           1           0      30000 [SAMPLE] MPIDI_CH3U_Recvq_FDP_or_AEU 
+  0.5           29           29           1           0      29999 .TAU application => [CONTEXT] .TAU application => [SAMPLE] UNRESOLVED /cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen2/gcc-9.2.0/tau-2.29-x6cvjho7izlv6p5hxo2ponkjjvb3m6zy/x86_64/lib/libTAUsh-papi-mpi-pthread-pdt.so
+  0.5            0           29           1           0      29999 MPI_Isend() => [CONTEXT] MPI_Isend() 
+  0.5           29           29           1           0      29999 MPI_Isend() => [CONTEXT] MPI_Isend() => [SAMPLE] UNRESOLVED /cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen2/gcc-9.2.0/tau-2.29-x6cvjho7izlv6p5hxo2ponkjjvb3m6zy/x86_64/lib/libTAUsh-papi-mpi-pthread-pdt.so
+  0.5            0           29           1           0      29999 [CONTEXT] MPI_Isend() 
+  0.5           29           29           1           0      29999 [SAMPLE] UNRESOLVED /cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen2/gcc-9.2.0/tau-2.29-x6cvjho7izlv6p5hxo2ponkjjvb3m6zy/x86_64/lib/libTAUsh-papi-mpi-pthread-pdt.so
+  0.5           29           29           1           0      29999 [SAMPLE] UNRESOLVED /cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen2/gcc-9.2.0/tau-2.29-x6cvjho7izlv6p5hxo2ponkjjvb3m6zy/x86_64/lib/libTAUsh-papi-mpi-pthread-pdt.so 
+  0.5           29           29           1           0      29995 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] MPIDI_CH3I_SMP_read_progress 
+  0.5           29           29           1           0      29995 [SAMPLE] MPIDI_CH3I_SMP_read_progress 
+  0.5           29           29           1           0      29994 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] MPIDI_CH3I_SMP_pull_header 
+  0.5           29           29           1           0      29994 [SAMPLE] MPIDI_CH3I_SMP_pull_header 
+  0.5           28           28       44000           0          1 MPI_Isend() 
+  0.3           20           20       44000           0          0 MPI_Irecv() 
+  0.2           13           13          64           0        208 MPI_Barrier() 
+  0.1            4            4          30           0        141 MPI_Send() 
+  0.0            2            2          32           0         89 MPI_Reduce() 
+  0.0        0.426        0.426          16           0         27 MPI_Type_vector() 
+  0.0        0.364        0.364          32           0         11 MPI_Type_commit() 
+  0.0        0.147        0.147          16           0          9 MPI_Type_contiguous() 
+  0.0        0.132        0.132         112           0          1 MPI_Comm_rank() 
+  0.0        0.111        0.111          48           0          2 MPI_Comm_size() 
+
+FUNCTION SUMMARY (mean):
+---------------------------------------------------------------------------------------
+%Time    Exclusive    Inclusive       #Call      #Subrs  Inclusive Name
+              msec   total msec                          usec/call 
+---------------------------------------------------------------------------------------
+100.0          126          395           1     6525.75     395721 .TAU application
+ 59.0          233          233           1           0     233493 MPI_Init() 
+ 26.5            0          105      3.4375           0      30546 .TAU application => [CONTEXT] .TAU application
+ 26.5            0          105      3.4375           0      30546 [CONTEXT] .TAU application
+ 26.1          103          103       3.375           0      30557 .TAU application => [CONTEXT] .TAU application => [SAMPLE] solve(double**, double**, double*, double, double, Plotter*, double&, double&) 
+ 26.1          103          103       3.375           0      30557 [SAMPLE] solve(double**, double**, double*, double, double, Plotter*, double&, double&) 
+  4.6           18           18           1           0      18383 MPI_Finalize() 
+  2.5           10           10        1000           0         10 MPI_Waitall() 
+  1.9            0            7        0.25           0      30003 MPI_Waitall() => [CONTEXT] MPI_Waitall() 
+  1.9            0            7        0.25           0      30003 [CONTEXT] MPI_Waitall() 
+  0.8            2            2       1.875           0       1597 MPI_Recv() 
+  0.5            1            1      0.0625           0      30022 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] __memmove_avx_unaligned_erms 
+  0.5            1            1      0.0625           0      30022 [SAMPLE] __memmove_avx_unaligned_erms 
+  0.5            1            1      0.0625           0      30000 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] MPIDI_CH3U_Recvq_FDP_or_AEU 
+  0.5            1            1      0.0625           0      30000 [SAMPLE] MPIDI_CH3U_Recvq_FDP_or_AEU 
+  0.5            1            1      0.0625           0      29999 .TAU application => [CONTEXT] .TAU application => [SAMPLE] UNRESOLVED /cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen2/gcc-9.2.0/tau-2.29-x6cvjho7izlv6p5hxo2ponkjjvb3m6zy/x86_64/lib/libTAUsh-papi-mpi-pthread-pdt.so
+  0.5            0            1      0.0625           0      29999 MPI_Isend() => [CONTEXT] MPI_Isend() 
+  0.5            1            1      0.0625           0      29999 MPI_Isend() => [CONTEXT] MPI_Isend() => [SAMPLE] UNRESOLVED /cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen2/gcc-9.2.0/tau-2.29-x6cvjho7izlv6p5hxo2ponkjjvb3m6zy/x86_64/lib/libTAUsh-papi-mpi-pthread-pdt.so
+  0.5            0            1      0.0625           0      29999 [CONTEXT] MPI_Isend() 
+  0.5            1            1      0.0625           0      29999 [SAMPLE] UNRESOLVED /cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen2/gcc-9.2.0/tau-2.29-x6cvjho7izlv6p5hxo2ponkjjvb3m6zy/x86_64/lib/libTAUsh-papi-mpi-pthread-pdt.so
+  0.5            1            1      0.0625           0      29999 [SAMPLE] UNRESOLVED /cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen2/gcc-9.2.0/tau-2.29-x6cvjho7izlv6p5hxo2ponkjjvb3m6zy/x86_64/lib/libTAUsh-papi-mpi-pthread-pdt.so 
+  0.5            1            1      0.0625           0      29995 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] MPIDI_CH3I_SMP_read_progress 
+  0.5            1            1      0.0625           0      29995 [SAMPLE] MPIDI_CH3I_SMP_read_progress 
+  0.5            1            1      0.0625           0      29994 MPI_Waitall() => [CONTEXT] MPI_Waitall() => [SAMPLE] MPIDI_CH3I_SMP_pull_header 
+  0.5            1            1      0.0625           0      29994 [SAMPLE] MPIDI_CH3I_SMP_pull_header 
+  0.5            1            1        2750           0          1 MPI_Isend() 
+  0.3            1            1        2750           0          0 MPI_Irecv() 
+  0.2        0.832        0.832           4           0        208 MPI_Barrier() 
+  0.1        0.264        0.264       1.875           0        141 MPI_Send() 
+  0.0        0.178        0.178           2           0         89 MPI_Reduce() 
+  0.0       0.0266       0.0266           1           0         27 MPI_Type_vector() 
+  0.0       0.0227       0.0227           2           0         11 MPI_Type_commit() 
+  0.0      0.00919      0.00919           1           0          9 MPI_Type_contiguous() 
+  0.0      0.00825      0.00825           7           0          1 MPI_Comm_rank() 
+  0.0      0.00694      0.00694           3           0          2 MPI_Comm_size() 

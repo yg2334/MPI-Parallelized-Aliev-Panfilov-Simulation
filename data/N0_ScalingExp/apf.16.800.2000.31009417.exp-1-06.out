@@ -1,0 +1,393 @@
+Lmod has detected the following error: These module(s) or extension(s) exist
+but cannot be loaded as requested: "mvapich2/2.3.6"
+   Try: "module spider mvapich2/2.3.6" to see how to load the module(s).
+
+
+
+
+[Simulation begins] Sun Jun  2 13:31:29 2024
+
+dt= 0.00687906, # iters = 2000
+m x n = 800 x 800
+processor geometry: 1 x 1
+
+Compiled with MPI ENABLED
+
+[Simulation completes] Sun Jun  2 13:31:33 2024
+
+End at iteration 1999
+Max norm: 9.92479e-01, L2norm: 5.63440e-01
+Running Time: 3.34858 sec. [10.7 GFlop/sec]
+
+   M x N   px x py Comm?   #iter  T_p, Gflops        Linf, L2
+@ 800 800    1 1      Y     2000  3.349 10.7    9.92479e-01 5.63440e-01
+  -----
+
+[Simulation begins] Sun Jun  2 13:31:33 2024
+
+dt= 0.00687906, # iters = 2000
+m x n = 800 x 800
+processor geometry: 2 x 1
+
+Compiled with MPI ENABLED
+
+[Simulation completes] Sun Jun  2 13:31:35 2024
+
+End at iteration 1999
+Max norm: 9.92479e-01, L2norm: 5.63440e-01
+Running Time: 1.70747 sec. [21 GFlop/sec]
+
+   M x N   px x py Comm?   #iter  T_p, Gflops        Linf, L2
+@ 800 800    2 1      Y     2000  1.707 20.99    9.92479e-01 5.63440e-01
+  -----
+
+[Simulation begins] Sun Jun  2 13:31:35 2024
+
+dt= 0.00687906, # iters = 2000
+m x n = 800 x 800
+processor geometry: 2 x 1
+
+Compiled with MPI ENABLED
+Communication shut off
+
+[Simulation completes] Sun Jun  2 13:31:37 2024
+
+End at iteration 1999
+Max norm: 9.78936e-01, L2norm: 4.87338e-01
+Running Time: 1.68088 sec. [21.3 GFlop/sec]
+
+   M x N   px x py Comm?   #iter  T_p, Gflops        Linf, L2
+@ 800 800    2 1      N     2000  1.681 21.32    9.78936e-01 4.87338e-01
+  -----
+
+[Simulation begins] Sun Jun  2 13:31:38 2024
+
+dt= 0.00687906, # iters = 2000
+m x n = 800 x 800
+processor geometry: 1 x 2
+
+Compiled with MPI ENABLED
+
+[Simulation completes] Sun Jun  2 13:31:39 2024
+
+End at iteration 1999
+Max norm: 9.92479e-01, L2norm: 5.63440e-01
+Running Time: 1.6757 sec. [21.4 GFlop/sec]
+
+   M x N   px x py Comm?   #iter  T_p, Gflops        Linf, L2
+@ 800 800    1 2      Y     2000  1.676 21.39    9.92479e-01 5.63440e-01
+  -----
+
+[Simulation begins] Sun Jun  2 13:31:40 2024
+
+dt= 0.00687906, # iters = 2000
+m x n = 800 x 800
+processor geometry: 1 x 2
+
+Compiled with MPI ENABLED
+Communication shut off
+
+[Simulation completes] Sun Jun  2 13:31:41 2024
+
+End at iteration 1999
+Max norm: 9.92479e-01, L2norm: 5.53765e-01
+Running Time: 1.6907 sec. [21.2 GFlop/sec]
+
+   M x N   px x py Comm?   #iter  T_p, Gflops        Linf, L2
+@ 800 800    1 2      N     2000  1.691 21.2    9.92479e-01 5.53765e-01
+  -----
+
+[Simulation begins] Sun Jun  2 13:31:42 2024
+
+dt= 0.00687906, # iters = 2000
+m x n = 800 x 800
+processor geometry: 4 x 1
+
+Compiled with MPI ENABLED
+
+[Simulation completes] Sun Jun  2 13:31:43 2024
+
+End at iteration 1999
+Max norm: 9.92479e-01, L2norm: 5.63440e-01
+Running Time: 0.90512 sec. [39.6 GFlop/sec]
+
+   M x N   px x py Comm?   #iter  T_p, Gflops        Linf, L2
+@ 800 800    4 1      Y     2000  0.9051 39.6    9.92479e-01 5.63440e-01
+  -----
+
+[Simulation begins] Sun Jun  2 13:31:43 2024
+
+dt= 0.00687906, # iters = 2000
+m x n = 800 x 800
+processor geometry: 4 x 1
+
+Compiled with MPI ENABLED
+Communication shut off
+
+[Simulation completes] Sun Jun  2 13:31:44 2024
+
+End at iteration 1999
+Max norm: 9.78936e-01, L2norm: 4.80077e-01
+Running Time: 0.855469 sec. [41.9 GFlop/sec]
+
+   M x N   px x py Comm?   #iter  T_p, Gflops        Linf, L2
+@ 800 800    4 1      N     2000  0.8555 41.9    9.78936e-01 4.80077e-01
+  -----
+
+[Simulation begins] Sun Jun  2 13:31:45 2024
+
+dt= 0.00687906, # iters = 2000
+m x n = 800 x 800
+processor geometry: 1 x 4
+
+Compiled with MPI ENABLED
+
+[Simulation completes] Sun Jun  2 13:31:46 2024
+
+End at iteration 1999
+Max norm: 9.92479e-01, L2norm: 5.63440e-01
+Running Time: 0.842722 sec. [42.5 GFlop/sec]
+
+   M x N   px x py Comm?   #iter  T_p, Gflops        Linf, L2
+@ 800 800    1 4      Y     2000  0.8427 42.53    9.92479e-01 5.63440e-01
+  -----
+
+[Simulation begins] Sun Jun  2 13:31:46 2024
+
+dt= 0.00687906, # iters = 2000
+m x n = 800 x 800
+processor geometry: 1 x 4
+
+Compiled with MPI ENABLED
+Communication shut off
+
+[Simulation completes] Sun Jun  2 13:31:47 2024
+
+End at iteration 1999
+Max norm: 9.92479e-01, L2norm: 5.45504e-01
+Running Time: 0.835544 sec. [42.9 GFlop/sec]
+
+   M x N   px x py Comm?   #iter  T_p, Gflops        Linf, L2
+@ 800 800    1 4      N     2000  0.8355 42.89    9.92479e-01 5.45504e-01
+  -----
+
+[Simulation begins] Sun Jun  2 13:31:48 2024
+
+dt= 0.00687906, # iters = 2000
+m x n = 800 x 800
+processor geometry: 1 x 4
+
+Compiled with MPI ENABLED
+
+[Simulation completes] Sun Jun  2 13:31:48 2024
+
+End at iteration 1999
+Max norm: 9.92479e-01, L2norm: 5.63440e-01
+Running Time: 0.876417 sec. [40.9 GFlop/sec]
+
+   M x N   px x py Comm?   #iter  T_p, Gflops        Linf, L2
+@ 800 800    1 4      Y     2000  0.8764 40.89    9.92479e-01 5.63440e-01
+  -----
+
+[Simulation begins] Sun Jun  2 13:31:49 2024
+
+dt= 0.00687906, # iters = 2000
+m x n = 800 x 800
+processor geometry: 1 x 4
+
+Compiled with MPI ENABLED
+Communication shut off
+
+[Simulation completes] Sun Jun  2 13:31:50 2024
+
+End at iteration 1999
+Max norm: 9.92479e-01, L2norm: 5.57850e-01
+Running Time: 0.917307 sec. [39.1 GFlop/sec]
+
+   M x N   px x py Comm?   #iter  T_p, Gflops        Linf, L2
+@ 800 800    1 4      N     2000  0.9173 39.07    9.92479e-01 5.57850e-01
+  -----
+
+[Simulation begins] Sun Jun  2 13:31:51 2024
+
+dt= 0.00687906, # iters = 2000
+m x n = 800 x 800
+processor geometry: 1 x 8
+
+Compiled with MPI ENABLED
+
+[Simulation completes] Sun Jun  2 13:31:51 2024
+
+End at iteration 1999
+Max norm: 9.92479e-01, L2norm: 5.63440e-01
+Running Time: 0.474302 sec. [75.6 GFlop/sec]
+
+   M x N   px x py Comm?   #iter  T_p, Gflops        Linf, L2
+@ 800 800    1 8      Y     2000  0.4743 75.56    9.92479e-01 5.63440e-01
+  -----
+
+[Simulation begins] Sun Jun  2 13:31:52 2024
+
+dt= 0.00687906, # iters = 2000
+m x n = 800 x 800
+processor geometry: 1 x 8
+
+Compiled with MPI ENABLED
+Communication shut off
+
+[Simulation completes] Sun Jun  2 13:31:52 2024
+
+End at iteration 1999
+Max norm: 9.92478e-01, L2norm: 5.28586e-01
+Running Time: 0.465094 sec. [77.1 GFlop/sec]
+
+   M x N   px x py Comm?   #iter  T_p, Gflops        Linf, L2
+@ 800 800    1 8      N     2000  0.4651 77.06    9.92478e-01 5.28586e-01
+  -----
+
+[Simulation begins] Sun Jun  2 13:31:53 2024
+
+dt= 0.00687906, # iters = 2000
+m x n = 800 x 800
+processor geometry: 8 x 1
+
+Compiled with MPI ENABLED
+
+[Simulation completes] Sun Jun  2 13:31:53 2024
+
+End at iteration 1999
+Max norm: 9.92479e-01, L2norm: 5.63440e-01
+Running Time: 0.517139 sec. [69.3 GFlop/sec]
+
+   M x N   px x py Comm?   #iter  T_p, Gflops        Linf, L2
+@ 800 800    8 1      Y     2000  0.5171 69.3    9.92479e-01 5.63440e-01
+  -----
+
+[Simulation begins] Sun Jun  2 13:31:54 2024
+
+dt= 0.00687906, # iters = 2000
+m x n = 800 x 800
+processor geometry: 8 x 1
+
+Compiled with MPI ENABLED
+Communication shut off
+
+[Simulation completes] Sun Jun  2 13:31:54 2024
+
+End at iteration 1999
+Max norm: 9.78936e-01, L2norm: 4.65220e-01
+Running Time: 0.434203 sec. [82.5 GFlop/sec]
+
+   M x N   px x py Comm?   #iter  T_p, Gflops        Linf, L2
+@ 800 800    8 1      N     2000  0.4342 82.54    9.78936e-01 4.65220e-01
+  -----
+
+[Simulation begins] Sun Jun  2 13:31:55 2024
+
+dt= 0.00687906, # iters = 2000
+m x n = 800 x 800
+processor geometry: 1 x 8
+
+Compiled with MPI ENABLED
+
+[Simulation completes] Sun Jun  2 13:31:55 2024
+
+End at iteration 1999
+Max norm: 9.92479e-01, L2norm: 5.63440e-01
+Running Time: 0.450803 sec. [79.5 GFlop/sec]
+
+   M x N   px x py Comm?   #iter  T_p, Gflops        Linf, L2
+@ 800 800    1 8      Y     2000  0.4508 79.5    9.92479e-01 5.63440e-01
+  -----
+
+[Simulation begins] Sun Jun  2 13:31:56 2024
+
+dt= 0.00687906, # iters = 2000
+m x n = 800 x 800
+processor geometry: 1 x 16
+
+Compiled with MPI ENABLED
+
+[Simulation completes] Sun Jun  2 13:31:56 2024
+
+End at iteration 1999
+Max norm: 9.92479e-01, L2norm: 5.63440e-01
+Running Time: 0.2335 sec. [153 GFlop/sec]
+
+   M x N   px x py Comm?   #iter  T_p, Gflops        Linf, L2
+@ 800 800    1 16      Y     2000  0.2335 153.5    9.92479e-01 5.63440e-01
+  -----
+
+[Simulation begins] Sun Jun  2 13:31:57 2024
+
+dt= 0.00687906, # iters = 2000
+m x n = 800 x 800
+processor geometry: 1 x 16
+
+Compiled with MPI ENABLED
+Communication shut off
+
+[Simulation completes] Sun Jun  2 13:31:57 2024
+
+End at iteration 1999
+Max norm: 9.92324e-01, L2norm: 4.92337e-01
+Running Time: 0.22879 sec. [157 GFlop/sec]
+
+   M x N   px x py Comm?   #iter  T_p, Gflops        Linf, L2
+@ 800 800    1 16      N     2000  0.2288 156.7    9.92324e-01 4.92337e-01
+  -----
+
+[Simulation begins] Sun Jun  2 13:31:57 2024
+
+dt= 0.00687906, # iters = 2000
+m x n = 800 x 800
+processor geometry: 16 x 1
+
+Compiled with MPI ENABLED
+
+[Simulation completes] Sun Jun  2 13:31:58 2024
+
+End at iteration 1999
+Max norm: 9.92479e-01, L2norm: 5.63440e-01
+Running Time: 0.280901 sec. [128 GFlop/sec]
+
+   M x N   px x py Comm?   #iter  T_p, Gflops        Linf, L2
+@ 800 800    16 1      Y     2000  0.2809 127.6    9.92479e-01 5.63440e-01
+  -----
+
+[Simulation begins] Sun Jun  2 13:31:58 2024
+
+dt= 0.00687906, # iters = 2000
+m x n = 800 x 800
+processor geometry: 16 x 1
+
+Compiled with MPI ENABLED
+Communication shut off
+
+[Simulation completes] Sun Jun  2 13:31:59 2024
+
+End at iteration 1999
+Max norm: 9.78936e-01, L2norm: 4.34265e-01
+Running Time: 0.237093 sec. [151 GFlop/sec]
+
+   M x N   px x py Comm?   #iter  T_p, Gflops        Linf, L2
+@ 800 800    16 1      N     2000  0.2371 151.2    9.78936e-01 4.34265e-01
+  -----
+
+[Simulation begins] Sun Jun  2 13:31:59 2024
+
+dt= 0.00687906, # iters = 2000
+m x n = 800 x 800
+processor geometry: 1 x 16
+
+Compiled with MPI ENABLED
+
+[Simulation completes] Sun Jun  2 13:32:00 2024
+
+End at iteration 1999
+Max norm: 9.92479e-01, L2norm: 5.63440e-01
+Running Time: 0.246778 sec. [145 GFlop/sec]
+
+   M x N   px x py Comm?   #iter  T_p, Gflops        Linf, L2
+@ 800 800    1 16      Y     2000  0.2468 145.2    9.92479e-01 5.63440e-01
+  -----

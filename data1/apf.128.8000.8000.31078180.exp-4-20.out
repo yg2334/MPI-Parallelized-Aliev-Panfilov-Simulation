@@ -1,0 +1,120 @@
+Lmod has detected the following error: These module(s) or extension(s) exist
+but cannot be loaded as requested: "mvapich2/2.3.6"
+   Try: "module spider mvapich2/2.3.6" to see how to load the module(s).
+
+
+
+
+[Simulation begins] Wed Jun  5 06:47:32 2024
+
+dt= 7.41769e-05, # iters = 8000
+m x n = 8000 x 8000
+processor geometry: 2 x 64
+
+slurmstepd: error: Detected 2 oom_kill events in StepId=31078180.0. Some of the step tasks have been OOM Killed.
+srun: error: exp-4-20: task 5: Out Of Memory
+srun: error: slurm_send_node_msg: [(null)] slurm_bufs_sendto(msg_type=RESPONSE_SLURM_RC) failed: Unexpected missing socket error
+srun: error: Task 5 reported exit for a second time.
+srun: error: slurm_send_node_msg: [(null)] slurm_bufs_sendto(msg_type=RESPONSE_SLURM_RC) failed: Unexpected missing socket error
+srun: error: Task 5 reported exit for a second time.
+srun: error: slurm_send_node_msg: [(null)] slurm_bufs_sendto(msg_type=RESPONSE_SLURM_RC) failed: Unexpected missing socket error
+srun: error: Task 5 reported exit for a second time.
+srun: error: slurm_send_node_msg: [(null)] slurm_bufs_sendto(msg_type=RESPONSE_SLURM_RC) failed: Unexpected missing socket error
+srun: error: Task 5 reported exit for a second time.
+srun: error: slurm_send_node_msg: [(null)] slurm_bufs_sendto(msg_type=RESPONSE_SLURM_RC) failed: Unexpected missing socket error
+srun: error: Task 5 reported exit for a second time.
+srun: error: slurm_send_node_msg: [(null)] slurm_bufs_sendto(msg_type=RESPONSE_SLURM_RC) failed: Unexpected missing socket error
+srun: error: Task 3 reported exit for a second time.
+srun: error: Task 6 reported exit for a second time.
+srun: error: Task 11 reported exit for a second time.
+srun: error: Task 19 reported exit for a second time.
+srun: error: Task 20 reported exit for a second time.
+srun: error: Task 22 reported exit for a second time.
+srun: error: Task 27 reported exit for a second time.
+srun: error: Task 30 reported exit for a second time.
+srun: error: Task 35 reported exit for a second time.
+srun: error: Task 36 reported exit for a second time.
+srun: error: Task 39 reported exit for a second time.
+srun: error: Task 51 reported exit for a second time.
+srun: error: Task 54 reported exit for a second time.
+srun: error: Task 55 reported exit for a second time.
+srun: error: Task 59 reported exit for a second time.
+srun: error: Task 60 reported exit for a second time.
+srun: error: Task 61 reported exit for a second time.
+srun: error: Task 63 reported exit for a second time.
+srun: error: Task 78 reported exit for a second time.
+srun: error: Task 90 reported exit for a second time.
+srun: error: Task 92 reported exit for a second time.
+srun: error: Task 100 reported exit for a second time.
+srun: error: Task 101 reported exit for a second time.
+srun: error: Task 109 reported exit for a second time.
+srun: error: Task 113 reported exit for a second time.
+srun: error: Task 116 reported exit for a second time.
+srun: error: Task 118 reported exit for a second time.
+srun: error: Task 120 reported exit for a second time.
+srun: error: slurm_send_node_msg: [(null)] slurm_bufs_sendto(msg_type=RESPONSE_SLURM_RC) failed: Unexpected missing socket error
+srun: error: Task 3 reported exit for a second time.
+srun: error: Task 6 reported exit for a second time.
+srun: error: Task 11 reported exit for a second time.
+srun: error: Task 19 reported exit for a second time.
+srun: error: Task 20 reported exit for a second time.
+srun: error: Task 22 reported exit for a second time.
+srun: error: Task 27 reported exit for a second time.
+srun: error: Task 30 reported exit for a second time.
+srun: error: Task 35 reported exit for a second time.
+srun: error: Task 36 reported exit for a second time.
+srun: error: Task 39 reported exit for a second time.
+srun: error: Task 51 reported exit for a second time.
+srun: error: Task 54 reported exit for a second time.
+srun: error: Task 55 reported exit for a second time.
+srun: error: Task 59 reported exit for a second time.
+srun: error: Task 60 reported exit for a second time.
+srun: error: Task 61 reported exit for a second time.
+srun: error: Task 63 reported exit for a second time.
+srun: error: Task 78 reported exit for a second time.
+srun: error: Task 90 reported exit for a second time.
+srun: error: Task 92 reported exit for a second time.
+srun: error: Task 100 reported exit for a second time.
+srun: error: Task 101 reported exit for a second time.
+srun: error: Task 109 reported exit for a second time.
+srun: error: Task 113 reported exit for a second time.
+srun: error: Task 116 reported exit for a second time.
+srun: error: Task 118 reported exit for a second time.
+srun: error: Task 120 reported exit for a second time.
+srun: error: slurm_send_node_msg: [(null)] slurm_bufs_sendto(msg_type=RESPONSE_SLURM_RC) failed: Unexpected missing socket error
+srun: error: Task 3 reported exit for a second time.
+srun: error: Task 6 reported exit for a second time.
+srun: error: Task 11 reported exit for a second time.
+srun: error: Task 19 reported exit for a second time.
+srun: error: Task 20 reported exit for a second time.
+srun: error: Task 22 reported exit for a second time.
+srun: error: Task 27 reported exit for a second time.
+srun: error: Task 30 reported exit for a second time.
+srun: error: Task 35 reported exit for a second time.
+srun: error: Task 36 reported exit for a second time.
+srun: error: Task 39 reported exit for a second time.
+srun: error: Task 51 reported exit for a second time.
+srun: error: Task 54 reported exit for a second time.
+srun: error: Task 55 reported exit for a second time.
+srun: error: Task 59 reported exit for a second time.
+srun: error: Task 60 reported exit for a second time.
+srun: error: Task 61 reported exit for a second time.
+srun: error: Task 63 reported exit for a second time.
+srun: error: Task 78 reported exit for a second time.
+srun: error: Task 90 reported exit for a second time.
+srun: error: Task 92 reported exit for a second time.
+srun: error: Task 100 reported exit for a second time.
+srun: error: Task 101 reported exit for a second time.
+srun: error: Task 109 reported exit for a second time.
+srun: error: Task 113 reported exit for a second time.
+srun: error: Task 116 reported exit for a second time.
+srun: error: Task 118 reported exit for a second time.
+srun: error: Task 120 reported exit for a second time.
+srun: error: slurm_send_node_msg: [(null)] slurm_bufs_sendto(msg_type=RESPONSE_SLURM_RC) failed: Unexpected missing socket error
+srun: error: Task 23 reported exit for a second time.
+srun: error: Task 49 reported exit for a second time.
+srun: error: slurm_send_node_msg: [(null)] slurm_bufs_sendto(msg_type=RESPONSE_SLURM_RC) failed: Unexpected missing socket error
+srun: error: Task 42 reported exit for a second time.
+slurmstepd: error: *** JOB 31078180 ON exp-4-20 CANCELLED AT 2024-06-05T06:50:21 DUE TO TIME LIMIT ***
+slurmstepd: error: *** STEP 31078180.0 ON exp-4-20 CANCELLED AT 2024-06-05T06:50:21 DUE TO TIME LIMIT ***
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.

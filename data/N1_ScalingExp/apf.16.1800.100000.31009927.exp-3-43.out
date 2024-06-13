@@ -1,0 +1,43 @@
+Lmod has detected the following error: These module(s) or extension(s) exist
+but cannot be loaded as requested: "mvapich2/2.3.6"
+   Try: "module spider mvapich2/2.3.6" to see how to load the module(s).
+
+
+
+
+[Simulation begins] Sun Jun  2 14:03:26 2024
+
+dt= 0.00144443, # iters = 100000
+m x n = 1800 x 1800
+processor geometry: 1 x 16
+
+Compiled with MPI ENABLED
+
+[Simulation completes] Sun Jun  2 14:04:15 2024
+
+End at iteration 99999
+Max norm: 9.83592e-01, L2norm: 7.55255e-01
+Running Time: 48.7102 sec. [186 GFlop/sec]
+
+   M x N   px x py Comm?   #iter  T_p, Gflops        Linf, L2
+@ 1800 1800    1 16      Y     100000  48.71 186.2    9.83592e-01 7.55255e-01
+  -----
+
+[Simulation begins] Sun Jun  2 14:04:16 2024
+
+dt= 0.00144443, # iters = 100000
+m x n = 1800 x 1800
+processor geometry: 1 x 16
+
+Compiled with MPI ENABLED
+Communication shut off
+
+[Simulation completes] Sun Jun  2 14:05:04 2024
+
+End at iteration 99999
+Max norm: 4.46702e-01, L2norm: 5.56114e-02
+Running Time: 48.4208 sec. [187 GFlop/sec]
+
+   M x N   px x py Comm?   #iter  T_p, Gflops        Linf, L2
+@ 1800 1800    1 16      N     100000  48.42 187.4    4.46702e-01 5.56114e-02
+  -----
